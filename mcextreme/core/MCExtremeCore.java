@@ -1,5 +1,8 @@
 package mcextreme.core;
 
+import java.util.logging.Level;
+
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -12,7 +15,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 public class MCExtremeCore
 {
     @Instance("MCExtremeCore")
-    public MCExtremeCore instance;
+    public static MCExtremeCore instance;
     
     @EventHandler
     public void load(FMLInitializationEvent event)
@@ -23,6 +26,6 @@ public class MCExtremeCore
     @EventHandler
     public void modsLoadedpostInit(FMLPostInitializationEvent event)
     {
-    	System.out.print("MCExtreme Core Loaded!"); 
+    	FMLLog.log(Level.INFO, "MCExtreme Core Loaded!"); 
     }
 }
