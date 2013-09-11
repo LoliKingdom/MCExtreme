@@ -1,0 +1,50 @@
+package mcextreme.vtweaks;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.Configuration;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkMod;
+
+@Mod(modid="MCExtremeVTweaks", name="MC-Extreme: Vanilla Tweaks", version="0.0.2", dependencies = "required-after:MCExtremeCore")
+@NetworkMod(clientSideRequired=true, serverSideRequired=false)
+public class MCExtremeVTweaks
+{
+	//Tab 2
+	public static CreativeTabs tabXVTweaks = new CreativeTabs("extreme_tab_vtweaks")
+	{
+		public ItemStack getIconItemStack()
+		{
+			return new ItemStack(ItemsVTweaks.itemLinkIron);
+		}
+	};
+		
+    @Instance("MCExtremeVTweaks")
+    public MCExtremeVTweaks instance;
+    
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event)
+    {
+        PropertiesVTweaks.loadConfig(new Configuration(event.getSuggestedConfigurationFile()));
+    }
+    
+    @EventHandler
+    public void load(FMLInitializationEvent event)
+    {
+    	ItemsVTweaks.initItems();
+        LocalizationVTweaks.addNames();
+        CraftingVTweaks.removeRecipes();
+        CraftingVTweaks.addRecipes();
+    }
+    
+    @EventHandler
+    public void modsLoadedpostInit(FMLPostInitializationEvent event)
+    {
+    	System.out.print("MCExtreme Vanilla Tweaks Loaded!"); 
+    }
+}
