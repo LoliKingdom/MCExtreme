@@ -23,7 +23,7 @@ public class LocalizationTech
 	        
 	    for (int meta = 0; meta < ingotNames.length; ++meta)
 	    {
-	        LanguageRegistry.addName(new ItemStack(ItemsTech.itemIngot, 1, meta), ingotNames[meta]);
+	        //LanguageRegistry.addName(new ItemStack(ItemsTech.itemIngot, 1, meta), ingotNames[meta]);
     	}
         
         //Tabs

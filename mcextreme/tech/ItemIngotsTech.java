@@ -14,6 +14,8 @@ public class ItemIngotsTech extends Item
 	//GENERAL3214: Uranium, Mercury, Tungsten, Lead gravity
     public static String[] names = new String[] {"ingotAluminium", "ingotCopper", "ingotLead", "ingotNickel", "ingotPlatinum", "ingotSilver", "ingotTin", "ingotZinc"};
     public Icon[] textures;
+    //Kodehawa: Fixes to localization.
+	public static String[] localizedNames = new String[] {"Aluminium Ingot", "Copper Ingot", "Lead Ingot", "Nickel Ingot", "Platinum Ingot", "Silver Ingot", "Tin Ingot", "Zinc Ingot"};
     
     public ItemIngotsTech(int itemID, String type)
     {
@@ -44,13 +46,27 @@ public class ItemIngotsTech extends Item
     {
     	return meta < names.length ? textures[meta] : textures[0];
     }
+   
+    @Override
+    public String getItemDisplayName(ItemStack is){
+      if(is.getItemDamage() <= 8)
+    	  
+            return localizedNames[is.getItemDamage()];
+      
+      return "Test";
+    }
     
     public String getUnlocalizedName()
     {
     	ItemStack stack = new ItemStack(ItemsTech.itemIngot);
     	
-        return names[stack.getItemDamage()];
+    	 if(stack.getItemDamage() <= 8)
+    		 
+             return "item." + names[stack.getItemDamage()];
+    	 
+         return "item" + "." + "test";
     }
+
     
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) 
     {
