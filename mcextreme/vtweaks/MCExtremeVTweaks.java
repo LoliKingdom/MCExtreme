@@ -1,8 +1,11 @@
 package mcextreme.vtweaks;
 
+import java.util.logging.Level;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -25,7 +28,7 @@ public class MCExtremeVTweaks
 	};
 		
     @Instance("MCExtremeVTweaks")
-    public MCExtremeVTweaks instance;
+    public static MCExtremeVTweaks instance;
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -45,6 +48,6 @@ public class MCExtremeVTweaks
     @EventHandler
     public void modsLoadedpostInit(FMLPostInitializationEvent event)
     {
-    	System.out.print("MCExtreme Vanilla Tweaks Loaded!"); 
+    	FMLLog.log(Level.INFO, "MCExtreme Vanilla Tweaks Loaded!"); 
     }
 }
