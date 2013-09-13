@@ -12,10 +12,10 @@ import net.minecraft.util.Icon;
 public class ItemIngotsTech extends Item
 {
 	//GENERAL3214: Uranium, Mercury, Tungsten, Lead gravity
-    public static String[] names = new String[] {"ingotAluminium", "ingotCopper", "ingotLead", "ingotNickel", "ingotPlatinum", "ingotSilver", "ingotTin", "ingotZinc"};
+    public static String[] names = new String[] {"ingotAluminium", "ingotCopper", "ingotLead", "ingotNickel", "ingotPlatinum", "ingotSilver", "ingotTin", "ingotZinc", "ingotDarkIron"};
     public Icon[] textures;
     //Kodehawa: Fixes to localization.
-	public static String[] localizedNames = new String[] {"Aluminium Ingot", "Copper Ingot", "Lead Ingot", "Nickel Ingot", "Platinum Ingot", "Silver Ingot", "Tin Ingot", "Zinc Ingot"};
+	public static String[] localizedNames = new String[] {"Aluminium Ingot", "Copper Ingot", "Lead Ingot", "Nickel Ingot", "Platinum Ingot", "Silver Ingot", "Tin Ingot", "Zinc Ingot", "Dark Iron"};
     
     public ItemIngotsTech(int itemID, String type)
     {
@@ -49,7 +49,7 @@ public class ItemIngotsTech extends Item
    
     @Override
     public String getItemDisplayName(ItemStack is){
-      if(is.getItemDamage() <= 8)
+      if(is.getItemDamage() <= 9)
     	  
             return localizedNames[is.getItemDamage()];
       
@@ -60,7 +60,7 @@ public class ItemIngotsTech extends Item
     {
     	ItemStack stack = new ItemStack(ItemsTech.itemIngot);
     	
-    	 if(stack.getItemDamage() <= 8)
+    	 if(stack.getItemDamage() <= 9)
     		 
              return "item." + names[stack.getItemDamage()];
     	 
@@ -75,7 +75,7 @@ public class ItemIngotsTech extends Item
 	    	if (par1ItemStack.getItemDamage() == meta)
 	    	{
 	    		//\u00a7 http://www.minecraftwiki.net/wiki/Classic_server_protocol#Color_Codes
-	    		String[] periodic = new String[] {"13 Al", "29 Cu", "82 Pb", "28 Ni", "78 Pt", "47 Ag", "50 Sn", "30 Zn"};
+	    		String[] periodic = new String[] {"13 Al", "29 Cu", "82 Pb", "28 Ni", "78 Pt", "47 Ag", "50 Sn", "30 Zn", "26 Fe+"};
 	    		
 	    		par3List.add(periodic[meta]);
 	    	}
