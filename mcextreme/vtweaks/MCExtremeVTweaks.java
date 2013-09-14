@@ -1,5 +1,6 @@
 package mcextreme.vtweaks;
 
+import java.util.Arrays;
 import java.util.logging.Level;
 
 import net.minecraft.creativetab.CreativeTabs;
@@ -7,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -23,7 +25,7 @@ public class MCExtremeVTweaks
 	{
 		public ItemStack getIconItemStack()
 		{
-			return new ItemStack(ItemsVTweaks.itemLinkIron);
+			return new ItemStack(ItemsVTweaks.itemLink);
 		}
 	};
 		
@@ -33,6 +35,9 @@ public class MCExtremeVTweaks
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+    	ModMetadata modMeta = event.getModMetadata();
+ 		modMeta.parent = "MCExtremeCore";
+ 		
         PropertiesVTweaks.loadConfig(new Configuration(event.getSuggestedConfigurationFile()));
     }
     
@@ -41,7 +46,6 @@ public class MCExtremeVTweaks
     {
     	ItemsVTweaks.initItems();
         LocalizationVTweaks.addNames();
-        CraftingVTweaks.removeRecipes();
         CraftingVTweaks.addRecipes();
     }
     

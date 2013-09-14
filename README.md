@@ -1,4 +1,4 @@
 MCExtreme
 ========
 
-Repo for our members - It is a mod for Minecraft which changes everything. Literally.
+This is the repo for our members of EnderExtreme - this repo holds the legendary mod of Minecraft to the Extreme. The Ultimate Minecraft Mod.

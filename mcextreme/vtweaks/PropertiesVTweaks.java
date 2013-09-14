@@ -7,7 +7,8 @@ import net.minecraftforge.common.Property;
 
 public class PropertiesVTweaks
 {
-    public static int itemLinkIronID;
+    public static int itemLinkID;
+    public static int itemPlateID;
     
     public static boolean isClient;
 
@@ -17,7 +18,8 @@ public class PropertiesVTweaks
         
         config.load();
         
-        itemLinkIronID = config.get("item", "ItemIngotID", 6500).getInt();
+        itemLinkID = config.get("item", "ItemLinkID", 6500).getInt();
+        itemPlateID = config.get("item", "ItemPlateID", 6501).getInt();
         
         config.save();
     }

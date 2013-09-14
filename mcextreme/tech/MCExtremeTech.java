@@ -9,6 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -35,6 +36,9 @@ public class MCExtremeTech
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+    	ModMetadata modMeta = event.getModMetadata();
+ 		modMeta.parent = "MCExtremeCore";
+ 		
         PropertiesTech.loadConfig(new Configuration(event.getSuggestedConfigurationFile()));
     }
     
