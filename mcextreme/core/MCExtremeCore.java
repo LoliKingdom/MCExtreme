@@ -14,13 +14,15 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
 //Kodehawa: Changed version name.
-@Mod(modid="MCExtremeCore", name="MC-Extreme: Core", version="0.1.0")
+@Mod(modid="MCExtremeCore", name="MC-Extreme: Core", version=MCExtremeCore.version)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 
 public class MCExtremeCore
 {
     @Instance("MCExtremeCore")
     public static MCExtremeCore instance;
+    
+    public static final String version = "0.1.0";
     
     @EventHandler
     public void preInitialization(FMLPreInitializationEvent evt){

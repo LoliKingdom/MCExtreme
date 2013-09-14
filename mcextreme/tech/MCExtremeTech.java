@@ -2,6 +2,7 @@ package mcextreme.tech;
 
 import java.util.logging.Level;
 
+import mcextreme.core.MCExtremeCore;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
@@ -15,7 +16,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid="MCExtremeTech", name="MC-Extreme: Tech", version="0.1.0", dependencies = "required-after:MCExtremeCore")
+@Mod(modid="MCExtremeTech", name="MC-Extreme: Tech", version=MCExtremeCore.version, dependencies = "required-after:MCExtremeCore")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MCExtremeTech
 {
@@ -24,7 +25,7 @@ public class MCExtremeTech
 	{
 		public ItemStack getIconItemStack()
 		{
-			return new ItemStack(Block.furnaceBurning, 1, 0);
+			return new ItemStack(Block.furnaceBurning);
 		}
 	};
 			

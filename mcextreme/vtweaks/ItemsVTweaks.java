@@ -8,7 +8,7 @@ public static Item itemLinkIron;
     
     public static void initItems()
     {
-        itemLinkIron = new Item(PropertiesVTweaks.itemLinkIronID).setCreativeTab(MCExtremeVTweaks.tabXVTweaks).setUnlocalizedName("linkIron").setTextureName("mcextreme:linkIron");
+        itemLinkIron = new Item(PropertiesVTweaks.itemLinkIronID).setCreativeTab(MCExtremeVTweaks.tabXVTweaks).setUnlocalizedName("linkIron").setTextureName("mcxvtweaks:linkIron");
     }
 
 }

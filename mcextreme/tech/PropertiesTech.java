@@ -28,6 +28,7 @@ public class PropertiesTech
         
         blockOreID = propBlockOreID.getInt();
         blockStorageID = propBlockStorageID.getInt();
+        
         itemIngotID = config.get("item", "ItemIngotID", 6400).getInt();
         
         config.save();

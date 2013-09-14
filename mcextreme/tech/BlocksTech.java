@@ -16,6 +16,6 @@ public class BlocksTech
         blockStorage = new BlockOreStorageTech(PropertiesTech.blockStorageID, "STORAGE", Material.iron).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("blockAluminium");
 
         Item.itemsList[PropertiesTech.blockOreID] = new ItemBlockTech(PropertiesTech.blockOreID).setUnlocalizedName("blockOreID"); 
-        Item.itemsList[PropertiesTech.blockStorageID] = new ItemBlockTech(PropertiesTech.blockStorageID).setUnlocalizedName("blockStorage"); 
+        Item.itemsList[PropertiesTech.blockStorageID] = new ItemBlockTech(PropertiesTech.blockStorageID).setUnlocalizedName("blockStorageID"); 
     }
 }

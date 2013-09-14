@@ -1,4 +1,4 @@
-package mcextreme.tech;
+package mcextreme.magic;
 
 import java.util.List;
 
@@ -9,19 +9,18 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 
-public class ItemIngotsTech extends Item
+public class ItemCrystalsMagic extends Item
 {
 	//GENERAL3214: Uranium, Mercury, Tungsten, Lead gravity
-    public static String[] names = new String[] {"ingotAluminium", "ingotCopper", "ingotLead", "ingotNickel", "ingotPlatinum", "ingotSilver", "ingotTin", "ingotZinc", "ingotDarkIron"};
+    public static String[] names = new String[] {"cystalAquamarine"};
     public Icon[] textures;
-    //Kodehawa: Fixes to localization.
-	public static String[] localizedNames = new String[] {"Aluminium Ingot", "Copper Ingot", "Lead Ingot", "Nickel Ingot", "Platinum Ingot", "Silver Ingot", "Tin Ingot", "Zinc Ingot", "Dark Iron"};
+	public static String[] localizedNames = new String[] {"Aquamarine Crystal"};
     
-    public ItemIngotsTech(int itemID, String type)
+    public ItemCrystalsMagic(int itemID, String type)
     {
         super(itemID);
         this.setHasSubtypes(true);
-        this.setCreativeTab(MCExtremeTech.tabXTech);
+        this.setCreativeTab(MCExtremeMagic.tabXMagic);
     }
     
     public void getSubItems(int itemID, CreativeTabs tab, List tabList)
@@ -38,7 +37,7 @@ public class ItemIngotsTech extends Item
     	
     	for (int meta = 0; meta < names.length; ++meta)
     	{
-    		this.textures[meta] = iconRegistry.registerIcon("mcxtech:" + names[meta]);
+    		this.textures[meta] = iconRegistry.registerIcon("mcxmagic:" + names[meta]);
     	}
     }
     
@@ -58,32 +57,12 @@ public class ItemIngotsTech extends Item
     
     public String getUnlocalizedName()
     {
-    	ItemStack stack = new ItemStack(ItemsTech.itemIngot);
+    	ItemStack stack = new ItemStack(ItemsMagic.itemCrystal);
     	
     	 if(stack.getItemDamage() <= 9)
     		 
              return "item." + names[stack.getItemDamage()];
     	 
          return "item.test";
-    }
-
-    
-    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) 
-    {
-    	for (int meta = 0; meta < names.length; ++meta)
-    	{
-	    	if (par1ItemStack.getItemDamage() == meta)
-	    	{
-	    		//\u00a7 http://www.minecraftwiki.net/wiki/Classic_server_protocol#Color_Codes
-	    		String[] periodic = new String[] {"13 Al", "29 Cu", "82 Pb", "28 Ni", "78 Pt", "47 Ag", "50 Sn", "30 Zn", "Data missing"};
-	    		
-	    		par3List.add(periodic[meta]);
-	    	}
-	    	
-	    	else
-	    	{
-	    		
-	    	}
-    	}
     }
 }
