@@ -12,7 +12,7 @@ import net.minecraft.util.Icon;
 
 public class BlockOreStorageTech extends Block
 {
-	public static String[] names = new String[] {"blockAluminium", "blockCopper", "blockLead", "blockNickel", "blockPlatinum", "blockSilver", "blockTin", "blockZinc"};
+	public static String[] names = new String[] {"blockAluminium", "blockCopper", "blockLead", "blockNickel", "blockPlatinum", "blockSilver", "blockTin", "blockZinc", "blockUranium", "blockChromium", "blockMercury", "blockArsenic", "blockAntimony", "blockLithium", "blockStrontium", "blockIridium", "blockTitanium", "blockTungsten"};
     public Icon[] textures;
     
     public BlockOreStorageTech(int blockID, String type, Material blockMaterial)

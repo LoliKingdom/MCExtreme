@@ -11,7 +11,7 @@ import net.minecraft.util.Icon;
 
 public class ItemCrystalsMagic extends Item
 {
-	//GENERAL3214: Uranium, Mercury, Tungsten, Lead gravity
+	//GENERAL3214: Add Uranium, Mercury, Tungsten, & Lead gravity
     public static String[] names = new String[] {"cystalAquamarine"};
     public Icon[] textures;
 	public static String[] localizedNames = new String[] {"Aquamarine Crystal"};

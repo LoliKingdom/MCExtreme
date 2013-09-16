@@ -3,6 +3,7 @@ package mcextreme.core;
 import java.util.Arrays;
 import java.util.logging.Level;
 
+import mcextreme.tech.LocalizationTech;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -14,7 +15,6 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-//Kodehawa: Changed version name.
 @Mod(modid="MCExtremeCore", name="MC-Extreme: Core", version=MCExtremeCore.version)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 
@@ -36,6 +36,7 @@ public class MCExtremeCore
  		modMeta.credits = "The MCX Modding Team";
  		modMeta.description = "Changes a lot of things in Minecraft for make it more interesting!";
  		modMeta.url = "https://github.com/EnderExtreme/MCExtreme";
+ 		modMeta.logoFile = "/assets/mcx/textures/gui/logo.png";
  		
  		/* ---------------------------------------------------------------------- */
     }

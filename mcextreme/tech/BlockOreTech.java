@@ -12,7 +12,7 @@ import net.minecraft.util.Icon;
 
 public class BlockOreTech extends Block
 {
-	public static String[] names = new String[] {"oreAluminium", "oreCopper", "oreLead", "oreNickel", "orePlatinum", "oreSilver", "oreTin", "oreZinc"};
+	public static String[] names = new String[] {"oreAluminium", "oreCopper", "oreLead", "oreNickel", "orePlatinum", "oreSilver", "oreTin", "oreZinc", "oreUranium", "oreChromium", "oreMercury", "oreArsenic", "oreAntimony", "oreLithium", "oreStrontium", "oreIridium", "oreTitanium", "oreTungsten"};
     public Icon[] textures;
     
     public BlockOreTech(int blockID, String type, Material blockMaterial)

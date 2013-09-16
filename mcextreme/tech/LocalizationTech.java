@@ -5,8 +5,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class LocalizationTech
 {
-	public static String[] oreNames = new String[] {"Bauxite", "Cuprite", "Galena", "Garnierite", "Platinum Ore", "Acanthite", "Cassiterite", "Sphalerite"};
-	public static String[] storageNames = new String[] {"Block of Aluminium", "Block of Copper", "Block of Lead", "Block of Nickel", "Block of Platinum", "Block of Silver", "Block of Tin", "Block of Zinc"};
+	public static String[] oreNames = new String[] {"Bauxite", "Cuprite", "Galena", "Garnierite", "Platinum Ore", "Acanthite", "Cassiterite", "Sphalerite", "Chromite", "Kunzite", "Celestine", "Realgar", "Uraninite", "Magnetite", "Pyrite", "Iridium", "Titanium Ore", "Tungsten Ore"};
+	public static String[] storageNames = new String[] {"Block of Aluminium", "Block of Copper", "Block of Lead", "Block of Nickel", "Block of Platinum", "Block of Silver", "Block of Tin", "Block of Zinc", "Block of Uranium", "Block of Chromium", "Block of Mercury", "Block of Arsenic", "Block of Antimony", "Block of Lithium", "Block of Strontium", "Block of Iridium", "Block of Titanium", "Block of Tungsten"};
 	
     public static void addNames()
     {
