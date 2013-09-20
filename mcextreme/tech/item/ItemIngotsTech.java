@@ -1,7 +1,8 @@
-package mcextreme.tech;
+package mcextreme.tech.item;
 
 import java.util.List;
 
+import mcextreme.tech.MCExtremeTech;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;

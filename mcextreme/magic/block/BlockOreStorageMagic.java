@@ -1,8 +1,9 @@
-package mcextreme.tech;
+package mcextreme.magic.block;
 
 import java.util.List;
 import java.util.Random;
 
+import mcextreme.magic.MCExtremeMagic;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -10,22 +11,21 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 
-public class BlockOreTech extends Block
+public class BlockOreStorageMagic extends Block
 {
-	public static String[] names = new String[] {"oreAluminium", "oreCopper", "oreLead", "oreNickel", "orePlatinum", "oreSilver", "oreTin", "oreZinc", "oreUranium", "oreChromium", "oreMercury", "oreArsenic", "oreAntimony", "oreLithium", "oreStrontium", "oreIridium", "oreTitanium", "oreTungsten"};
+	public static String[] names = new String[] {"blockAquamarine"};
     public Icon[] textures;
     
-    public BlockOreTech(int blockID, String type, Material blockMaterial)
+    public BlockOreStorageMagic(int blockID, String type, Material blockMaterial)
     {
         super(blockID, blockMaterial);
-        this.setCreativeTab(MCExtremeTech.tabXTech);
     }
     
     public void getSubBlocks(int blockID, CreativeTabs tab, List tabList)
     {
     	for (int meta = 0; meta < names.length; ++meta)
     	{
-	        tabList.add(new ItemStack(this, 1, meta));
+	        tabList.add(new ItemStack(blockID, 1, meta));
     	}
     }
     
@@ -51,7 +51,7 @@ public class BlockOreTech extends Block
     
     public String getUnlocalizedName() 
     {
-    	ItemStack stack = new ItemStack(BlocksTech.blockOre);
+    	ItemStack stack = new ItemStack(BlocksMagic.blockStorage);
     	
     	return names[stack.getItemDamage()];
     }

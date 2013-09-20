@@ -1,6 +1,8 @@
-package mcextreme.tech;
+package mcextreme.tech.block;
 
-import mcextreme.magic.BlockMagicPortal;
+import mcextreme.magic.block.BlockMagicPortal;
+import mcextreme.tech.PropertiesTech;
+import mcextreme.tech.item.ItemBlockTech;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;

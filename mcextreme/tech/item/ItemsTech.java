@@ -1,5 +1,6 @@
-package mcextreme.tech;
+package mcextreme.tech.item;
 
+import mcextreme.tech.PropertiesTech;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 

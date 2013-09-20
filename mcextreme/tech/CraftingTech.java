@@ -5,6 +5,10 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 
+import mcextreme.tech.block.BlockOreStorageTech;
+import mcextreme.tech.block.BlockOreTech;
+import mcextreme.tech.block.BlocksTech;
+import mcextreme.tech.item.ItemsTech;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
@@ -19,6 +23,7 @@ public class CraftingTech
         for (int meta = 0; meta < BlockOreStorageTech.names.length; ++meta)
         {
         	CraftingManager.getInstance().addRecipe(new ItemStack(BlocksTech.blockStorage.blockID, 1, meta), new Object[] {"###", "###", "###", '#', new ItemStack(ItemsTech.itemIngot.itemID, 1, meta)});
+        	CraftingManager.getInstance().addShapelessRecipe(new ItemStack(ItemsTech.itemIngot.itemID, 9, meta), new Object[] {new ItemStack(BlocksTech.blockStorage.blockID, 1, meta)});
         }
     }
     

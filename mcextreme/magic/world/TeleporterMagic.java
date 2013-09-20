@@ -1,4 +1,4 @@
-package mcextreme.magic;
+package mcextreme.magic.world;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -13,7 +13,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.WorldServer;
 
-public class MagicTeleporter
+public class TeleporterMagic
 {
     //TODO: Cleanup
     

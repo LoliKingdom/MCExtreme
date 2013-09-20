@@ -1,5 +1,6 @@
 package mcextreme.magic;
 
+import mcextreme.magic.block.BlocksMagic;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 

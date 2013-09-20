@@ -1,4 +1,4 @@
-package mcextreme.magic;
+package mcextreme.magic.item;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;

@@ -1,5 +1,7 @@
-package mcextreme.vtweaks;
+package mcextreme.vtweaks.item;
 
+import mcextreme.vtweaks.MCExtremeVTweaks;
+import mcextreme.vtweaks.PropertiesVTweaks;
 import net.minecraft.item.Item;
 
 public class ItemsVTweaks 

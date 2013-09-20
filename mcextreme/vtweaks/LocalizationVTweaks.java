@@ -1,5 +1,6 @@
 package mcextreme.vtweaks;
 
+import mcextreme.vtweaks.item.ItemsVTweaks;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class LocalizationVTweaks

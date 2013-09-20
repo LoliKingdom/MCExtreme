@@ -1,4 +1,4 @@
-package mcextreme.tech;
+package mcextreme.tech.item;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;

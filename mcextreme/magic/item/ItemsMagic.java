@@ -1,5 +1,6 @@
-package mcextreme.magic;
+package mcextreme.magic.item;
 
+import mcextreme.magic.PropertiesMagic;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 

@@ -3,6 +3,7 @@ package mcextreme.vtweaks;
 import java.util.Arrays;
 import java.util.logging.Level;
 
+import mcextreme.vtweaks.item.ItemsVTweaks;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;

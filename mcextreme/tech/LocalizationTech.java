@@ -1,5 +1,6 @@
 package mcextreme.tech;
 
+import mcextreme.tech.block.BlocksTech;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 

@@ -1,8 +1,9 @@
-package mcextreme.magic;
+package mcextreme.magic.block;
 
 import java.util.List;
 import java.util.Random;
 
+import mcextreme.magic.MCExtremeMagic;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;

@@ -1,4 +1,4 @@
-package mcextreme.tech;
+package mcextreme.tech.world.gen.feature;
 
 import java.util.Random;
 import cpw.mods.fml.common.IWorldGenerator;

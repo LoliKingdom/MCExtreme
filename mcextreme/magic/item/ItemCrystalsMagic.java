@@ -1,7 +1,8 @@
-package mcextreme.magic;
+package mcextreme.magic.item;
 
 import java.util.List;
 
+import mcextreme.magic.MCExtremeMagic;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;

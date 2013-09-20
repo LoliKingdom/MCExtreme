@@ -3,6 +3,8 @@ package mcextreme.tech;
 import java.util.logging.Level;
 
 import mcextreme.core.MCExtremeCore;
+import mcextreme.tech.block.BlocksTech;
+import mcextreme.tech.item.ItemsTech;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
@@ -51,6 +53,7 @@ public class MCExtremeTech
         CraftingTech.addRecipes();
         CraftingTech.addSmeltingRecipes();
         CraftingTech.registerInOreDict();
+        EnumsTech.setHarvestLevels();
     }
     
     @EventHandler
