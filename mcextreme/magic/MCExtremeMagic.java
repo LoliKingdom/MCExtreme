@@ -32,7 +32,9 @@ public class MCExtremeMagic
 			return new ItemStack(Item.brewingStand);
 		}
 	};
-			
+		
+	public static final String version = "0.1.0";
+	
 	@SidedProxy(clientSide="mcextreme.magic.ClientProxy", serverSide="mcextreme.magic.ServerProxy")
 	public static ServerProxy proxy;
 	
@@ -64,6 +66,5 @@ public class MCExtremeMagic
     @EventHandler
     public void modsLoadedpostInit(FMLPostInitializationEvent event)
     {
-    	FMLLog.log(Level.INFO, "MCExtreme Magic Loaded!"); 
     }
 }

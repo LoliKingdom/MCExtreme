@@ -47,6 +47,31 @@ public class MCExtremeCore
     @EventHandler
     public void modsLoadedpostInit(FMLPostInitializationEvent event)
     {
-    	FMLLog.log(Level.INFO, "MCExtreme Core Loaded!"); 
+    	String pluginsFound = "[MC-X] Installed plugins:";
+    	boolean first = true;
+    	
+    	String[] classes = new String[] { "magic.MCExtremeMagic", "tech.MCExtremeTech", "vtweaks.MCExtremeVTweaks" };
+    	String[] names = new String[] {	"Magic ", "Tech ", "VanillaTweaks " };
+    	
+    	for (int i = 0; i < classes.length; i++)
+    	{
+    		String version, label = "";
+    		boolean failed = false;
+    		
+    		try
+    		{
+    			version = (String) Class.forName("mcextreme." + classes[i]).getField("version").get(null);
+    			label = (first ? " " : ", ") + names[i] + version;
+    			first = false;
+    		}
+    		catch (Exception e) 
+    		{
+    			failed = true;
+    		}
+    		
+    		if (!failed) pluginsFound = pluginsFound + label;
+    	}
+    	
+    	FMLLog.log(Level.INFO, pluginsFound); 
     }
 }

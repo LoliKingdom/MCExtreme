@@ -32,6 +32,8 @@ public class MCExtremeTech
 		}
 	};
 			
+	public static final String version = "0.1.0";
+	
     @Instance("MCExtremeTech")
     public static MCExtremeTech instance;
     
@@ -59,6 +61,5 @@ public class MCExtremeTech
     @EventHandler
     public void modsLoadedpostInit(FMLPostInitializationEvent event)
     {
-    	FMLLog.log(Level.INFO, "MCExtreme Tech Loaded!"); 
     }
 }

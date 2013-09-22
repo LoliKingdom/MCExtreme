@@ -29,6 +29,8 @@ public class MCExtremeVTweaks
 			return new ItemStack(ItemsVTweaks.itemLink);
 		}
 	};
+	
+	public static final String version = "0.1.0";
 		
     @Instance("MCExtremeVTweaks")
     public static MCExtremeVTweaks instance;
@@ -53,6 +55,5 @@ public class MCExtremeVTweaks
     @EventHandler
     public void modsLoadedpostInit(FMLPostInitializationEvent event)
     {
-    	FMLLog.log(Level.INFO, "MCExtreme Vanilla Tweaks Loaded!"); 
     }
 }
