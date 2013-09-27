@@ -1,5 +1,6 @@
 package mcextreme.vtweaks;
 
+import mcextreme.vtweaks.blocks.BlockNonSolidLeaves;
 import mcextreme.vtweaks.item.ItemsVTweaks;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -48,7 +49,7 @@ public class MCExtremeVTweaks
     	ItemsVTweaks.initItems();
         LocalizationVTweaks.addNames();
         CraftingVTweaks.addRecipes();
-        Block blockLeaves = new BlockNonSolidLeaves(18).setUnlocalizedName("leaves");
+        Block blockLeaves = new BlockNonSolidLeaves(18).setHardness(0.2F).setLightOpacity(1).setStepSound(Block.soundGrassFootstep).setUnlocalizedName("leaves").setTextureName("leaves");
     }
     
     @EventHandler
