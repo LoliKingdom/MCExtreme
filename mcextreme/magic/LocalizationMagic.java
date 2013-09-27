@@ -12,6 +12,7 @@ public class LocalizationMagic
     public static void addNames()
     {
         LanguageRegistry.addName(BlocksMagic.blockMagicPortal, "Magic Portal");
+        LanguageRegistry.addName(BlocksMagic.blockSolidEvil, "Solidifed Evil");
         
         for (int meta = 0; meta < oreNames.length; ++meta)
         	LanguageRegistry.addName(new ItemStack(BlocksMagic.blockOre, 1, meta), oreNames[meta]);

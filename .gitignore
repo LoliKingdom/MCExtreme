@@ -8,6 +8,7 @@
 *.ear
 *.bat
 *.sh
+*.lmza
 
 /cpw
 /ibxm

@@ -64,6 +64,6 @@ public class CraftingVTweaks
         CraftingManager.getInstance().addRecipe(new ItemStack(Block.bookShelf), new Object[] {"###", "XXX", "###", '#', Block.planks, 'X', Item.enchantedBook});
         
         CraftingManager.getInstance().addRecipe(new ItemStack(ItemsVTweaks.itemLink), new Object[] {"#", '#', Item.ingotIron});
-        CraftingManager.getInstance().addRecipe(new ItemStack(ItemsVTweaks.itemPlate), new Object[] {"##", '#', ItemsVTweaks.itemLink});
+        CraftingManager.getInstance().addRecipe(new ItemStack(ItemsVTweaks.itemPlate), new Object[] {"##", '#', Item.ingotIron});
     }
 }
