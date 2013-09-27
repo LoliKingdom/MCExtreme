@@ -63,6 +63,7 @@ public class MCExtremeMagic
         proxy.setCustomRenderers();
         proxy.registerRenderers();
         GameRegistry.registerBlock(BlocksMagic.blockSolidEvil, "Solidified Evil");
+        GameRegistry.registerBlock(BlocksMagic.blockWorldsEnd, "The End of the World as you knew it");
         GameRegistry.registerBlock(BlocksMagic.blockLiquidDark, "Liquid Darkness");
         
     }

@@ -12,6 +12,7 @@ public class PropertiesMagic
     public static int itemCrystalID;
     public static int itembucketdarkID;
     public static int blockSolidEvilID;
+    public static int blockWorldsEndID;
     
     public static final int liquidDarkID = 1005;
     
@@ -27,6 +28,7 @@ public class PropertiesMagic
         blockOreID = config.get("block", "BlockOreID", 541).getInt();
         blockStorageID = config.get("block", "BlockStorageID", 542).getInt();
         blockSolidEvilID = config.get("block", "BlockSolidEvilID", 543).getInt();
+        blockWorldsEndID = config.get("block", "BlockWorldsEndID", 544).getInt();
         
         itemCrystalID = config.get("item", "ItemCrystalID", 6300).getInt();
         itembucketdarkID = config.get("item", "ItemDarkBucketID", 6301).getInt();
