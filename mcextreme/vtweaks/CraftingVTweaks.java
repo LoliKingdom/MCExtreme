@@ -56,14 +56,14 @@ public class CraftingVTweaks
         CraftingManager.getInstance().addRecipe(new ItemStack(Item.legsChain), new Object[] {"###", "# #", "# #", '#', ItemsVTweaks.itemLink});
         CraftingManager.getInstance().addRecipe(new ItemStack(Item.bootsChain), new Object[] {"# #", "# #", '#', ItemsVTweaks.itemLink});
         
-        CraftingManager.getInstance().addRecipe(new ItemStack(Item.helmetIron), new Object[] {"I#I", "#X#", "I#I", 'I', Item.leather, '#', ItemsVTweaks.itemPlate, 'X', Item.helmetChain});
-        CraftingManager.getInstance().addRecipe(new ItemStack(Item.plateIron), new Object[] {"I#I", "#X#", "I#I", 'I', Item.leather, '#', ItemsVTweaks.itemPlate, 'X', Item.plateChain});
-        CraftingManager.getInstance().addRecipe(new ItemStack(Item.legsIron), new Object[] {"I#I", "#X#", "I#I", 'I', Item.leather, '#', ItemsVTweaks.itemPlate, 'X', Item.legsChain});
-        CraftingManager.getInstance().addRecipe(new ItemStack(Item.bootsIron), new Object[] {"I#I", "#X#", "I#I", 'I', Item.leather, '#', ItemsVTweaks.itemPlate, 'X', Item.bootsChain});
+        CraftingManager.getInstance().addRecipe(new ItemStack(Item.helmetIron), new Object[] {"I#I", "#X#", "   ", 'I', ItemsVTweaks.itemPlate, '#', Item.leather, 'X', Item.helmetChain});
+        CraftingManager.getInstance().addRecipe(new ItemStack(Item.plateIron), new Object[] {"I#I", "#X#", "I#I", 'I', ItemsVTweaks.itemPlate, '#', Item.leather, 'X', Item.plateChain});
+        CraftingManager.getInstance().addRecipe(new ItemStack(Item.legsIron), new Object[] {"I#I", "#X#", "I#I", 'I', ItemsVTweaks.itemPlate, '#', Item.leather, 'X', Item.legsChain});
+        CraftingManager.getInstance().addRecipe(new ItemStack(Item.bootsIron), new Object[] {"   ", "#X#", "I#I", 'I', ItemsVTweaks.itemPlate, '#', Item.leather, 'X', Item.bootsChain});
         
         CraftingManager.getInstance().addRecipe(new ItemStack(Block.bookShelf), new Object[] {"###", "XXX", "###", '#', Block.planks, 'X', Item.enchantedBook});
         
         CraftingManager.getInstance().addRecipe(new ItemStack(ItemsVTweaks.itemLink), new Object[] {"#", '#', Item.ingotIron});
-        CraftingManager.getInstance().addRecipe(new ItemStack(ItemsVTweaks.itemPlate), new Object[] {"##", '#', Item.ingotIron});
+        CraftingManager.getInstance().addShapelessRecipe(new ItemStack(ItemsVTweaks.itemPlate),new ItemStack(Item.ingotIron), new ItemStack(Item.ingotIron));
     }
 }

@@ -1,17 +1,14 @@
 package mcextreme.vtweaks;
 
-import java.util.Arrays;
-import java.util.logging.Level;
-
 import mcextreme.vtweaks.item.ItemsVTweaks;
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
-import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -47,9 +44,11 @@ public class MCExtremeVTweaks
     @EventHandler
     public void load(FMLInitializationEvent event)
     {
+    	Block.blocksList[18] = null;
     	ItemsVTweaks.initItems();
         LocalizationVTweaks.addNames();
         CraftingVTweaks.addRecipes();
+        Block blockLeaves = new BlockNonSolidLeaves(18).setUnlocalizedName("leaves");
     }
     
     @EventHandler
