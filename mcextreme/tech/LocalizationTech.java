@@ -18,6 +18,6 @@ public class LocalizationTech
 	        LanguageRegistry.addName(new ItemStack(BlocksTech.blockStorage, 1, meta), storageNames[meta]);
         
         //Tabs
-    	LanguageRegistry.instance().addStringLocalization("itemGroup.extreme_tab_tech", "MC-Extreme: Tech");
+    	LanguageRegistry.instance().addStringLocalization("itemGroup.mcx.tech", "MC-Extreme: Tech");
     }
 }

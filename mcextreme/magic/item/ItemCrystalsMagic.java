@@ -2,6 +2,7 @@ package mcextreme.magic.item;
 
 import java.util.List;
 
+import mcextreme.core.MCExtremeCore;
 import mcextreme.magic.MCExtremeMagic;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -21,7 +22,7 @@ public class ItemCrystalsMagic extends Item
     {
         super(itemID);
         this.setHasSubtypes(true);
-        this.setCreativeTab(MCExtremeMagic.tabXMagic);
+        this.setCreativeTab(MCExtremeCore.tabMagic);
     }
     
     public void getSubItems(int itemID, CreativeTabs tab, List tabList)
@@ -38,7 +39,7 @@ public class ItemCrystalsMagic extends Item
     	
     	for (int meta = 0; meta < names.length; ++meta)
     	{
-    		this.textures[meta] = iconRegistry.registerIcon("mcxmagic:" + names[meta]);
+    		this.textures[meta] = iconRegistry.registerIcon("mcextreme:/magic/" + names[meta]);
     	}
     }
     

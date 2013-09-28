@@ -1,6 +1,7 @@
 package mcextreme.magic.block;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import mcextreme.core.MCExtremeCore;
 import mcextreme.magic.MCExtremeMagic;
 import mcextreme.magic.PropertiesMagic;
 import mcextreme.magic.item.ItemBlockMagic;
@@ -32,8 +33,8 @@ public class BlocksMagic
     	
         blockMagicPortal = new BlockMagicPortal(PropertiesMagic.blockMagicPortalID).setHardness(-1.0F).setResistance(6000000.0F).setLightValue(1.0F).setUnlocalizedName("portalMagic");
         //Corrupt Stuff
-        blockSolidEvil = new BlockSolidEvil(PropertiesMagic.blockSolidEvilID, Material.rock).setHardness(50.0F).setResistance(2000.0F).setUnlocalizedName("solidEvil").setCreativeTab(MCExtremeMagic.tabXMagic);
-        blockWorldsEnd = new BlockWorldsEnd(PropertiesMagic.blockWorldsEndID, Material.rock).setHardness(-1.0F).setResistance(6000000.0F).setUnlocalizedName("worldEnd").setCreativeTab(MCExtremeMagic.tabXMagic);
+        blockSolidEvil = new BlockSolidEvil(PropertiesMagic.blockSolidEvilID, Material.rock).setHardness(50.0F).setResistance(2000.0F).setUnlocalizedName("solidEvil").setCreativeTab(MCExtremeCore.tabMagic);
+        blockWorldsEnd = new BlockWorldsEnd(PropertiesMagic.blockWorldsEndID, Material.rock).setHardness(-1.0F).setResistance(6000000.0F).setUnlocalizedName("worldEnd").setCreativeTab(MCExtremeCore.tabMagic);
         blockLiquidDark = new BlockLiquidDark(liquidDarkID).setUnlocalizedName("liquidDarkness");
         
         blockOre = new BlockOreMagic(PropertiesMagic.blockOreID, "ORE", Material.rock).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("oreAquamarine");

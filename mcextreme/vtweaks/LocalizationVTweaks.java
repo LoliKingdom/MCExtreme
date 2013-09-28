@@ -10,6 +10,6 @@ public class LocalizationVTweaks
 	    LanguageRegistry.addName(ItemsVTweaks.itemLink, "Iron Link");
 	    LanguageRegistry.addName(ItemsVTweaks.itemPlate, "Iron Plate");
 	    
-    	LanguageRegistry.instance().addStringLocalization("itemGroup.extreme_tab_vtweaks", "MC-Extreme: Vanilla Tweaks");
+    	LanguageRegistry.instance().addStringLocalization("itemGroup.mcx.vtweaks", "MC-Extreme: Vanilla Tweaks");
     }
 }

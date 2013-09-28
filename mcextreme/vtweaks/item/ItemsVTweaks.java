@@ -1,5 +1,6 @@
 package mcextreme.vtweaks.item;
 
+import mcextreme.core.MCExtremeCore;
 import mcextreme.vtweaks.MCExtremeVTweaks;
 import mcextreme.vtweaks.PropertiesVTweaks;
 import net.minecraft.item.Item;
@@ -11,8 +12,8 @@ public class ItemsVTweaks
     
     public static void initItems()
     {
-        itemLink = new Item(PropertiesVTweaks.itemLinkID).setCreativeTab(MCExtremeVTweaks.tabXVTweaks).setUnlocalizedName("linkIron").setTextureName("mcxvtweaks:linkIron");
-        itemPlate = new Item(PropertiesVTweaks.itemPlateID).setCreativeTab(MCExtremeVTweaks.tabXVTweaks).setUnlocalizedName("plateIron").setTextureName("mcxvtweaks:plateIron");
+        itemLink = new Item(PropertiesVTweaks.itemLinkID).setCreativeTab(MCExtremeCore.tabVanillaTweaks).setUnlocalizedName("linkIron").setTextureName("mcextreme:/vtweaks/linkIron");
+        itemPlate = new Item(PropertiesVTweaks.itemPlateID).setCreativeTab(MCExtremeCore.tabVanillaTweaks).setUnlocalizedName("plateIron").setTextureName("mcextreme:/vtweaks/plateIron");
     }
 
 }

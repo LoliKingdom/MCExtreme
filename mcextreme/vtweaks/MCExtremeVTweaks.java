@@ -1,5 +1,7 @@
 package mcextreme.vtweaks;
 
+import mcextreme.core.MCExtremeCore;
+import mcextreme.core.utils.CreativeTab;
 import mcextreme.vtweaks.blocks.BlockNonSolidLeaves;
 import mcextreme.vtweaks.item.ItemsVTweaks;
 import net.minecraft.block.Block;
@@ -18,16 +20,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 @Mod(modid="MCExtremeVTweaks", name="MC-Extreme: Vanilla Tweaks", version="0.1.0", dependencies = "required-after:MCExtremeCore")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MCExtremeVTweaks
-{
-	//Tab 2
-	public static CreativeTabs tabXVTweaks = new CreativeTabs("extreme_tab_vtweaks")
-	{
-		public ItemStack getIconItemStack()
-		{
-			return new ItemStack(ItemsVTweaks.itemLink);
-		}
-	};
-	
+{	
 	public static final String version = "0.1.0";
 		
     @Instance("MCExtremeVTweaks")
@@ -50,10 +43,7 @@ public class MCExtremeVTweaks
         LocalizationVTweaks.addNames();
         CraftingVTweaks.addRecipes();
         Block blockLeaves = new BlockNonSolidLeaves(18).setHardness(0.2F).setLightOpacity(1).setStepSound(Block.soundGrassFootstep).setUnlocalizedName("leaves").setTextureName("leaves");
-    }
-    
-    @EventHandler
-    public void modsLoadedpostInit(FMLPostInitializationEvent event)
-    {
+
+        MCExtremeCore.tabVanillaTweaks = new CreativeTab("mcx.vtweaks", 3).setIconItemStack(new ItemStack(ItemsVTweaks.itemLink));
     }
 }

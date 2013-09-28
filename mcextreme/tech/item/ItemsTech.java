@@ -11,7 +11,7 @@ public class ItemsTech
     
     public static void initItems()
     {
-        itemIngot = new ItemIngotsTech(PropertiesTech.itemIngotID, "INGOT").setUnlocalizedName("ingotAluminium");
+        itemIngot = new ItemIngotsTech(PropertiesTech.itemIngotID, "INGOT").setUnlocalizedName("ingotMCExtreme");
     }
     
 }

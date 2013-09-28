@@ -3,6 +3,7 @@ package mcextreme.magic.block;
 import java.util.List;
 import java.util.Random;
 
+import mcextreme.core.MCExtremeCore;
 import mcextreme.magic.MCExtremeMagic;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -18,7 +19,7 @@ public class BlockMagicPortal extends Block//Container
     public BlockMagicPortal(int blockID)
     {
         super(blockID, Material.portal);
-        this.setCreativeTab(MCExtremeMagic.tabXMagic);
+        this.setCreativeTab(MCExtremeCore.tabMagic);
     }
     
     /*
@@ -131,9 +132,10 @@ public class BlockMagicPortal extends Block//Container
         return 0;
     }
      */
+    
     public void registerIcons(IconRegister iconRegistry) 
 	{
-		this.blockIcon = iconRegistry.registerIcon("mcxmagic:" + this.getUnlocalizedName().substring(5));
+		this.blockIcon = iconRegistry.registerIcon("mcextreme:/magic/:" + this.getUnlocalizedName().substring(5));
 	}
     
 }

@@ -3,6 +3,7 @@ package mcextreme.tech.block;
 import java.util.List;
 import java.util.Random;
 
+import mcextreme.core.MCExtremeCore;
 import mcextreme.tech.MCExtremeTech;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -19,7 +20,7 @@ public class BlockOreTech extends Block
     public BlockOreTech(int blockID, String type, Material blockMaterial)
     {
         super(blockID, blockMaterial);
-        this.setCreativeTab(MCExtremeTech.tabXTech);
+        this.setCreativeTab(MCExtremeCore.tabTech);
     }
     
     public void getSubBlocks(int blockID, CreativeTabs tab, List tabList)
@@ -36,7 +37,7 @@ public class BlockOreTech extends Block
     	
     	for (int meta = 0; meta < names.length; ++meta)
     	{
-    		this.textures[meta] = iconRegistry.registerIcon("mcxtech:" + names[meta]);
+    		this.textures[meta] = iconRegistry.registerIcon("mcextreme:/tech/" + names[meta]);
     	}
     }
     

@@ -2,6 +2,7 @@ package mcextreme.tech.item;
 
 import java.util.List;
 
+import mcextreme.core.MCExtremeCore;
 import mcextreme.tech.MCExtremeTech;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -21,7 +22,7 @@ public class ItemIngotsTech extends Item
     {
         super(itemID);
         this.setHasSubtypes(true);
-        this.setCreativeTab(MCExtremeTech.tabXTech);
+        this.setCreativeTab(MCExtremeCore.tabTech);
     }
     
     public void getSubItems(int itemID, CreativeTabs tab, List tabList)
@@ -38,7 +39,7 @@ public class ItemIngotsTech extends Item
     	
     	for (int meta = 0; meta < names.length; ++meta)
     	{
-    		this.textures[meta] = iconRegistry.registerIcon("mcxtech:" + names[meta]);
+    		this.textures[meta] = iconRegistry.registerIcon("mcextreme:/tech/" + names[meta]);
     	}
     }
     

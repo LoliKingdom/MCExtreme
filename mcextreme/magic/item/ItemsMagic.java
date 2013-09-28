@@ -14,7 +14,7 @@ public class ItemsMagic
     public static void initItems()
     {
         itemCrystal = new ItemCrystalsMagic(PropertiesMagic.itemCrystalID, "CRYSTAL").setUnlocalizedName("cystalAquamarine");
-        bucketDarkness = new Item(PropertiesMagic.itembucketdarkID).setUnlocalizedName("darkBucket");
+        bucketDarkness = new Item(PropertiesMagic.itembucketdarkID).setUnlocalizedName("darkBucket").setTextureName("mcextreme:/magic/darkBucket");
     }
     
 }

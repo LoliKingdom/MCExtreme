@@ -22,6 +22,6 @@ public class LocalizationMagic
         	LanguageRegistry.addName(new ItemStack(BlocksMagic.blockStorage, 1, meta), storageNames[meta]);
         
         //Tabs
-    	LanguageRegistry.instance().addStringLocalization("itemGroup.extreme_tab_magic", "MC-Extreme: Magic");
+    	LanguageRegistry.instance().addStringLocalization("itemGroup.mcx.magic", "MC-Extreme: Magic");
     }
 }

@@ -13,7 +13,7 @@ import net.minecraft.util.Icon;
 
 public class BlockOreStorageMagic extends Block
 {
-	public static String[] names = new String[] {"blockAquamarine"};
+	public static String[] names = new String[] { "blockAquamarine" };
     public Icon[] textures;
     
     public BlockOreStorageMagic(int blockID, String type, Material blockMaterial)
@@ -35,7 +35,7 @@ public class BlockOreStorageMagic extends Block
     	
     	for (int meta = 0; meta < names.length; ++meta)
     	{
-    		this.textures[meta] = iconRegistry.registerIcon("mcxtech:" + names[meta]);
+    		this.textures[meta] = iconRegistry.registerIcon("mcextreme:/magic/" + names[meta]);
     	}
     }
     

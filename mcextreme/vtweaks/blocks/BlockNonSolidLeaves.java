@@ -14,7 +14,7 @@ public class BlockNonSolidLeaves extends BlockLeaves
 		super(id);
 	}
 	
-	public AxisAlignedBB getCollisionBoundingBoxFromPool(World par1World, int par2, int par3, int par4)
+	public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z)
 	{
 		return null;
 	}
@@ -29,13 +29,13 @@ public class BlockNonSolidLeaves extends BlockLeaves
 		return false;
 	}
 	
-	public int getRenderType()
+	public int getRenderBlockPass()
     {
-        return 0;
+        return 1;
     }
 	
-	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
+	public boolean shouldSideBeRendered(IBlockAccess world, int x, int y, int z, int side)
     {
-        return true;
+	    return world.getBlockId(x, y, z) == blockID ? false : super.shouldSideBeRendered(world, x, y, z, side);
     }
 }

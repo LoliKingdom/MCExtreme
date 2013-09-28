@@ -3,6 +3,7 @@ package mcextreme.magic;
 import java.util.logging.Level;
 
 import mcextreme.core.MCExtremeCore;
+import mcextreme.core.utils.CreativeTab;
 import mcextreme.magic.block.BlocksMagic;
 import mcextreme.magic.item.ItemsMagic;
 import net.minecraft.creativetab.CreativeTabs;
@@ -25,19 +26,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MCExtremeMagic
 {
-	//Tab 2
-	public static CreativeTabs tabXMagic = new CreativeTabs("extreme_tab_magic")
-	{
-		public ItemStack getIconItemStack()
-		{
-			return new ItemStack(Item.brewingStand);
-		}
-	};
-		
 	public static final String version = "0.1.0";
-	
-	@SidedProxy(clientSide="mcextreme.magic.ClientProxy", serverSide="mcextreme.magic.ServerProxy")
-	public static ServerProxy proxy;
 	
 	@Instance("MCExtremeMagic")
     public static MCExtremeMagic instance;
@@ -60,16 +49,10 @@ public class MCExtremeMagic
         CraftingMagic.addSmeltingRecipes();
         CraftingMagic.registerInOreDict();
         EnumsMagic.setHarvestLevels();
-        proxy.setCustomRenderers();
-        proxy.registerRenderers();
         GameRegistry.registerBlock(BlocksMagic.blockSolidEvil, "Solidified Evil");
         GameRegistry.registerBlock(BlocksMagic.blockWorldsEnd, "The End of the World as you knew it");
         GameRegistry.registerBlock(BlocksMagic.blockLiquidDark, "Liquid Darkness");
         
-    }
-    
-    @EventHandler
-    public void modsLoadedpostInit(FMLPostInitializationEvent event)
-    {
+        MCExtremeCore.tabMagic = new CreativeTab("mcx.magic", 1).setIconItemStack(new ItemStack(Item.brewingStand));
     }
 }
