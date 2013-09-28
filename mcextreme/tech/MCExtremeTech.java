@@ -1,7 +1,9 @@
 package mcextreme.tech;
 
+import java.io.File;
 import java.util.logging.Level;
 
+import mcextreme.config.MCExtremeConfig;
 import mcextreme.core.MCExtremeCore;
 import mcextreme.core.utils.CreativeTab;
 import mcextreme.tech.block.BlocksTech;
@@ -20,11 +22,11 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid="MCExtremeTech", name="MC-Extreme: Tech", version=MCExtremeCore.version, dependencies = "required-after:MCExtremeCore")
+@Mod(modid="MCExtremeTech", name="MC-X Tech", version=MCExtremeCore.version, dependencies = "required-after:MCExtremeCore")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MCExtremeTech
 {			
-	public static final String version = "0.1.0";
+	public static final String version = "0.2.1";
 	
     @Instance("MCExtremeTech")
     public static MCExtremeTech instance;
@@ -37,7 +39,7 @@ public class MCExtremeTech
     	ModMetadata modMeta = event.getModMetadata();
  		modMeta.parent = "MCExtremeCore";
  		
-        PropertiesTech.loadConfig(new Configuration(event.getSuggestedConfigurationFile()));
+ 		MCExtremeConfig.loadConfig(new Configuration(new File(event.getModConfigurationDirectory() + "/mcextreme", "mcx-tech.cfg")), "TECH");
     }
     
     @EventHandler

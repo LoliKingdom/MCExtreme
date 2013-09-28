@@ -1,7 +1,9 @@
 package mcextreme.magic;
 
+import java.io.File;
 import java.util.logging.Level;
 
+import mcextreme.config.MCExtremeConfig;
 import mcextreme.core.MCExtremeCore;
 import mcextreme.core.utils.CreativeTab;
 import mcextreme.magic.block.BlocksMagic;
@@ -22,11 +24,11 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid="MCExtremeMagic", name="MC-Extreme: Magic", version=MCExtremeCore.version, dependencies = "required-after:MCExtremeCore")
+@Mod(modid="MCExtremeMagic", name="MC-X Magic", version=MCExtremeCore.version, dependencies = "required-after:MCExtremeCore")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MCExtremeMagic
 {
-	public static final String version = "0.1.0";
+	public static final String version = "0.2.1";
 	
 	@Instance("MCExtremeMagic")
     public static MCExtremeMagic instance;
@@ -39,7 +41,7 @@ public class MCExtremeMagic
     	ModMetadata modMeta = event.getModMetadata();
  		modMeta.parent = "MCExtremeCore";
  		
-        PropertiesMagic.loadConfig(new Configuration(event.getSuggestedConfigurationFile()));
+        MCExtremeConfig.loadConfig(new Configuration(new File(event.getModConfigurationDirectory() + "/mcextreme", "mcx-magic.cfg")), "MAGIC");
     }
     
     @EventHandler

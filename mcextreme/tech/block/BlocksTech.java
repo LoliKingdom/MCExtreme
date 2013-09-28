@@ -1,7 +1,7 @@
 package mcextreme.tech.block;
 
+import mcextreme.config.MCExtremeConfig;
 import mcextreme.magic.block.BlockMagicPortal;
-import mcextreme.tech.PropertiesTech;
 import mcextreme.tech.item.ItemBlockTech;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -14,10 +14,10 @@ public class BlocksTech
     
     public static void initBlocks()
     {
-        blockOre = new BlockOreTech(PropertiesTech.blockOreID, "ORE", Material.rock).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("oreAluminium");
-        blockStorage = new BlockOreStorageTech(PropertiesTech.blockStorageID, "STORAGE", Material.iron).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("blockAluminium");
+        blockOre = new BlockOreTech(MCExtremeConfig.blockTechOreID, "ORE", Material.rock).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("oreAluminium");
+        blockStorage = new BlockOreStorageTech(MCExtremeConfig.blockTechStorageID, "STORAGE", Material.iron).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("blockAluminium");
 
-        Item.itemsList[PropertiesTech.blockOreID] = new ItemBlockTech(PropertiesTech.blockOreID).setUnlocalizedName("blockOreID"); 
-        Item.itemsList[PropertiesTech.blockStorageID] = new ItemBlockTech(PropertiesTech.blockStorageID).setUnlocalizedName("blockStorageID"); 
+        Item.itemsList[MCExtremeConfig.blockTechOreID] = new ItemBlockTech(MCExtremeConfig.blockTechOreID).setUnlocalizedName("blockOreID"); 
+        Item.itemsList[MCExtremeConfig.blockTechStorageID] = new ItemBlockTech(MCExtremeConfig.blockTechStorageID).setUnlocalizedName("blockStorageID"); 
     }
 }
