@@ -32,6 +32,8 @@ public class MCExtremeTech
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        MCExtremeCore.tabTech = new CreativeTab("mcx.tech", 2);
+        
     	ModMetadata modMeta = event.getModMetadata();
  		modMeta.parent = "MCExtremeCore";
  		
@@ -49,6 +51,6 @@ public class MCExtremeTech
         CraftingTech.registerInOreDict();
         EnumsTech.setHarvestLevels();
         
-        MCExtremeCore.tabTech = new CreativeTab("mcx.tech", 2).setIconItemStack(new ItemStack(Block.furnaceBurning));
+        ((CreativeTab)MCExtremeCore.tabTech).setIconItemStack(new ItemStack(Block.furnaceBurning));
     }
 }

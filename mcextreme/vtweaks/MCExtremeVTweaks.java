@@ -29,6 +29,8 @@ public class MCExtremeVTweaks
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        MCExtremeCore.tabVanillaTweaks = new CreativeTab("mcx.vtweaks", 3);
+        
     	ModMetadata modMeta = event.getModMetadata();
  		modMeta.parent = "MCExtremeCore";
  		
@@ -43,7 +45,7 @@ public class MCExtremeVTweaks
         LocalizationVTweaks.addNames();
         CraftingVTweaks.addRecipes();
         Block blockLeaves = new BlockNonSolidLeaves(18).setHardness(0.2F).setLightOpacity(1).setStepSound(Block.soundGrassFootstep).setUnlocalizedName("leaves").setTextureName("leaves");
-
-        MCExtremeCore.tabVanillaTweaks = new CreativeTab("mcx.vtweaks", 3).setIconItemStack(new ItemStack(ItemsVTweaks.itemLink));
+        
+        ((CreativeTab)MCExtremeCore.tabVanillaTweaks).setIconItemStack(new ItemStack(ItemsVTweaks.itemLink));
     }
 }

@@ -34,6 +34,8 @@ public class MCExtremeMagic
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        MCExtremeCore.tabMagic = new CreativeTab("mcx.magic", 1);
+        
     	ModMetadata modMeta = event.getModMetadata();
  		modMeta.parent = "MCExtremeCore";
  		
@@ -49,10 +51,7 @@ public class MCExtremeMagic
         CraftingMagic.addSmeltingRecipes();
         CraftingMagic.registerInOreDict();
         EnumsMagic.setHarvestLevels();
-        GameRegistry.registerBlock(BlocksMagic.blockSolidEvil, "Solidified Evil");
-        GameRegistry.registerBlock(BlocksMagic.blockWorldsEnd, "The End of the World as you knew it");
-        GameRegistry.registerBlock(BlocksMagic.blockLiquidDark, "Liquid Darkness");
         
-        MCExtremeCore.tabMagic = new CreativeTab("mcx.magic", 1).setIconItemStack(new ItemStack(Item.brewingStand));
+        ((CreativeTab)MCExtremeCore.tabMagic).setIconItemStack(new ItemStack(Item.brewingStand));
     }
 }
