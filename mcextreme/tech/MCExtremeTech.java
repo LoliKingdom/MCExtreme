@@ -22,7 +22,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid="MCExtremeTech", name="MC-X Tech", version=MCExtremeCore.version, dependencies = "required-after:MCExtremeCore")
+@Mod(modid="MCExtremeTech", name="MC-X Tech", version=MCExtremeTech.version, dependencies = "required-after:MCExtremeCore")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MCExtremeTech
 {			
@@ -34,7 +34,7 @@ public class MCExtremeTech
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        MCExtremeCore.tabTech = new CreativeTab("mcx.tech", 2);
+        MCExtremeCore.tabTech = new CreativeTab("mcx.tech", CreativeTabs.getNextID());
         
     	ModMetadata modMeta = event.getModMetadata();
  		modMeta.parent = "MCExtremeCore";

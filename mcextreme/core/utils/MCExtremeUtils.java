@@ -14,7 +14,7 @@ public class MCExtremeUtils
     	boolean first = true;
     	
     	String[] classes = new String[] { "magic.MCExtremeMagic", "tech.MCExtremeTech", "vtweaks.MCExtremeVTweaks" };
-    	String[] names = new String[] {	"Magic ", "Tech ", "VanillaTweaks " };
+    	String[] names = new String[] {	"Magic ", "Tech ", "Vanilla Tweaks " };
     	
     	for (int i = 0; i < classes.length; i++)
     	{

@@ -21,7 +21,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid="MCExtremeVTweaks", name="MC-X Vanilla Tweaks", version="0.1.0", dependencies = "required-after:MCExtremeCore")
+@Mod(modid="MCExtremeVTweaks", name="MC-X Vanilla Tweaks", version=MCExtremeVTweaks.version, dependencies = "required-after:MCExtremeCore")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MCExtremeVTweaks
 {	
@@ -33,7 +33,7 @@ public class MCExtremeVTweaks
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        MCExtremeCore.tabVanillaTweaks = new CreativeTab("mcx.vtweaks", 3);
+        MCExtremeCore.tabVanillaTweaks = new CreativeTab("mcx.vtweaks", CreativeTabs.getNextID());
         
     	ModMetadata modMeta = event.getModMetadata();
  		modMeta.parent = "MCExtremeCore";

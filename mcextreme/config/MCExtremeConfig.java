@@ -24,17 +24,17 @@ public class MCExtremeConfig
     {
         config.load();
         
-        if (type.equals("AESTHETICS"))
+        if (type.toUpperCase().equals("AESTHETICS"))
         {
             
         }
         
-        else if (type.equals("CORE"))
+        else if (type.toUpperCase().equals("CORE"))
         {
             
         }
         
-        else if (type.equals("MAGIC"))
+        else if (type.toUpperCase().equals("MAGIC"))
         {
             blockMagicPortalID = config.get("block", "BlockMagicPortalID", 540).getInt();
             blockMagicOreID = config.get("block", "BlockOreID", 541).getInt();
@@ -46,7 +46,7 @@ public class MCExtremeConfig
             itemDarkBucketID = config.get("item", "ItemDarkBucketID", 6301).getInt();
         }
         
-        else if (type.equals("TECH"))
+        else if (type.toUpperCase().equals("TECH"))
         {
             Property propBlockOreID, propBlockStorageID;
             
@@ -65,7 +65,7 @@ public class MCExtremeConfig
             itemScrewdriverID = config.get("item", "ItemScrewdriverID", 6350).getInt();
         }
         
-        else if (type.equals("VTWEAKS"))
+        else if (type.toUpperCase().equals("VTWEAKS"))
         {
             itemLinkID = config.get("item", "ItemLinkID", 6500).getInt();
             itemPlateID = config.get("item", "ItemPlateID", 6501).getInt();

@@ -10,7 +10,7 @@ public class CreativeTab extends CreativeTabs
 	
 	public CreativeTab(String identifier, int internalID)
 	{
-		super(identifier);
+		super(internalID, identifier);
 	}
 	
 	public ItemStack getIconItemStack()

@@ -14,28 +14,30 @@ import net.minecraftforge.event.entity.player.FillBucketEvent;
 public class MagicEventHooks 
 {
 	@ForgeSubscribe(priority = EventPriority.NORMAL)
-	public void FillBucket(FillBucketEvent event) {
-	ItemStack result = attemptFill(event.world, event.target);
-	if (result != null) {
-	event.result = result;
-	event.setResult(Result.ALLOW);
-	}
+	public void FillBucket(FillBucketEvent event) 
+	{
+		ItemStack result = attemptFill(event.world, event.target);
+		if (result != null) 
+		{
+			event.result = result;
+			event.setResult(Result.ALLOW);
+		}
 	}
 
 	private ItemStack attemptFill( World world, MovingObjectPosition p )
 	{
-	int id = world.getBlockId( p.blockX, p.blockY, p.blockZ );
-
-	if ( id == BlocksMagic.blockLiquidDark.blockID )
-	{
-	if ( world.getBlockMetadata( p.blockX, p.blockY, p.blockZ ) == 0 ) // Check that it is a source block
-	{
-	world.setBlock( p.blockX, p.blockY, p.blockZ, 0 ); // Remove the fluid block
-
-	return new ItemStack(ItemsMagic.bucketDarkness); // Return the filled bucked item here.
-	}
-	}
-
-	return null;
+		int id = world.getBlockId( p.blockX, p.blockY, p.blockZ );
+	
+		if ( id == BlocksMagic.blockLiquidDark.blockID )
+		{
+			if ( world.getBlockMetadata( p.blockX, p.blockY, p.blockZ ) == 0 ) // Check that it is a source block
+			{
+				world.setBlock( p.blockX, p.blockY, p.blockZ, 0 ); // Remove the fluid block
+			
+				return new ItemStack(ItemsMagic.bucketDarkness); // Return the filled bucked item here.
+			}
+		}
+		
+		return null;
 	}
 }
