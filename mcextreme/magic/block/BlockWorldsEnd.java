@@ -98,6 +98,6 @@ public class BlockWorldsEnd extends Block
     }
 public void registerIcons(IconRegister iconRegistry) 
 {
-	this.blockIcon = iconRegistry.registerIcon("mcextreme:/magic/worldEnd");
+	this.blockIcon = iconRegistry.registerIcon("mcextreme:magic/worldEnd");
 }
 }

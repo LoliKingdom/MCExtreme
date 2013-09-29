@@ -135,7 +135,7 @@ public class BlockMagicPortal extends Block//Container
     
     public void registerIcons(IconRegister iconRegistry) 
 	{
-		this.blockIcon = iconRegistry.registerIcon("mcextreme:/magic/" + this.getUnlocalizedName().substring(5));
+		this.blockIcon = iconRegistry.registerIcon("mcextreme:magic/" + this.getUnlocalizedName().substring(5));
 	}
     
 }

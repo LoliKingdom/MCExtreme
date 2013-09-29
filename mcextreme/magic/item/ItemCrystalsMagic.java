@@ -39,7 +39,7 @@ public class ItemCrystalsMagic extends Item
     	
     	for (int meta = 0; meta < names.length; ++meta)
     	{
-    		this.textures[meta] = iconRegistry.registerIcon("mcextreme:/magic/" + names[meta]);
+    		this.textures[meta] = iconRegistry.registerIcon("mcextreme:magic/" + names[meta]);
     	}
     }
     

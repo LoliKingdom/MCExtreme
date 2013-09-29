@@ -37,7 +37,7 @@ public class BlockOreStorageTech extends Block
     	
     	for (int meta = 0; meta < names.length; ++meta)
     	{
-    		this.textures[meta] = iconRegistry.registerIcon("mcextreme:/tech/" + names[meta]);
+    		this.textures[meta] = iconRegistry.registerIcon("mcextreme:tech/" + names[meta]);
     	}
     }
     

@@ -23,8 +23,8 @@ public class ItemsVTweaks
         pickaxeGold = new ItemPickaxeVTweaks(29, EnumToolMaterial.GOLD).setUnlocalizedName("pickaxeGold").setTextureName("gold_pickaxe");
         pickaxeDiamond = new ItemPickaxeVTweaks(22, EnumToolMaterial.EMERALD).setUnlocalizedName("pickaxeDiamond").setTextureName("diamond_pickaxe");
         
-        itemLink = new Item(MCExtremeConfig.itemLinkID).setCreativeTab(MCExtremeCore.tabVanillaTweaks).setUnlocalizedName("linkIron").setTextureName("mcextreme:/vtweaks/linkIron");
-        itemPlate = new Item(MCExtremeConfig.itemPlateID).setCreativeTab(MCExtremeCore.tabVanillaTweaks).setUnlocalizedName("plateIron").setTextureName("mcextreme:/vtweaks/plateIron");
+        itemLink = new Item(MCExtremeConfig.itemLinkID).setCreativeTab(MCExtremeCore.tabVanillaTweaks).setUnlocalizedName("linkIron").setTextureName("mcextreme:vtweaks/linkIron");
+        itemPlate = new Item(MCExtremeConfig.itemPlateID).setCreativeTab(MCExtremeCore.tabVanillaTweaks).setUnlocalizedName("plateIron").setTextureName("mcextreme:vtweaks/plateIron");
     }
 
     private static void eraseItems()
