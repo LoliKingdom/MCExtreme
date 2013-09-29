@@ -26,7 +26,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MCExtremeTech
 {			
-	public static final String version = "0.2.1";
+	public static final String version = "0.2.2";
 	
     @Instance("MCExtremeTech")
     public static MCExtremeTech instance;

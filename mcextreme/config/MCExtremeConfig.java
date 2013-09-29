@@ -14,8 +14,8 @@ public class MCExtremeConfig
     public static int itemCrystalID, itemDarkBucketID;   
     
     //--------------- MC-Extreme Tech ------------------------
-    public static int blockTechOreID, blockTechStorageID;
-    public static int itemTechIngotID;
+    public static int blockTechOreID, blockTechStorageID, blockBasicMachineID;
+    public static int itemTechIngotID, itemScrewdriverID;
     
     //--------------- MC-Extreme VanillaTweaks ---------------
     public static int itemLinkID, itemPlateID;
@@ -59,7 +59,10 @@ public class MCExtremeConfig
             blockTechOreID = propBlockOreID.getInt();
             blockTechStorageID = propBlockStorageID.getInt();
             
+            blockBasicMachineID = config.get("block", "BlockBasicMachineID", 670).getInt();
+            
             itemTechIngotID = config.get("item", "ItemIngotID", 6400).getInt();
+            itemScrewdriverID = config.get("item", "ItemScrewdriverID", 6350).getInt();
         }
         
         else if (type.equals("VTWEAKS"))

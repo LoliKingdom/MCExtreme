@@ -11,13 +11,17 @@ public class LocalizationTech
 	
     public static void addNames()
     {
+        LanguageRegistry lr = LanguageRegistry.instance();
+        
     	for (int meta = 0; meta < oreNames.length; ++meta)
 	        LanguageRegistry.addName(new ItemStack(BlocksTech.blockOre, 1, meta), oreNames[meta]);
     	
     	for (int meta = 0; meta < storageNames.length; ++meta)
 	        LanguageRegistry.addName(new ItemStack(BlocksTech.blockStorage, 1, meta), storageNames[meta]);
         
-        //Tabs
-    	LanguageRegistry.instance().addStringLocalization("itemGroup.mcx.tech", "MC-Extreme: Tech");
+    	lr.addStringLocalization("item.screwdriver.name", "Screwdriver");
+    	lr.addStringLocalization("tile.blockBasicMachine.name", "Block Breaker");
+    	
+    	lr.addStringLocalization("itemGroup.mcx.tech", "MC-Extreme: Tech");
     }
 }

@@ -7,11 +7,12 @@ import net.minecraft.item.Item;
 
 public class ItemsTech
 {
-    public static Item itemIngot;
+    public static Item itemIngot, itemScrewdriver;
     
     public static void initItems()
     {
         itemIngot = new ItemIngotsTech(MCExtremeConfig.itemTechIngotID, "INGOT").setUnlocalizedName("ingotMCExtreme");
+        itemScrewdriver = new ItemScrewdriver(MCExtremeConfig.itemScrewdriverID).setUnlocalizedName("screwdriver");
     }
     
 }
