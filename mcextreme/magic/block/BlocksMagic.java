@@ -1,7 +1,7 @@
 package mcextreme.magic.block;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import mcextreme.config.MCExtremeConfig;
+import mcextreme.core.config.MCExtremeConfig;
 import mcextreme.core.MCExtremeCore;
 import mcextreme.magic.MCExtremeMagic;
 import mcextreme.magic.item.ItemBlockMagic;
@@ -35,14 +35,14 @@ public class BlocksMagic
         blockMagicPortal = new BlockMagicPortal(MCExtremeConfig.blockMagicPortalID).setHardness(-1.0F).setResistance(6000000.0F).setLightValue(1.0F).setUnlocalizedName("portalMagic");
         //Corrupt Stuff
         blockSolidEvil = new BlockSolidEvil(MCExtremeConfig.blockSolidEvilID, Material.rock).setHardness(50.0F).setResistance(2000.0F).setUnlocalizedName("solidEvil").setCreativeTab(MCExtremeCore.tabMagic);
-        blockWorldsEnd = new BlockWorldsEnd(MCExtremeConfig.blockWorldsEndID, Material.rock).setHardness(-1.0F).setResistance(6000000.0F).setUnlocalizedName("worldEnd").setCreativeTab(CreativeTabs.tabDecorations);
+        blockWorldsEnd = new BlockWorldsEnd(MCExtremeConfig.blockWorldsEndID, Material.rock).setHardness(-1.0F).setResistance(6000000.0F).setUnlocalizedName("worldEnd").setCreativeTab(MCExtremeCore.tabMagic);
         blockLiquidDark = new BlockLiquidDark(liquidDarkID).setUnlocalizedName("liquidDarkness");
         
-        blockOre = new BlockOreMagic(MCExtremeConfig.blockMagicOreID, "ORE", Material.rock).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("oreAquamarine");
-        blockStorage = new BlockOreStorageMagic(MCExtremeConfig.blockMagicStorageID, "STORAGE", Material.iron).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("blockAquamarine");
+        blockOre = new BlockOreMagic(MCExtremeConfig.blockMagicOreID, "ORE", Material.rock).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("blockMagicOre");
+        blockStorage = new BlockOreStorageMagic(MCExtremeConfig.blockMagicStorageID, "STORAGE", Material.iron).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("blockMagicStorage");
         
-        Item.itemsList[MCExtremeConfig.blockMagicOreID] = new ItemBlockMagic(MCExtremeConfig.blockMagicOreID).setUnlocalizedName("blockOreID"); 
-        Item.itemsList[MCExtremeConfig.blockMagicStorageID] = new ItemBlockMagic(MCExtremeConfig.blockMagicStorageID).setUnlocalizedName("blockStorageID");
+        Item.itemsList[MCExtremeConfig.blockMagicOreID] = new ItemBlockMagic(MCExtremeConfig.blockMagicOreID).setUnlocalizedName("blockMagicOre"); 
+        Item.itemsList[MCExtremeConfig.blockMagicStorageID] = new ItemBlockMagic(MCExtremeConfig.blockMagicStorageID).setUnlocalizedName("blockMagicStorage");
 
         GameRegistry.registerBlock(BlocksMagic.blockSolidEvil, "Solidified Evil");
         GameRegistry.registerBlock(BlocksMagic.blockWorldsEnd, "The End of the World as you knew it");

@@ -2,7 +2,7 @@ package mcextreme.vtweaks;
 
 import java.io.File;
 
-import mcextreme.config.MCExtremeConfig;
+import mcextreme.core.config.MCExtremeConfig;
 import mcextreme.core.MCExtremeCore;
 import mcextreme.core.utils.CreativeTab;
 import mcextreme.vtweaks.blocks.BlockNonSolidLeaves;
@@ -33,7 +33,7 @@ public class MCExtremeVTweaks
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        MCExtremeCore.tabVanillaTweaks = new CreativeTab("mcx.vtweaks", CreativeTabs.getNextID());
+        MCExtremeCore.tabVanillaTweaks = new CreativeTab("mcx.vtweaks");
         
     	ModMetadata modMeta = event.getModMetadata();
  		modMeta.parent = "MCExtremeCore";
@@ -46,7 +46,6 @@ public class MCExtremeVTweaks
     {
     	Block.blocksList[18] = null;
     	ItemsVTweaks.initItems();
-        LocalizationVTweaks.addNames();
         CraftingVTweaks.addRecipes();
         Block blockLeaves = new BlockNonSolidLeaves(18).setHardness(0.2F).setLightOpacity(1).setStepSound(Block.soundGrassFootstep).setUnlocalizedName("leaves").setTextureName("leaves");
         

@@ -47,23 +47,12 @@ public class ItemCrystalsMagic extends Item
     {
     	return meta < names.length ? textures[meta] : textures[0];
     }
-   
-    @Override
-    public String getItemDisplayName(ItemStack is){
-      if(is.getItemDamage() <= 9)
-    	  
-            return localizedNames[is.getItemDamage()];
-      
-      return "Test";
-    }
     
-    public String getUnlocalizedName()
+    public String getUnlocalizedName(ItemStack stack)
     {
-    	ItemStack stack = new ItemStack(ItemsMagic.itemCrystal);
-    	
     	 if(stack.getItemDamage() <= 9)
     		 
-             return "item." + names[stack.getItemDamage()];
+             return super.getUnlocalizedName() + "." + stack.getItemDamage();
     	 
          return "item.test";
     }

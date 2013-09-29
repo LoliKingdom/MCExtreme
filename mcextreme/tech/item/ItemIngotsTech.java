@@ -47,24 +47,12 @@ public class ItemIngotsTech extends Item
     {
     	return meta < names.length ? textures[meta] : textures[0];
     }
-   
-    @Override
-    public String getItemDisplayName(ItemStack is)
-    {
-      if(is.getItemDamage() <= localizedNames.length)
-    	  
-            return localizedNames[is.getItemDamage()];
-      
-      return "Test";
-    }
     
-    public String getUnlocalizedName()
+    public String getUnlocalizedName(ItemStack stack)
     {
-    	ItemStack stack = new ItemStack(ItemsTech.itemIngot);
-    	
     	 if(stack.getItemDamage() <= names.length)
     		 
-             return "item." + names[stack.getItemDamage()];
+             return super.getUnlocalizedName() + "." + stack.getItemDamage();
     	 
          return "item.test";
     }

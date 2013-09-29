@@ -56,11 +56,4 @@ public class BlockOreMagic extends Block
     {
     	return meta;
     }
-    
-    public String getUnlocalizedName() 
-    {
-    	ItemStack stack = new ItemStack(BlocksMagic.blockOre);
-    	
-    	return names[stack.getItemDamage()];
-    }
 }

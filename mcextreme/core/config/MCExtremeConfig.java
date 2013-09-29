@@ -1,4 +1,4 @@
-package mcextreme.config;
+package mcextreme.core.config;
 
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.Property;

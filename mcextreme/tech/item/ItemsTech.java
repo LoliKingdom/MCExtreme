@@ -1,6 +1,6 @@
 package mcextreme.tech.item;
 
-import mcextreme.config.MCExtremeConfig;
+import mcextreme.core.config.MCExtremeConfig;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 

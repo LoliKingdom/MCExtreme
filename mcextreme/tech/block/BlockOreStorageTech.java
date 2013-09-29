@@ -50,11 +50,4 @@ public class BlockOreStorageTech extends Block
     {
     	return meta;
     }
-    
-    public String getUnlocalizedName() 
-    {
-    	ItemStack stack = new ItemStack(BlocksTech.blockStorage);
-    	
-    	return names[stack.getItemDamage()];
-    }
 }

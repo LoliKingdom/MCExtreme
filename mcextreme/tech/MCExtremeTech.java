@@ -3,7 +3,7 @@ package mcextreme.tech;
 import java.io.File;
 import java.util.logging.Level;
 
-import mcextreme.config.MCExtremeConfig;
+import mcextreme.core.config.MCExtremeConfig;
 import mcextreme.core.MCExtremeCore;
 import mcextreme.core.utils.CreativeTab;
 import mcextreme.tech.block.BlocksTech;
@@ -34,7 +34,7 @@ public class MCExtremeTech
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        MCExtremeCore.tabTech = new CreativeTab("mcx.tech", CreativeTabs.getNextID());
+        MCExtremeCore.tabTech = new CreativeTab("mcx.tech");
         
     	ModMetadata modMeta = event.getModMetadata();
  		modMeta.parent = "MCExtremeCore";
@@ -47,12 +47,11 @@ public class MCExtremeTech
     {
         BlocksTech.initBlocks();
         ItemsTech.initItems();
-        LocalizationTech.addNames();
         CraftingTech.addRecipes();
         CraftingTech.addSmeltingRecipes();
         CraftingTech.registerInOreDict();
         EnumsTech.setHarvestLevels();
         
-        ((CreativeTab)MCExtremeCore.tabTech).setIconItemStack(new ItemStack(Block.furnaceBurning));
+        ((CreativeTab)MCExtremeCore.tabTech).setIconItemStack(new ItemStack(BlocksTech.blockBasicMachine, 1, 0));
     }
 }

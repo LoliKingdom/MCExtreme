@@ -3,8 +3,8 @@ package mcextreme.magic;
 import java.io.File;
 import java.util.logging.Level;
 
-import mcextreme.config.MCExtremeConfig;
 import mcextreme.core.MCExtremeCore;
+import mcextreme.core.config.MCExtremeConfig;
 import mcextreme.core.utils.CreativeTab;
 import mcextreme.magic.block.BlocksMagic;
 import mcextreme.magic.item.ItemsMagic;
@@ -36,7 +36,7 @@ public class MCExtremeMagic
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        MCExtremeCore.tabMagic = new CreativeTab("mcx.magic", CreativeTabs.getNextID());
+        MCExtremeCore.tabMagic = new CreativeTab("mcx.magic");
         
     	ModMetadata modMeta = event.getModMetadata();
  		modMeta.parent = "MCExtremeCore";
@@ -49,11 +49,10 @@ public class MCExtremeMagic
     {
         BlocksMagic.initBlocks();
         ItemsMagic.initItems();
-        LocalizationMagic.addNames();
         CraftingMagic.addSmeltingRecipes();
         CraftingMagic.registerInOreDict();
         EnumsMagic.setHarvestLevels();
         
-        ((CreativeTab)MCExtremeCore.tabMagic).setIconItemStack(new ItemStack(Item.brewingStand));
+        ((CreativeTab)MCExtremeCore.tabMagic).setIconItemStack(new ItemStack(ItemsMagic.itemCrystal, 1, 0));
     }
 }
