@@ -9,7 +9,6 @@ public class ItemBlockTech extends ItemBlock
     {
         super(itemID-256);
         setHasSubtypes(true);
-        
     }
     
     public int getMetadata(int meta)

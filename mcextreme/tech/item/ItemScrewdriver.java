@@ -16,7 +16,7 @@ public class ItemScrewdriver extends Item
         super(itemID);
         setMaxStackSize(1);
         setMaxDamage(249);
-        setTextureName("mcextreme:tech/screwdriver");
+        setTextureName("mcextreme:tech/tools/screwdriver");
         setCreativeTab(MCExtremeCore.tabTech);
     }
     
@@ -31,9 +31,15 @@ public class ItemScrewdriver extends Item
         if (world.getBlockId(x, y, z) == BlocksTech.blockBasicMachine.blockID)
         {
             int meta = world.getBlockMetadata(x, y, z);
+            if (meta < 0) return false;
             if (meta < 6)
             {
                 world.setBlockMetadataWithNotify(x, y, z, (meta == 5 ? 0 : meta + 1), 3);
+                stack.damageItem(1, player);
+            }
+            else if (meta < 12)
+            {
+                world.setBlockMetadataWithNotify(x, y, z, (meta == 11 ? 6 : meta + 1), 3);
                 stack.damageItem(1, player);
             }
         }

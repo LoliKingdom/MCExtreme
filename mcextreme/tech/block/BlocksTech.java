@@ -21,7 +21,6 @@ public class BlocksTech
         
         Item.itemsList[MCExtremeConfig.blockTechOreID] = new ItemBlockTech(MCExtremeConfig.blockTechOreID).setUnlocalizedName("blockOreID");
         Item.itemsList[MCExtremeConfig.blockTechStorageID] = new ItemBlockTech(MCExtremeConfig.blockTechStorageID).setUnlocalizedName("blockStorageID");
-        
-        GameRegistry.registerBlock(blockBasicMachine, ItemBlock.class, null);
+        Item.itemsList[MCExtremeConfig.blockBasicMachineID] = new ItemBlockTech(MCExtremeConfig.blockBasicMachineID).setUnlocalizedName("blockBasicMachine");
     }
 }
