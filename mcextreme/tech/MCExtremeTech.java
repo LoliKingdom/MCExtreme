@@ -26,6 +26,9 @@ import cpw.mods.fml.common.network.NetworkMod;
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MCExtremeTech
 {
+	
+	public static final int guiIDCompressor = 0;
+	
     @Instance("MCExtremeTech")
     public static MCExtremeTech instance;
     

@@ -14,7 +14,7 @@ public class MCExtremeConfig
     public static int itemCrystalID, itemDarkBucketID;   
     
     //--------------- MC-Extreme Tech ------------------------
-    public static int blockTechOreID, blockTechStorageID, blockBasicMachineID;
+    public static int blockTechOreID, blockTechStorageID, blockBasicMachineID, blockCompressorID, blockCompressorActiveID;
     public static int itemTechIngotID, itemScrewdriverID;
     
     //--------------- MC-Extreme VanillaTweaks ---------------

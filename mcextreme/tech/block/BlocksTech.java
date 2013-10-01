@@ -25,5 +25,15 @@ public class BlocksTech
         Item.itemsList[MCExtremeConfig.blockTechOreID] = new ItemBlockTech(MCExtremeConfig.blockTechOreID).setUnlocalizedName("blockOreID");
         Item.itemsList[MCExtremeConfig.blockTechStorageID] = new ItemBlockTech(MCExtremeConfig.blockTechStorageID).setUnlocalizedName("blockStorageID");
         Item.itemsList[MCExtremeConfig.blockBasicMachineID] = new ItemBlockTech(MCExtremeConfig.blockBasicMachineID).setUnlocalizedName("blockBasicMachine");
+        
+        
+        GameRegistry.registerBlock(blockBasicMachine, ItemBlock.class, null);
+        GameRegistry.registerBlock(blockCompressor, "Compressor");
+        GameRegistry.registerBlock(blockCompressorActive, "You Broke ME");
+        
+        GameRegistry.registerTileEntity(TileEntityCompressor.class, "tileEntityCompressor");
+        
+        Item.itemsList[MCExtremeConfig.blockBasicMachineID] = new ItemBlockTech(MCExtremeConfig.blockBasicMachineID).setUnlocalizedName("blockBasicMachine");
+        
     }
 }
