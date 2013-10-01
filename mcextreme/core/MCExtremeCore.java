@@ -26,7 +26,7 @@ public class MCExtremeCore
     
     public static CreativeTabs tabAesthetics, tabMagic, tabTech, tabVanillaTweaks; 
     
-    public static final String version = "0.2.2", mcversion = "1.6.4";
+    public static final String version = "0.2.4", mcversion = "1.6.4";
     
     @EventHandler
     public void preInitialization(FMLPreInitializationEvent event)

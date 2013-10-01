@@ -21,12 +21,10 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid="MCExtremeVTweaks", name="MC-X Vanilla Tweaks", version=MCExtremeVTweaks.version, dependencies = "required-after:MCExtremeCore")
+@Mod(modid="MCExtremeVTweaks", name="MC-X Vanilla Tweaks", version=MCExtremeCore.version, dependencies = "required-after:MCExtremeCore")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MCExtremeVTweaks
 {	
-	public static final String version = "0.2.1";
-		
     @Instance("MCExtremeVTweaks")
     public static MCExtremeVTweaks instance;
     

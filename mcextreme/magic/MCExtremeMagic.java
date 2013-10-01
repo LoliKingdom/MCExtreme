@@ -24,12 +24,10 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid="MCExtremeMagic", name="MC-X Magic", version=MCExtremeMagic.version, dependencies = "required-after:MCExtremeCore")
+@Mod(modid="MCExtremeMagic", name="MC-X Magic", version=MCExtremeCore.version, dependencies = "required-after:MCExtremeCore")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MCExtremeMagic
 {
-	public static final String version = "0.2.1";
-	
 	@Instance("MCExtremeMagic")
     public static MCExtremeMagic instance;
     
