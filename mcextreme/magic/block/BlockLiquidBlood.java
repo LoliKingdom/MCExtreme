@@ -11,7 +11,7 @@ public class BlockLiquidBlood extends BlockFluidClassic
 {
 	public BlockLiquidBlood(int par1) 
 	{
-		super(par1, BlocksMagic.fluidBlood, Material.lava);
+		super(par1, BlocksMagic.fluidDarkness, Material.lava);
 		this.setCreativeTab(MCExtremeCore.tabMagic);
 		BlocksMagic.fluidDarkness.setBlockID(par1);
 	}
