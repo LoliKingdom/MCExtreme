@@ -16,13 +16,16 @@ import net.minecraftforge.fluids.FluidRegistry;
 
 public class BlocksMagic
 {
-	public static final int liquidDarkID = 1700;
+	public static final int liquidDarkID = 1600;
 	
     public static Block blockMagicPortal;
     public static Block blockOre, blockStorage;
     public static Block blockSolidEvil;
     public static Block blockWorldsEnd;
     public static Block blockLiquidDark;
+    public static Block blockLiquidBlood;
+    public static Block blockLiquidFireBlood;
+    public static Block blockLiquidEndBlood;
     
     public static Material materialDark;
     
@@ -30,7 +33,7 @@ public class BlocksMagic
     
     public static void initBlocks()
     {
-        fluidDarkness = new FluidDark().setBlockID(liquidDarkID);
+    	fluidDarkness = new FluidDark().setBlockID(liquidDarkID);
     	
         blockMagicPortal = new BlockMagicPortal(MCExtremeConfig.blockMagicPortalID).setHardness(-1.0F).setResistance(6000000.0F).setLightValue(1.0F).setUnlocalizedName("portalMagic");
         //Corrupt Stuff

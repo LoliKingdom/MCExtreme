@@ -2,6 +2,7 @@ package mcextreme.vtweaks.blocks;
 
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.client.settings.GameSettings;
+import net.minecraft.entity.Entity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
@@ -37,5 +38,9 @@ public class BlockNonSolidLeaves extends BlockLeaves
 	public boolean shouldSideBeRendered(IBlockAccess world, int x, int y, int z, int side)
     {
 	    return world.getBlockId(x, y, z) == blockID ? false : super.shouldSideBeRendered(world, x, y, z, side);
+    }
+    public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
+    {
+        par5Entity.setInWeb();
     }
 }
