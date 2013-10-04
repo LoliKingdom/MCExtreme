@@ -1,5 +1,6 @@
 package mcextreme.core.utils;
 
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.network.IConnectionHandler;
 import ibxm.Player;
 import net.minecraft.client.Minecraft;
@@ -18,10 +19,14 @@ public class MCExtremePlayerHandler implements IConnectionHandler
 	public void playerLoggedIn(cpw.mods.fml.common.network.Player player,
 			NetHandler netHandler, INetworkManager manager) 
 	{
-		//if(EntityPlayerMP.username == "warlordjones")
-		//{
-			//ModLoader.getMinecraftInstance().thePlayer.addChatMessage("Warning! Warlordjones will probably break stuff!");
-		//}
+		for(String username : MinecraftServer.getServer().getAllUsernames()){
+			if(username.contains("warlordjones")){
+				FMLLog.warning("The code breaker is here: warlordjones! You're warned!", ""); break;
+			}
+			if(username.contains("Player")){
+				FMLLog.info("MCP Test Envirioment!", ""); break;
+			}
+		}
 		
 	}
 

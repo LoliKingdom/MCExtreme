@@ -12,7 +12,7 @@ public class ItemsTech
     public static void initItems()
     {
         itemIngot = new ItemIngotsTech(MCExtremeConfig.itemTechIngotID, "INGOT").setUnlocalizedName("ingotMCExtreme");
-        itemScrewdriver = new ItemScrewdriver(MCExtremeConfig.itemScrewdriverID).setUnlocalizedName("screwdriver");
+        /*itemScrewdriver = new ItemScrewdriver(MCExtremeConfig.itemScrewdriverID).setUnlocalizedName("screwdriver"); Kodehawa: Really, LOLWUT */
         itemScrewdriver = new ItemScrewdriver(MCExtremeConfig.itemScrewdriverID, false).setUnlocalizedName("screwdriver");
         itemNanotube = new ItemNanotube(MCExtremeConfig.itemNanotubeID).setUnlocalizedName("nanotube");
         itemDebugScrewdriver = new ItemScrewdriver(MCExtremeConfig.itemDebugScrewdriverID, true).setUnlocalizedName("dbgscrewdriver");
