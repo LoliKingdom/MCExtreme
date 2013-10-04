@@ -1,20 +1,21 @@
 package mcextreme.core;
 
 import java.util.Arrays;
+import java.util.logging.Level;
 
-import net.minecraft.creativetab.CreativeTabs;
-
+import mcextreme.core.utils.MCExtremePlayerHandler;
 import mcextreme.core.utils.MCExtremeUtils;
+import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.ModContainer;
 import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
 
 @Mod(modid="MCExtremeCore", name="Minecraft to the Extreme", version=MCExtremeCore.version)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
@@ -45,7 +46,11 @@ public class MCExtremeCore
     }
     
     @EventHandler
-    public void load(FMLInitializationEvent event) { }
+    public void load(FMLInitializationEvent event) 
+    { 
+    	NetworkRegistry.instance().registerConnectionHandler(new MCExtremePlayerHandler());
+    	FMLLog.log(Level.SEVERE, "Aw Snap, the almighty CodeBreaker, warlordjones, is here!");
+    }
     
     @EventHandler
     public void modsLoaded(FMLPostInitializationEvent event)
