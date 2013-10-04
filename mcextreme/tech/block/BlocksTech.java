@@ -31,7 +31,7 @@ public class BlocksTech
     	
         blockOre = new BlockOreTech(MCExtremeConfig.blockTechOreID, "ORE", Material.rock).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("blockTechOre");
         blockStorage = new BlockOreStorageTech(MCExtremeConfig.blockTechStorageID, "STORAGE", Material.iron).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("blockTechStorage");
-        blockBasicMachine = new BlockBasicMachine(MCExtremeConfig.blockBasicMachineID).setHardness(3.5F).setUnlocalizedName("blockBasicMachine").setCreativeTab(MCExtremeCore.tabTech);
+        blockBasicMachine = new BlockBasicMachine(MCExtremeConfig.blockBasicMachineID, "BREAKER").setHardness(3.5F).setUnlocalizedName("blockBasicMachine").setCreativeTab(MCExtremeCore.tabTech);
         blockCompressor = new BlockCompressor(MCExtremeConfig.blockCompressorID, false).setHardness(3.5F).setCreativeTab(MCExtremeCore.tabTech);
         blockCompressorActive = new BlockCompressor(MCExtremeConfig.blockCompressorActiveID, true).setHardness(3.5F).setLightValue(1.0F);
         blockLiquidConcrete = new BlockLiquidConcrete(liquidConcreteID).setUnlocalizedName("liquidConcrete");
