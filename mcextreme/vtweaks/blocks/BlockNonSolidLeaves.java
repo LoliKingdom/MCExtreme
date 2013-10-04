@@ -39,8 +39,10 @@ public class BlockNonSolidLeaves extends BlockLeaves
     {
 	    return world.getBlockId(x, y, z) == blockID ? false : super.shouldSideBeRendered(world, x, y, z, side);
     }
-    public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
+	
+    public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity entity)
     {
-        par5Entity.setInWeb();
+    	entity.motionX *= 0.3D;
+        entity.motionZ *= 0.3D;
     }
 }

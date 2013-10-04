@@ -32,7 +32,7 @@ public class MCExtremeUtils
     			failed = true;
     		}
     		
-    		if (!failed) pluginsFound = pluginsFound + label;
+    		if(!failed) pluginsFound = pluginsFound + label;
     	}
     	
     	FMLLog.log(Level.INFO, "[MC-X] Loaded MC to the Extreme version " + MCExtremeCore.version + " for MC " + MCExtremeCore.mcversion);
