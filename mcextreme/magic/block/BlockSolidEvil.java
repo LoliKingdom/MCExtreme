@@ -1,5 +1,6 @@
 package mcextreme.magic.block;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -31,56 +32,32 @@ public class BlockSolidEvil extends Block
         {
             for (int l = 0; l < 50; ++l)
             {
-                int i1 = par2 + par5Random.nextInt(3) - 1;
-                int j1 = par3 + par5Random.nextInt(5) - 3;
-                int k1 = par4 + par5Random.nextInt(3) - 1;
-                int l1 = par1World.getBlockId(i1, j1 + 1, k1);
-
-                //Most Efficient way I could find, fix this Domi? Should only corrupt natural blocks - Arona
-                if (par1World.getBlockId(i1, j1, k1) == Block.grass.blockID
-                		)
-                {
-                    par1World.setBlock(i1, j1, k1, this.blockID);
-                }
-                	 if (par1World.getBlockId(i1, j1, k1) == Block.dirt.blockID
-                     		)
-                	 {
-                         par1World.setBlock(i1, j1, k1, this.blockID);
-                     }
-                		 if (par1World.getBlockId(i1, j1, k1) == Block.stone.blockID
-                         		)
-                		 {
-                             par1World.setBlock(i1, j1, k1, this.blockID);
-                         }
-                			 if (par1World.getBlockId(i1, j1, k1) == Block.wood.blockID
-                             		)
-                			 {
-                                 par1World.setBlock(i1, j1, k1, this.blockID);
-                             }
-                				 if (par1World.getBlockId(i1, j1, k1) == Block.sand.blockID
-                	                		)
-                				 {
-                	                    par1World.setBlock(i1, j1, k1, this.blockID);
-                	                }
-                					 if (par1World.getBlockId(i1, j1, k1) == Block.gravel.blockID
-                		                		)
-                					 {
-                		                    par1World.setBlock(i1, j1, k1, this.blockID);
-                		                }
-                						 if (par1World.getBlockId(i1, j1, k1) == Block.leaves.blockID
-                			                		)
-                						 {
-                			                    par1World.setBlock(i1, j1, k1, this.blockID);
-                			                }
-                							 if (par1World.getBlockId(i1, j1, k1) == Block.waterStill.blockID
-                				                		)
-                							 {
-                				                    par1World.setBlock(i1, j1, k1, this.blockID);
-                				                }
-                								 if (par1World.getBlockId(i1, j1, k1) == Block.waterMoving.blockID
-                					                		)
-                {
-                    par1World.setBlock(i1, j1, k1, this.blockID);
+            	int wx = par2 + par5Random.nextInt(3) - 1;
+                int wy = par3 + par5Random.nextInt(5) - 3;
+                int wz = par4 + par5Random.nextInt(3) - 1;
+                int l1 = par1World.getBlockId(wx, wy + 1, wz);
+                               
+                //Kodehawa code: Tested and fully working c: | Arona: If you need to add another ID just do the same than in the bottom of this text
+                //Kodehawa code: Now using a Array list c:
+                
+                ArrayList<Integer> blocksToDestroy = new ArrayList<Integer>();
+                blocksToDestroy.add(BlocksMagic.blockSolidEvil.blockID);
+                blocksToDestroy.add(Block.grass.blockID);
+                blocksToDestroy.add(Block.dirt.blockID);
+                blocksToDestroy.add(Block.stone.blockID);
+                blocksToDestroy.add(Block.wood.blockID);
+                blocksToDestroy.add(Block.sand.blockID);
+                blocksToDestroy.add(Block.gravel.blockID);
+                blocksToDestroy.add(Block.leaves.blockID);
+                blocksToDestroy.add(Block.waterStill.blockID);
+                blocksToDestroy.add(Block.waterMoving.blockID);
+                blocksToDestroy.add(Block.lavaMoving.blockID);
+                blocksToDestroy.add(Block.lavaStill.blockID);
+           
+                for(Integer blockid: blocksToDestroy){
+                	if (par1World.getBlockId(wx, wy, wz) == blockid){
+                		par1World.setBlock(wx, wy, wz, this.blockID);
+				    }
                 }
             }
         }
