@@ -26,6 +26,8 @@ public class BlockSolidEvil extends Block
         par3List.add("Could get out of hand!");
     }	
 
+    //GitHub fails tests
+    @Override
     public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
     {
         if (!par1World.isRemote)
@@ -38,7 +40,6 @@ public class BlockSolidEvil extends Block
                 int l1 = par1World.getBlockId(wx, wy + 1, wz);
                                
                 //Kodehawa code: Tested and fully working c: | Arona: If you need to add another ID just do the same than in the bottom of this text
-                //Kodehawa code: Now using a Array list c:
                 
                 ArrayList<Integer> blocksToDestroy = new ArrayList<Integer>();
                 blocksToDestroy.add(BlocksMagic.blockSolidEvil.blockID);
