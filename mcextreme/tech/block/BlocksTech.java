@@ -2,6 +2,7 @@ package mcextreme.tech.block;
 
 import mcextreme.core.MCExtremeCore;
 import mcextreme.core.config.MCExtremeConfig;
+import mcextreme.core.utils.MCExtremeUtils;
 import mcextreme.magic.block.BlockLiquidDark;
 import mcextreme.magic.block.FluidDark;
 import mcextreme.tech.item.ItemBlockTech;
@@ -15,7 +16,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class BlocksTech
 {
-	
 	public static final int liquidConcreteID = 1500;
 	
     public static Block blockOre, blockStorage, blockBasicMachine, blockCompressor, blockCompressorActive;
@@ -26,7 +26,6 @@ public class BlocksTech
     
     public static void initBlocks()
     {
-    	
     	fluidConcrete = new FluidConcrete().setBlockID(liquidConcreteID);
     	
         blockOre = new BlockOreTech(MCExtremeConfig.blockTechOreID, "ORE", Material.rock).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("blockTechOre");
@@ -40,14 +39,8 @@ public class BlocksTech
         Item.itemsList[MCExtremeConfig.blockTechStorageID] = new ItemBlockTech(MCExtremeConfig.blockTechStorageID).setUnlocalizedName("blockStorageID");
         Item.itemsList[MCExtremeConfig.blockBasicMachineID] = new ItemBlockTech(MCExtremeConfig.blockBasicMachineID).setUnlocalizedName("blockBasicMachine");
         
-        
-        GameRegistry.registerBlock(blockBasicMachine, ItemBlock.class, null);
-        GameRegistry.registerBlock(blockCompressor, "Compressor");
-        GameRegistry.registerBlock(blockCompressorActive, "You Broke ME");
+        MCExtremeUtils.registerDefaultBlocks(blockBasicMachine, blockCompressor, blockCompressorActive);
         
         GameRegistry.registerTileEntity(TileEntityCompressor.class, "tileEntityCompressor");
-        
-        Item.itemsList[MCExtremeConfig.blockBasicMachineID] = new ItemBlockTech(MCExtremeConfig.blockBasicMachineID).setUnlocalizedName("blockBasicMachine");
-        
     }
 }
