@@ -42,8 +42,8 @@ public class BlockWorldsEnd extends Block
                 int wz = par4 + par5Random.nextInt(3) - 1;
                 int l1 = par1World.getBlockId(wx, wy + 1, wz);
                                
-                //Kodehawa: For now, it's better than a freaking infinite cadence of if's.
-                //Kodehawa: Tested and fully working, just place more than 1, thinking in a bug.
+                //Kodehawa code: Tested and fully working c: | Arona: If you need to add another ID just do the same than in the bottom of this text
+                //Kodehawa code: Now using a Array list c:
                 
                 ArrayList<Integer> blocksToDestroy = new ArrayList<Integer>();
                 blocksToDestroy.add(BlocksMagic.blockSolidEvil.blockID);
@@ -56,6 +56,8 @@ public class BlockWorldsEnd extends Block
                 blocksToDestroy.add(Block.leaves.blockID);
                 blocksToDestroy.add(Block.waterStill.blockID);
                 blocksToDestroy.add(Block.waterMoving.blockID);
+                blocksToDestroy.add(Block.lavaMoving.blockID);
+                blocksToDestroy.add(Block.lavaStill.blockID);
            
                 for(Integer blockid: blocksToDestroy){
                 	if (par1World.getBlockId(wx, wy, wz) == blockid){
