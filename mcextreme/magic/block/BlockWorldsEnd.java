@@ -1,12 +1,11 @@
 package mcextreme.magic.block;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -46,14 +45,23 @@ public class BlockWorldsEnd extends Block
                 //Kodehawa: For now, it's better than a freaking infinite cadence of if's.
                 //Kodehawa: Tested and fully working, just place more than 1, thinking in a bug.
                 
-                int ids = BlocksMagic.blockSolidEvil.blockID | Block.grass.blockID | Block.dirt.blockID | Block.stone.blockID |
-                		Block.wood.blockID | Block.sand.blockID | Block.gravel.blockID | Block.leaves.blockID |
-                		Block.waterStill.blockID | Block.waterMoving.blockID | Block.cactus.blockID | Block.waterlily.blockID |
-                		Block.snow.blockID;
-                
-				if (par1World.getBlockId(wx, wy, wz) == ids){
-					 par1World.setBlock(wx, wy, wz, this.blockID);
-				}
+                ArrayList<Integer> blocksToDestroy = new ArrayList<Integer>();
+                blocksToDestroy.add(BlocksMagic.blockSolidEvil.blockID);
+                blocksToDestroy.add(Block.grass.blockID);
+                blocksToDestroy.add(Block.dirt.blockID);
+                blocksToDestroy.add(Block.stone.blockID);
+                blocksToDestroy.add(Block.wood.blockID);
+                blocksToDestroy.add(Block.sand.blockID);
+                blocksToDestroy.add(Block.gravel.blockID);
+                blocksToDestroy.add(Block.leaves.blockID);
+                blocksToDestroy.add(Block.waterStill.blockID);
+                blocksToDestroy.add(Block.waterMoving.blockID);
+           
+                for(Integer blockid: blocksToDestroy){
+                	if (par1World.getBlockId(wx, wy, wz) == blockid){
+                		par1World.setBlock(wx, wy, wz, this.blockID);
+				    }
+                }
                 			
 				//Air
 				if (par1World.getBlockId(wx, wy, wz) == 0){
