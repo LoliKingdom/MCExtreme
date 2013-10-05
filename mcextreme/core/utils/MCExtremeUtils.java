@@ -13,7 +13,7 @@ public class MCExtremeUtils
 {    
 	public static void printModInfo()
 	{
-		String pluginsFound = "[MC-X] Installed plugins: ";
+		String pluginsFound = "[MC-X] Installed plugins:";
     	boolean first = true;
     	
     	String[] classes = new String[] { "magic.MCExtremeMagic", "tech.MCExtremeTech", "vtweaks.MCExtremeVTweaks" };
@@ -24,7 +24,7 @@ public class MCExtremeUtils
     		boolean failed = false;
     		
     		//Kodehawa code: Fixed reflection usage for independent versioning system
-    		//General: DO NOT CHANGE THIS CODE
+    		//To General: DO NOT CHANGE THIS CODE, pleeease :)
     		
     		try{
     			Class clazz = Class.forName("mcextreme."+classes[i]);
@@ -36,9 +36,9 @@ public class MCExtremeUtils
     			        version.setAccessible(true);
     			        pluginVersion = (String)version.get(null);
     			        label = (String)name.get(null);
+    	    		    label = (first ? " " : ", ")+label+"["+pluginVersion+"]";
+        			    first = false;
     			    }
-    			    
-    			    first = false;
     			}
     		}
     		catch(Exception exception){
@@ -47,7 +47,6 @@ public class MCExtremeUtils
     		}
     		
     		if(!failed){
-    		    label = (first ? " " : ", ")+label+"["+pluginVersion+"]";
     			pluginsFound = pluginsFound + label;
     		}
     	}
