@@ -22,12 +22,14 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid="MCExtremeTech", name="MC-X Tech", version=MCExtremeCore.version, dependencies = "required-after:MCExtremeCore")
+@Mod(modid="MCExtremeTech", name="MC-X Tech", version=MCExtremeTech.version, dependencies = "required-after:MCExtremeCore")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MCExtremeTech
 {
 	
 	public static final int guiIDCompressor = 0;
+	public static final String version = "0.2.4";
+	public static final String pluginName = "MCX Tech";
 	
     @Instance("MCExtremeTech")
     public static MCExtremeTech instance;

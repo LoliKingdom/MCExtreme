@@ -1,12 +1,11 @@
 package mcextreme.core.utils;
 
+import java.lang.reflect.Field;
 import java.util.logging.Level;
 
+import mcextreme.core.MCExtremeCore;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
-
-import mcextreme.core.MCExtremeCore;
-
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -14,29 +13,43 @@ public class MCExtremeUtils
 {    
 	public static void printModInfo()
 	{
-		String pluginsFound = "[MC-X] Installed plugins:";
+		String pluginsFound = "[MC-X] Installed plugins: ";
     	boolean first = true;
     	
     	String[] classes = new String[] { "magic.MCExtremeMagic", "tech.MCExtremeTech", "vtweaks.MCExtremeVTweaks" };
-    	String[] names = new String[] {	"Magic ", "Tech ", "Vanilla Tweaks " };
     	
     	for (int i = 0; i < classes.length; i++)
     	{
-    		String version, label = "";
+    		String pluginVersion = "", label = "";
     		boolean failed = false;
     		
-    		try
-    		{
-    			version = (String) Class.forName("mcextreme." + classes[i]).getField("version").get(null);
-    			label = (first ? " " : ", ") + names[i] + version;
-    			first = false;
+    		//Kodehawa code: Fixed reflection usage for independent versioning system
+    		//General: DO NOT CHANGE THIS CODE
+    		
+    		try{
+    			Class clazz = Class.forName("mcextreme."+classes[i]);
+    			if(clazz != null){
+    				Field name = clazz.getDeclaredField("pluginName");
+    			    Field version = clazz.getDeclaredField("version");
+    			    if(name != null && version != null){
+    			    	name.setAccessible(true);
+    			        version.setAccessible(true);
+    			        pluginVersion = (String)version.get(null);
+    			        label = (String)name.get(null);
+    			    }
+    			    
+    			    first = false;
+    			}
     		}
-    		catch (Exception e) 
-    		{
+    		catch(Exception exception){
+    			exception.printStackTrace();
     			failed = true;
     		}
     		
-    		if(!failed) pluginsFound = pluginsFound + label;
+    		if(!failed){
+    		    label = (first ? " " : ", ")+label+"["+pluginVersion+"]";
+    			pluginsFound = pluginsFound + label;
+    		}
     	}
     	
     	FMLLog.log(Level.INFO, "[MC-X] Loaded MC to the Extreme version " + MCExtremeCore.version + " for MC " + MCExtremeCore.mcversion);

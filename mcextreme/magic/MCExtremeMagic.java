@@ -30,7 +30,8 @@ public class MCExtremeMagic
 {
 	@Instance("MCExtremeMagic")
     public static MCExtremeMagic instance;
-	static final String version = "0.2.4";
+	public static final String version = "0.2.4";
+	public static final String pluginName = "MCX Magic";
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
