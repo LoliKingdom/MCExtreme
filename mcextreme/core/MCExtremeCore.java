@@ -1,12 +1,14 @@
 package mcextreme.core;
 
 import java.util.Arrays;
-import java.util.logging.Level;
 
 import mcextreme.core.utils.MCExtremePlayerHandler;
 import mcextreme.core.utils.MCExtremeUtils;
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
-import cpw.mods.fml.common.FMLLog;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.event.ForgeEventFactory;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -14,6 +16,7 @@ import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartedEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 
@@ -49,7 +52,6 @@ public class MCExtremeCore
     public void load(FMLInitializationEvent event) 
     { 
     	NetworkRegistry.instance().registerConnectionHandler(new MCExtremePlayerHandler());
-    	FMLLog.log(Level.SEVERE, "Aw Snap, the almighty CodeBreaker, warlordjones, is here!");
     }
     
     @EventHandler
