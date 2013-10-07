@@ -32,7 +32,7 @@ public class BlockSolidEvil extends Block
     {
         if (!par1World.isRemote)
         {
-            for (int l = 0; l < 50; ++l)
+            for (int l = 0; l < 25; ++l)
             {
             	int wx = par2 + par5Random.nextInt(3) - 1;
                 int wy = par3 + par5Random.nextInt(5) - 3;
