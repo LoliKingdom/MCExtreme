@@ -54,6 +54,9 @@ tile.blockTechStorage.14.name=Block of Strontium
 tile.blockTechStorage.15.name=Block of Iridium
 tile.blockBasicMachine.0.name=Block Breaker
 tile.blockBasicMachine.6.name=Block Placer
+tile.blockCompressor.name=Compressor
+tile.liquidConcrete.name=Liquid Concrete
+tile.rebar.name=Rebar
 
 #Items
 item.screwdriver.name=Screwdriver

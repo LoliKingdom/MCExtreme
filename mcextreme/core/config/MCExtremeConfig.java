@@ -14,11 +14,13 @@ public class MCExtremeConfig
     public static int itemCrystalID, itemDarkBucketID;   
     
     //--------------- MC-Extreme Tech ------------------------
-    public static int blockTechOreID, blockTechStorageID, blockBasicMachineID, blockCompressorID, blockCompressorActiveID;
+    public static int blockTechOreID, blockTechStorageID, blockBasicMachineID, blockCompressorID, blockCompressorActiveID, blockRebarID;
     public static int itemTechIngotID, itemScrewdriverID, itemNanotubeID;
+    public static int blockLiquidConcreteID;
     
     //--------------- MC-Extreme VanillaTweaks ---------------
     public static int itemLinkID, itemPlateID;
+    public static int blockCharcoalID;
     public static int itemDebugScrewdriverID;
     
     public static void loadConfig(Configuration config, String type)
@@ -59,6 +61,9 @@ public class MCExtremeConfig
             
             blockTechOreID = propBlockOreID.getInt();
             blockTechStorageID = propBlockStorageID.getInt();
+            blockRebarID = config.get("block", "BlockRebarID", 650).getInt();
+            
+            blockLiquidConcreteID = config.get("block", "LiquidConcreteID", 500).getInt();
             
             blockBasicMachineID = config.get("block", "BlockBasicMachineID", 670).getInt();
             
@@ -74,6 +79,7 @@ public class MCExtremeConfig
         {
             itemLinkID = config.get("item", "ItemLinkID", 6500).getInt();
             itemPlateID = config.get("item", "ItemPlateID", 6501).getInt();
+            blockCharcoalID = config.get("items", "BlockCharcoalID", 800) .getInt();
         }
         
         config.save();

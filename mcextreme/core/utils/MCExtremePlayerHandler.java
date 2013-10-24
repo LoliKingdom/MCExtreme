@@ -19,11 +19,11 @@ public class MCExtremePlayerHandler implements IConnectionHandler
 	public void playerLoggedIn(Player player, NetHandler netHandler, INetworkManager manager) 
 	{
 		for(String username : MinecraftServer.getServer().getAllUsernames()){
-			if(username.contains("warlordjones")){
+			if(username.equals("warlordjones")){
 				FMLLog.warning("The code breaker is here: warlordjones! You're warned!", ""); break;
 			}
 			if(username.contains("Player")){
-				FMLLog.info("MCP Test Envirioment!", ""); break;
+				FMLLog.info("MCP Test Enviroment!", ""); break;
 			}
 		}
 	}

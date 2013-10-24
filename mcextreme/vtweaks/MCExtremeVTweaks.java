@@ -8,6 +8,7 @@ import mcextreme.core.utils.CreativeTab;
 import mcextreme.vtweaks.blocks.BlockNonSolidLeaves;
 import mcextreme.vtweaks.item.ItemsVTweaks;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
@@ -50,6 +51,7 @@ public class MCExtremeVTweaks
     	ItemsVTweaks.initItems();
         CraftingVTweaks.addRecipes();
         Block blockLeaves = new BlockNonSolidLeaves(18).setHardness(0.2F).setLightOpacity(1).setStepSound(Block.soundGrassFootstep).setUnlocalizedName("leaves").setTextureName("leaves");
+        Block blockCharcoal = new Block(MCExtremeConfig.blockCharcoalID, Material.rock).setUnlocalizedName("blockCharcoal").setTextureName("blockCoal").setCreativeTab(CreativeTabs.tabBlock);
         
         ((CreativeTab)MCExtremeCore.tabVanillaTweaks).setIconItemStack(new ItemStack(ItemsVTweaks.itemLink));
     }
