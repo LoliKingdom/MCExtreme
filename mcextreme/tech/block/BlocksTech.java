@@ -30,8 +30,8 @@ public class BlocksTech
         blockBasicMachine = new BlockBasicMachine(MCExtremeConfig.blockBasicMachineID, "BREAKER").setHardness(3.5F).setUnlocalizedName("blockBasicMachine").setCreativeTab(MCExtremeCore.tabTech);
         blockCompressor = new BlockCompressor(MCExtremeConfig.blockCompressorID, false).setHardness(3.5F).setCreativeTab(MCExtremeCore.tabTech);
         blockCompressorActive = new BlockCompressor(MCExtremeConfig.blockCompressorActiveID, true).setHardness(3.5F).setLightValue(1.0F);
-        blockLiquidConcrete = new BlockLiquidConcrete(liquidConcreteID).setUnlocalizedName("liquidConcrete");
-        blockRebar = new Block(MCExtremeConfig.blockRebarID, Material.iron).setUnlocalizedName("rebar");
+        blockLiquidConcrete = new BlockLiquidConcrete(liquidConcreteID).setUnlocalizedName("liquidConcrete").setCreativeTab(MCExtremeCore.tabTech);
+        blockRebar = new Block(MCExtremeConfig.blockRebarID, Material.iron).setUnlocalizedName("rebar").setCreativeTab(MCExtremeCore.tabTech);
         
         Item.itemsList[MCExtremeConfig.blockTechOreID] = new ItemBlockTech(MCExtremeConfig.blockTechOreID).setUnlocalizedName("blockOreID");
         Item.itemsList[MCExtremeConfig.blockTechStorageID] = new ItemBlockTech(MCExtremeConfig.blockTechStorageID).setUnlocalizedName("blockStorageID");
@@ -41,5 +41,6 @@ public class BlocksTech
         
         GameRegistry.registerTileEntity(TileEntityCompressor.class, "tileEntityCompressor");
         GameRegistry.registerBlock(blockRebar, "Rebar");
+        GameRegistry.registerBlock(blockLiquidConcrete, "Liquid Concrete");
     }
 }

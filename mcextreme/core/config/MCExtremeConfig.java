@@ -6,7 +6,7 @@ import net.minecraftforge.common.Property;
 public class MCExtremeConfig
 {
     //--------------- MC-Extreme Aesthetics ------------------
-    
+    public static int blockBoneID;
     //--------------- MC-Extreme Core ------------------------
     
     //--------------- MC-Extreme Magic -----------------------
@@ -29,7 +29,7 @@ public class MCExtremeConfig
         
         if (type.toUpperCase().equals("AESTHETICS"))
         {
-            
+        	blockBoneID = config.get("block", "BlockBoneID", 900).getInt();
         }
         
         else if (type.toUpperCase().equals("CORE"))
