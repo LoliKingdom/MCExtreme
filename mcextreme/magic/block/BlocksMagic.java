@@ -26,6 +26,7 @@ public class BlocksMagic
     public static Block blockLiquidBlood;
     public static Block blockLiquidFireBlood;
     public static Block blockLiquidEndBlood;
+    public static Block blockbarrierrune;
     
     public static Material materialDark;
     
@@ -40,6 +41,8 @@ public class BlocksMagic
         blockSolidEvil = new BlockSolidEvil(MCExtremeConfig.blockSolidEvilID, Material.rock).setHardness(50.0F).setResistance(2000.0F).setUnlocalizedName("solidEvil").setCreativeTab(MCExtremeCore.tabMagic);
         blockWorldsEnd = new BlockWorldsEnd(MCExtremeConfig.blockWorldsEndID, Material.rock).setHardness(-1.0F).setResistance(6000000.0F).setUnlocalizedName("worldEnd").setCreativeTab(MCExtremeCore.tabMagic);
         blockLiquidDark = new BlockLiquidDark(liquidDarkID).setUnlocalizedName("liquidDarkness");
+        //Runes
+        blockbarrierrune = new BlockBarrierRune(1000, Material.circuits).setUnlocalizedName("barrierrune");
         
         blockOre = new BlockOreMagic(MCExtremeConfig.blockMagicOreID, "ORE", Material.rock).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("blockMagicOre");
         blockStorage = new BlockOreStorageMagic(MCExtremeConfig.blockMagicStorageID, "STORAGE", Material.iron).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("blockMagicStorage");
@@ -48,7 +51,9 @@ public class BlocksMagic
         Item.itemsList[MCExtremeConfig.blockMagicStorageID] = new ItemBlockMagic(MCExtremeConfig.blockMagicStorageID).setUnlocalizedName("blockMagicStorage");
 
         GameRegistry.registerBlock(BlocksMagic.blockSolidEvil, "Solidified Evil");
-        GameRegistry.registerBlock(BlocksMagic.blockWorldsEnd, "The End of the World as you knew it");
+        GameRegistry.registerBlock(BlocksMagic.blockWorldsEnd, "World's End");
         GameRegistry.registerBlock(BlocksMagic.blockLiquidDark, "Liquid Darkness");
+        
+        GameRegistry.registerBlock(BlocksMagic.blockbarrierrune, "Barrier Rune");
     }
 }

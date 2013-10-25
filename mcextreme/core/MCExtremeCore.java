@@ -28,7 +28,7 @@ public class MCExtremeCore
     @Instance("MCExtremeCore")
     public static MCExtremeCore instance;
     
-    public static CreativeTabs tabAesthetics, tabMagic, tabTech, tabVanillaTweaks; 
+    public static CreativeTabs tabAesthetics, tabMagic, tabTech, tabVanillaTweaks, tabUtilities, tabAsthetics; 
     
     public static final String version = "0.2.4", mcversion = "1.6.4";
     
