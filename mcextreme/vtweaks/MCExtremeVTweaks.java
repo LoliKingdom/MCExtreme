@@ -51,7 +51,7 @@ public class MCExtremeVTweaks
     	ItemsVTweaks.initItems();
         CraftingVTweaks.addRecipes();
         Block blockLeaves = new BlockNonSolidLeaves(18).setHardness(0.2F).setLightOpacity(1).setStepSound(Block.soundGrassFootstep).setUnlocalizedName("leaves").setTextureName("leaves");
-        Block blockCharcoal = new Block(MCExtremeConfig.blockCharcoalID, Material.rock).setUnlocalizedName("blockCharcoal").setTextureName("blockCoal").setCreativeTab(CreativeTabs.tabBlock);
+        Block blockCharcoal = new Block(MCExtremeConfig.blockCharcoalID, Material.rock).setUnlocalizedName("blockCharcoal").setTextureName("blockCoal").setCreativeTab(CreativeTabs.tabBlock).setCreativeTab(MCExtremeCore.tabVanillaTweaks);
         
         ((CreativeTab)MCExtremeCore.tabVanillaTweaks).setIconItemStack(new ItemStack(ItemsVTweaks.itemLink));
     }
