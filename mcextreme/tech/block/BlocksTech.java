@@ -25,7 +25,7 @@ public class BlocksTech
     public static Fluid fluidConcrete;
     
     public static void initBlocks()
-    {
+    {	
     	fluidConcrete = new FluidConcrete().setBlockID(liquidConcreteID);
     	
         blockOre = new BlockOreTech(MCExtremeConfig.blockTechOreID, "ORE", Material.rock).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("blockTechOre");

@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import mcextreme.core.utils.MCExtremePlayerHandler;
 import mcextreme.core.utils.MCExtremeUtils;
+import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -32,6 +33,8 @@ public class MCExtremeCore
     
     public static final String version = "0.2.4", mcversion = "1.6.4";
     
+    public static boolean exhate = false;
+    
     @EventHandler
     public void preInitialization(FMLPreInitializationEvent event)
     {
@@ -51,6 +54,14 @@ public class MCExtremeCore
     @EventHandler
     public void load(FMLInitializationEvent event) 
     { 
+    	if(exhate == true)
+    	{
+    		Block.blocksList[56] = null;
+    	}
+    	else
+    	{
+    		return;
+    	}
     	NetworkRegistry.instance().registerConnectionHandler(new MCExtremePlayerHandler());
     }
     

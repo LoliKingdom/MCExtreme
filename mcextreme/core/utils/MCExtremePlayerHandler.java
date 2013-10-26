@@ -3,6 +3,8 @@ package mcextreme.core.utils;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.network.IConnectionHandler;
 import cpw.mods.fml.common.network.Player;
+import mcextreme.core.MCExtremeCore;
+import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -10,8 +12,11 @@ import net.minecraft.network.INetworkManager;
 import net.minecraft.network.NetLoginHandler;
 import net.minecraft.network.packet.NetHandler;
 import net.minecraft.network.packet.Packet1Login;
+import net.minecraft.network.packet.Packet3Chat;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.src.ModLoader;
+import net.minecraft.util.ChatMessageComponent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 
 public class MCExtremePlayerHandler implements IConnectionHandler
 {
@@ -24,6 +29,12 @@ public class MCExtremePlayerHandler implements IConnectionHandler
 			}
 			if(username.contains("Player")){
 				FMLLog.info("MCP Test Enviroment!", ""); break;
+			}
+			//Insert Exacat Hate here!
+			if(username.equals("Exacat"))
+			{
+			MCExtremeCore.exhate = true;
+			FMLLog.warning("Exacat, you do not deserve this mod!", "");
 			}
 		}
 	}
