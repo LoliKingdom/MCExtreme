@@ -6,6 +6,9 @@ import mcextreme.core.utils.MCExtremeUtils;
 import mcextreme.tech.item.ItemBlockTech;
 import mcextreme.tech.tileentity.TileEntityCompressor;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockGlass;
+import net.minecraft.block.BlockPane;
+import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraftforge.fluids.Fluid;
@@ -32,7 +35,7 @@ public class BlocksTech
         blockCompressor = new BlockCompressor(MCExtremeConfig.blockCompressorID, false).setHardness(3.5F).setCreativeTab(MCExtremeCore.tabTech);
         blockCompressorActive = new BlockCompressor(MCExtremeConfig.blockCompressorActiveID, true).setHardness(3.5F).setLightValue(1.0F);
         blockLiquidConcrete = new BlockLiquidConcrete(liquidConcreteID).setUnlocalizedName("liquidConcrete").setCreativeTab(MCExtremeCore.tabTech);
-        blockRebar = new Block(MCExtremeConfig.blockRebarID, Material.iron).setUnlocalizedName("rebar").setCreativeTab(MCExtremeCore.tabTech);
+        blockRebar = new BlockWall(MCExtremeConfig.blockRebarID, Block.anvil).setUnlocalizedName("rebar").setCreativeTab(MCExtremeCore.tabTech);
         
         Item.itemsList[MCExtremeConfig.blockTechOreID] = new ItemBlockTech(MCExtremeConfig.blockTechOreID).setUnlocalizedName("blockOreID");
         Item.itemsList[MCExtremeConfig.blockTechStorageID] = new ItemBlockTech(MCExtremeConfig.blockTechStorageID).setUnlocalizedName("blockStorageID");

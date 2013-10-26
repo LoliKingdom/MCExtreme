@@ -67,6 +67,7 @@ public class CraftingVTweaks
         
         CraftingManager.getInstance().addRecipe(new ItemStack(ItemsVTweaks.itemLink), new Object[] {"#", '#', Item.ingotIron});
         CraftingManager.getInstance().addRecipe(new ItemStack(BlocksVTweaks.blockCharcoal), new Object[] { "CCC", "CCC", "CCC", 'C', new ItemStack(Item.coal.itemID, 1, 1) });
+        CraftingManager.getInstance().addShapelessRecipe(new ItemStack(Item.coal, 9, 1), new ItemStack(BlocksVTweaks.blockCharcoal));
         CraftingManager.getInstance().addShapelessRecipe(new ItemStack(ItemsVTweaks.itemPlate),new ItemStack(Item.ingotIron), new ItemStack(Item.ingotIron));
     }
 }

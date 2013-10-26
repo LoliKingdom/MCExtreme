@@ -27,10 +27,10 @@ public class BlockLiquidConcrete extends BlockFluidClassic
 
 	public int colorMultiplier(IBlockAccess iblockaccess, int x, int y, int z)
 	{
-	    return 0x000000; // HEX color code as indicated by the 0x infront. This is black
+	    return 0x808080; // HEX color code as indicated by the 0x infront. This is black
 	}
 	public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
     {
-    par1World.setBlock(par2, par3, par4, par4, par4, par4);
+    par1World.setBlock(103, 1, 1, 1);
     }
 }

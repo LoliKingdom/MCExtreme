@@ -21,9 +21,8 @@ public class BlockLiquidDark extends BlockFluidClassic
 	
 	public Icon getIcon(int side, int meta)
 	{
-	    return Block.waterMoving.getIcon(side, meta);
+	    return Block.lavaMoving.getIcon(side, meta);
 	}
-
 	public int colorMultiplier(IBlockAccess iblockaccess, int x, int y, int z)
 	{
 	    return 0x000000; // HEX color code as indicated by the 0x infront. This is a greenish color.

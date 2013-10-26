@@ -9,7 +9,7 @@ public class FluidConcrete extends Fluid
     {
         super("FluidConcrete");
         setDensity(100); // How tick the fluid is, affects movement inside the liquid.
-        setViscosity(5000); // How fast the fluid flows.
+        setViscosity(500); // How fast the fluid flows.
         luminosity = 0;
         FluidRegistry.registerFluid(this); // Registering inside it self, keeps things neat :)
     }
