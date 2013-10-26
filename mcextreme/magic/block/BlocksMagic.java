@@ -2,6 +2,7 @@ package mcextreme.magic.block;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import mcextreme.core.config.MCExtremeConfig;
+import mcextreme.core.utils.MCExtremeUtils;
 import mcextreme.core.MCExtremeCore;
 import mcextreme.magic.MCExtremeMagic;
 import mcextreme.magic.item.ItemBlockMagic;
@@ -16,8 +17,6 @@ import net.minecraftforge.fluids.FluidRegistry;
 
 public class BlocksMagic
 {
-	public static final int liquidDarkID = 1600;
-	
     public static Block blockMagicPortal;
     public static Block blockOre, blockStorage;
     public static Block blockSolidEvil;
@@ -26,7 +25,7 @@ public class BlocksMagic
     public static Block blockLiquidBlood;
     public static Block blockLiquidFireBlood;
     public static Block blockLiquidEndBlood;
-    public static Block blockbarrierrune;
+    public static Block blockBarrierRune;
     
     public static Material materialDark;
     
@@ -34,15 +33,15 @@ public class BlocksMagic
     
     public static void initBlocks()
     {
-    	fluidDarkness = new FluidDark().setBlockID(liquidDarkID);
+    	fluidDarkness = new FluidDark().setBlockID(MCExtremeConfig.blockLiquidDarkID);
     	
         blockMagicPortal = new BlockMagicPortal(MCExtremeConfig.blockMagicPortalID).setHardness(-1.0F).setResistance(6000000.0F).setLightValue(1.0F).setUnlocalizedName("portalMagic");
         //Corrupt Stuff
         blockSolidEvil = new BlockSolidEvil(MCExtremeConfig.blockSolidEvilID, Material.rock).setHardness(50.0F).setResistance(2000.0F).setUnlocalizedName("solidEvil").setCreativeTab(MCExtremeCore.tabMagic);
         blockWorldsEnd = new BlockWorldsEnd(MCExtremeConfig.blockWorldsEndID, Material.rock).setHardness(-1.0F).setResistance(6000000.0F).setUnlocalizedName("worldEnd").setCreativeTab(MCExtremeCore.tabMagic);
-        blockLiquidDark = new BlockLiquidDark(liquidDarkID).setUnlocalizedName("liquidDarkness");
+        blockLiquidDark = new BlockLiquidDark(MCExtremeConfig.blockLiquidDarkID).setUnlocalizedName("liquidDarkness");
         //Runes
-        blockbarrierrune = new BlockBarrierRune(1000, Material.circuits).setUnlocalizedName("barrierrune");
+        blockBarrierRune = new BlockBarrierRune(MCExtremeConfig.blockBarrierRuneID, Material.circuits).setUnlocalizedName("barrierRune");
         
         blockOre = new BlockOreMagic(MCExtremeConfig.blockMagicOreID, "ORE", Material.rock).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("blockMagicOre");
         blockStorage = new BlockOreStorageMagic(MCExtremeConfig.blockMagicStorageID, "STORAGE", Material.iron).setHardness(3.0F).setResistance(1.5F).setUnlocalizedName("blockMagicStorage");
@@ -50,10 +49,6 @@ public class BlocksMagic
         Item.itemsList[MCExtremeConfig.blockMagicOreID] = new ItemBlockMagic(MCExtremeConfig.blockMagicOreID).setUnlocalizedName("blockMagicOre"); 
         Item.itemsList[MCExtremeConfig.blockMagicStorageID] = new ItemBlockMagic(MCExtremeConfig.blockMagicStorageID).setUnlocalizedName("blockMagicStorage");
 
-        GameRegistry.registerBlock(BlocksMagic.blockSolidEvil, "Solidified Evil");
-        GameRegistry.registerBlock(BlocksMagic.blockWorldsEnd, "World's End");
-        GameRegistry.registerBlock(BlocksMagic.blockLiquidDark, "Liquid Darkness");
-        
-        GameRegistry.registerBlock(BlocksMagic.blockbarrierrune, "Barrier Rune");
+        MCExtremeUtils.registerDefaultBlocks(blockSolidEvil, blockWorldsEnd, blockLiquidDark, blockBarrierRune);
     }
 }

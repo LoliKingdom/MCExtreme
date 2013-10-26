@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 
+import mcextreme.core.utils.MCExtremeUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -24,7 +25,7 @@ public class BlockBasicMachine extends Block
 {
     public String type;
     
-    public Icon[] textures = new Icon[12];
+    public static Icon[] textures = new Icon[12];
     public static int[][] textureReferences = new int[][] {{ 1, 0, 2, 2, 2, 2 }, { 0, 1, 4, 4, 4, 4 }, { 5, 5, 3, 5, 0, 1 }, { 3, 3, 5, 3, 1, 0 }, { 2, 2, 0, 1, 5, 3 }, { 4, 4, 1, 0, 3, 5 }};
     
     public BlockBasicMachine(int blockID, String blockType)
@@ -48,7 +49,6 @@ public class BlockBasicMachine extends Block
             textures[3] = iconRegistry.registerIcon("mcextreme:tech/basic/blockBreakerSide1");
             textures[4] = iconRegistry.registerIcon("mcextreme:tech/basic/blockBreakerSide2");
             textures[5] = iconRegistry.registerIcon("mcextreme:tech/basic/blockBreakerSide3");
-
             textures[6] = iconRegistry.registerIcon("mcextreme:tech/basic/blockPlacerFront");
             textures[7] = iconRegistry.registerIcon("mcextreme:tech/basic/blockPlacerBack");
             textures[8] = textures[4];
@@ -65,12 +65,14 @@ public class BlockBasicMachine extends Block
         
         int meta = world.getBlockMetadata(x, y, z);
         
-        if (world.getBlockPowerInput(x, y, z) > 0)
+        if (MCExtremeUtils.isBlockPowered(world, x, y, z))
         {
+            EntityPlayer mainPlayer = (EntityPlayer) MinecraftServer.getServer().getConfigurationManager().playerEntityList.get(0);
+            mainPlayer.sendChatToPlayer(ChatMessageComponent.createFromText("There has been a Block update"));
+            
             if (meta < 6)
             {
                 world.setBlockMetadataWithNotify(x, y, z, meta + 6, 3);
-                EntityPlayer mainPlayer = (EntityPlayer) MinecraftServer.getServer().getConfigurationManager().playerEntityList.get(0);
                 
                 if (type == "BREAKER") breakBlock(x, y, z, world);
                 else placeBlock(x, y, z, world);
@@ -161,8 +163,6 @@ public class BlockBasicMachine extends Block
     {
         int meta = world.getBlockMetadata(x, y, z) - 6;
         
-        System.out.println("LOL");
-        
         int xPos = x + (meta == 3 ? 1 : (meta == 2 ? -1 : 0));
         int yPos = y + (meta == 0 ? 1 : (meta == 1 ? -1 : 0));
         int zPos = z + (meta == 5 ? 1 : (meta == 4 ? -1 : 0));
@@ -181,7 +181,6 @@ public class BlockBasicMachine extends Block
         while (returnsIterator.hasNext())
         {
             ItemStack toPush = returnsIterator.next();
-            System.out.println(toPush);
             
             if (inventory != null)
             {
@@ -230,10 +229,5 @@ public class BlockBasicMachine extends Block
     private void placeBlock(int x, int y, int z, World world)
     {
         
-    }
-
-    public boolean canConnectRedstone(IBlockAccess world, int x, int y, int z, int side)
-    {
-        return true;
     }
 }

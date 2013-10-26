@@ -1,16 +1,20 @@
 package mcextreme.vtweaks;
 
 import java.io.File;
+import java.lang.reflect.Field;
 
 import mcextreme.core.config.MCExtremeConfig;
 import mcextreme.core.MCExtremeCore;
 import mcextreme.core.utils.CreativeTab;
+import mcextreme.core.utils.MCExtremeUtils;
 import mcextreme.vtweaks.blocks.BlockNonSolidLeaves;
+import mcextreme.vtweaks.blocks.BlocksVTweaks;
 import mcextreme.vtweaks.item.ItemsVTweaks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.Mod;
@@ -47,11 +51,9 @@ public class MCExtremeVTweaks
     @EventHandler
     public void load(FMLInitializationEvent event)
     {
-    	Block.blocksList[18] = null;
     	ItemsVTweaks.initItems();
+        BlocksVTweaks.initBlocks();
         CraftingVTweaks.addRecipes();
-        Block blockLeaves = new BlockNonSolidLeaves(18).setHardness(0.2F).setLightOpacity(1).setStepSound(Block.soundGrassFootstep).setUnlocalizedName("leaves").setTextureName("leaves");
-        Block blockCharcoal = new Block(MCExtremeConfig.blockCharcoalID, Material.rock).setUnlocalizedName("blockCharcoal").setTextureName("blockCoal").setCreativeTab(CreativeTabs.tabBlock).setCreativeTab(MCExtremeCore.tabVanillaTweaks);
         
         ((CreativeTab)MCExtremeCore.tabVanillaTweaks).setIconItemStack(new ItemStack(ItemsVTweaks.itemLink));
     }

@@ -1,5 +1,13 @@
-#VERSION 1
+#VERSION 2 - Translated by domi1819
 
+#######################################################
+
+#MC-X Aesthetics
+
+#Misc
+itemGroup.mcx.aesthetics=MC-Extreme: Aesthetics
+
+#######################################################
 
 #MC-X Magic
 
@@ -7,7 +15,7 @@
 tile.blockMagicOre.0.name=Aquamarinerz
 tile.solidEvil.name=Festes Unheil
 tile.worldEnd.name=Das Ende der Welt
-tile.liquidDarkness.name=Flüssige Finsternis
+tile.liquidDarkness.name=Fl\u00fcssige Finsternis
 
 #Items
 item.magicCrystal.0.name=Aquamarinkristall
@@ -52,8 +60,11 @@ tile.blockTechStorage.12.name=Antimonblock
 tile.blockTechStorage.13.name=Lithiumblock
 tile.blockTechStorage.14.name=Strontiumblock
 tile.blockTechStorage.15.name=Iridiumblock
-tile.blockBasicMachine.0.name=Blockzerstörer
-tile.blockBasicMachine.6.name=Blockplatzierer
+tile.blockBreaker.name=Blockzerst\u00f6rer
+tile.blockPlacer.name=Blockplatzierer
+tile.machineCompressor.name=Kompressor
+tile.liquidConcrete.name=Beton
+tile.rebar.name=Betonstahl
 
 #Items
 item.screwdriver.name=Schraubendreher
@@ -76,6 +87,8 @@ item.ingotMCExtreme.15.name=Iridiumbarren
 item.ingotMCExtreme.16.name=Titanbarren
 item.ingotMCExtreme.17.name=Wolframbarren
 item.ingotMCExtreme.18.name=Dunkler Eisenbarren
+item.nanotube.name=Nanor\u00f6hre
+item.dbgscrewdriver.name=Debug-Schraubendreher
 
 #Misc
 itemGroup.mcx.tech=MC-Extreme: Technik
@@ -83,6 +96,9 @@ itemGroup.mcx.tech=MC-Extreme: Technik
 #######################################################
 
 #MC-X VanillaTweaks
+
+#Blocks
+tile.blockCharcoal.name=Holzkohleblock
 
 #Items
 item.linkIron.name=Eisenkettenglied

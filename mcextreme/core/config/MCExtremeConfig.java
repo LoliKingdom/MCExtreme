@@ -6,22 +6,31 @@ import net.minecraftforge.common.Property;
 public class MCExtremeConfig
 {
     //--------------- MC-Extreme Aesthetics ------------------
+    //--------------- Block range: 700 - 1199 ----------------
+    //--------------- Item range: 3000 - 3999 ----------------
     public static int blockBoneID;
+    
     //--------------- MC-Extreme Core ------------------------
     
     //--------------- MC-Extreme Magic -----------------------
+    //--------------- Block range: 1200 - 1699 ---------------
+    //--------------- Item range: 4000 - 4999 ----------------
     public static int blockMagicPortalID, blockMagicOreID, blockMagicStorageID, blockSolidEvilID, blockWorldsEndID;   
-    public static int itemCrystalID, itemDarkBucketID;   
+    public static int blockBarrierRuneID, blockLiquidDarkID;
+    public static int itemCrystalID, itemDarkBucketID;
     
     //--------------- MC-Extreme Tech ------------------------
-    public static int blockTechOreID, blockTechStorageID, blockBasicMachineID, blockCompressorID, blockCompressorActiveID, blockRebarID;
-    public static int itemTechIngotID, itemScrewdriverID, itemNanotubeID;
+    //--------------- Block range: 1700 - 2199 ---------------
+    //--------------- Item range: 5000 - 5999 ----------------
+    public static int blockTechOreID, blockTechStorageID, blockBreakerID, blockPlacerID, blockCompressorID, blockCompressorActiveID, blockRebarID;
+    public static int itemTechIngotID, itemScrewdriverID, itemDebugScrewdriverID, itemNanotubeID;
     public static int blockLiquidConcreteID;
     
     //--------------- MC-Extreme VanillaTweaks ---------------
+    //--------------- Block range: 2200 - 2699 ---------------
+    //--------------- Item range: 6000 - 6999 ----------------
     public static int itemLinkID, itemPlateID;
     public static int blockCharcoalID;
-    public static int itemDebugScrewdriverID;
     
     public static void loadConfig(Configuration config, String type)
     {
@@ -29,7 +38,7 @@ public class MCExtremeConfig
         
         if (type.toUpperCase().equals("AESTHETICS"))
         {
-        	blockBoneID = config.get("block", "BlockBoneID", 900).getInt();
+        	blockBoneID = config.get("block", "BlockBoneID", 700).getInt();
         }
         
         else if (type.toUpperCase().equals("CORE"))
@@ -39,47 +48,52 @@ public class MCExtremeConfig
         
         else if (type.toUpperCase().equals("MAGIC"))
         {
-            blockMagicPortalID = config.get("block", "BlockMagicPortalID", 540).getInt();
-            blockMagicOreID = config.get("block", "BlockOreID", 541).getInt();
-            blockMagicStorageID = config.get("block", "BlockStorageID", 542).getInt();
-            blockSolidEvilID = config.get("block", "BlockSolidEvilID", 543).getInt();
-            blockWorldsEndID = config.get("block", "BlockWorldsEndID", 544).getInt();
+            blockMagicPortalID = config.get("block", "BlockMagicPortalID", 1200).getInt();
+            blockMagicOreID = config.get("block", "BlockOreID", 1201).getInt();
+            blockMagicStorageID = config.get("block", "BlockStorageID", 1202).getInt();
+            blockSolidEvilID = config.get("block", "BlockSolidEvilID", 1203).getInt();
+            blockWorldsEndID = config.get("block", "BlockWorldsEndID", 1204).getInt();
             
-            itemCrystalID = config.get("item", "ItemCrystalID", 6300).getInt();
-            itemDarkBucketID = config.get("item", "ItemDarkBucketID", 6301).getInt();
+            blockBarrierRuneID = config.get("block", "BlockBarrierRuneID", 1205).getInt();
+            blockLiquidDarkID = config.get("block", "BlockLiquidDarkID", 1206).getInt();
+            
+            itemCrystalID = config.get("item", "ItemCrystalID", 4000).getInt();
+            itemDarkBucketID = config.get("item", "ItemDarkBucketID", 4001).getInt();
         }
         
         else if (type.toUpperCase().equals("TECH"))
         {
             Property propBlockOreID, propBlockStorageID;
             
-            propBlockOreID = config.get("block", "BlockOreID", 640);
-            propBlockStorageID = config.get("block", "BlockStorageID", 641);
+            propBlockOreID = config.get("block", "BlockOreID", 1700);
+            propBlockStorageID = config.get("block", "BlockStorageID", 1701);
             
             propBlockOreID.comment = "Ore Block ID";
             propBlockStorageID.comment = "Storage Block ID";
             
             blockTechOreID = propBlockOreID.getInt();
             blockTechStorageID = propBlockStorageID.getInt();
-            blockRebarID = config.get("block", "BlockRebarID", 650).getInt();
+            blockRebarID = config.get("block", "BlockRebarID", 1702).getInt();
             
-            blockLiquidConcreteID = config.get("block", "LiquidConcreteID", 500).getInt();
+            blockLiquidConcreteID = config.get("block", "LiquidConcreteID", 1703).getInt();
             
-            blockBasicMachineID = config.get("block", "BlockBasicMachineID", 670).getInt();
+            blockBreakerID = config.get("block", "BlockBreakerID", 1704).getInt();
+            blockPlacerID = config.get("block", "BlockPlacerID", 1705).getInt();
             
-            blockCompressorID = config.get("block", "BlockCompressor", 700).getInt();
-            blockCompressorActiveID = config.get("block", "BlockCompressorActive", 701).getInt();
+            blockCompressorID = config.get("block", "BlockCompressor", 1706).getInt();
+            blockCompressorActiveID = config.get("block", "BlockCompressorActive", 1707).getInt();
             
-            itemTechIngotID = config.get("item", "ItemIngotID", 6400).getInt();
-            itemScrewdriverID = config.get("item", "ItemScrewdriverID", 6350).getInt();
-            itemDebugScrewdriverID = config.get("item", "DebugScrewdriverID", 6351).getInt();
+            itemTechIngotID = config.get("item", "ItemIngotID", 5000).getInt();
+            itemScrewdriverID = config.get("item", "ItemScrewdriverID", 5001).getInt();
+            itemDebugScrewdriverID = config.get("item", "ItemDebugScrewdriverID", 5002).getInt();
         }
         
         else if (type.toUpperCase().equals("VTWEAKS"))
         {
-            itemLinkID = config.get("item", "ItemLinkID", 6500).getInt();
-            itemPlateID = config.get("item", "ItemPlateID", 6501).getInt();
-            blockCharcoalID = config.get("items", "BlockCharcoalID", 800) .getInt();
+            blockCharcoalID = config.get("items", "BlockCharcoalID", 2200).getInt();
+            
+            itemLinkID = config.get("item", "ItemLinkID", 6000).getInt();
+            itemPlateID = config.get("item", "ItemPlateID", 6001).getInt();
         }
         
         config.save();

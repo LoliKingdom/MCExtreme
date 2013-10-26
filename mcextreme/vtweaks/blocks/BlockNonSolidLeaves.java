@@ -3,6 +3,8 @@ package mcextreme.vtweaks.blocks;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
@@ -42,7 +44,9 @@ public class BlockNonSolidLeaves extends BlockLeaves
 	
     public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity entity)
     {
-    	entity.motionX *= 0.3D;
-        entity.motionZ *= 0.3D;
+        if (entity instanceof EntityPlayer && ((EntityPlayer) entity).capabilities.isCreativeMode && ((EntityPlayer) entity).capabilities.isFlying) return;
+        
+        entity.motionX *= 0.6D;
+        entity.motionZ *= 0.6D;
     }
 }

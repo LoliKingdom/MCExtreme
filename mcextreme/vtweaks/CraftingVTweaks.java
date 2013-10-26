@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 
+import mcextreme.vtweaks.blocks.BlocksVTweaks;
 import mcextreme.vtweaks.item.ItemsVTweaks;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -51,6 +52,7 @@ public class CraftingVTweaks
     {
         CraftingVTweaks.removeItemRecipes(new Item[] {Item.helmetChain, Item.plateChain, Item.legsChain, Item.bootsChain, Item.helmetIron, Item.plateIron, Item.legsIron, Item.bootsIron});
         CraftingVTweaks.removeBlockRecipes(Block.bookShelf);
+        
         CraftingManager.getInstance().addRecipe(new ItemStack(Item.helmetChain), new Object[] {"###", "# #", '#', ItemsVTweaks.itemLink});
         CraftingManager.getInstance().addRecipe(new ItemStack(Item.plateChain), new Object[] {"# #", "###", "###", '#', ItemsVTweaks.itemLink});
         CraftingManager.getInstance().addRecipe(new ItemStack(Item.legsChain), new Object[] {"###", "# #", "# #", '#', ItemsVTweaks.itemLink});
@@ -64,6 +66,7 @@ public class CraftingVTweaks
         CraftingManager.getInstance().addRecipe(new ItemStack(Block.bookShelf), new Object[] {"###", "XXX", "###", '#', Block.planks, 'X', Item.enchantedBook});
         
         CraftingManager.getInstance().addRecipe(new ItemStack(ItemsVTweaks.itemLink), new Object[] {"#", '#', Item.ingotIron});
+        CraftingManager.getInstance().addRecipe(new ItemStack(BlocksVTweaks.blockCharcoal), new Object[] { "CCC", "CCC", "CCC", 'C', new ItemStack(Item.coal.itemID, 1, 1) });
         CraftingManager.getInstance().addShapelessRecipe(new ItemStack(ItemsVTweaks.itemPlate),new ItemStack(Item.ingotIron), new ItemStack(Item.ingotIron));
     }
 }

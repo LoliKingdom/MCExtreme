@@ -1,8 +1,8 @@
-package mcextreme.asthetics;
+package mcextreme.aesthetics;
 
 import java.io.File;
 
-import mcextreme.asthetics.blocks.BlocksAsthetics;
+import mcextreme.aesthetics.blocks.BlocksAesthetics;
 import mcextreme.core.MCExtremeCore;
 import mcextreme.core.config.MCExtremeConfig;
 import mcextreme.core.utils.CreativeTab;
@@ -15,31 +15,31 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid="MCExtremeAsthetics", name="MC-X Asthetics", version=MCExtremeAsthetics.version, dependencies = "required-after:MCExtremeCore")
+@Mod(modid="MCExtremeAesthetics", name="MC-X Aesthetics", version=MCExtremeAesthetics.version, dependencies = "required-after:MCExtremeCore")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
-public class MCExtremeAsthetics
+public class MCExtremeAesthetics
 {	
 	
 	public static final String version = "0.2.4";
-	public static final String pluginName = "MCX Asthetics";
+	public static final String pluginName = "MCX Aesthetics";
 	
-    @Instance("MCExtremeAsthetics")
-    public static MCExtremeAsthetics instance;
+    @Instance("MCExtremeAesthetics")
+    public static MCExtremeAesthetics instance;
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        MCExtremeCore.tabAsthetics = new CreativeTab("mcx.asthetics");
+        MCExtremeCore.tabAesthetics = new CreativeTab("mcx.aesthetics");
         
     	ModMetadata modMeta = event.getModMetadata();
  		modMeta.parent = "MCExtremeCore";
  		
- 		MCExtremeConfig.loadConfig(new Configuration(new File(event.getModConfigurationDirectory() + "/mcextreme", "mcx-vanillatweaks.cfg")), "VTWEAKS");
+ 		MCExtremeConfig.loadConfig(new Configuration(new File(event.getModConfigurationDirectory() + "/mcextreme", "mcx-aesthetics.cfg")), "AESTHETICS");
     }
     
     @EventHandler
     public void load(FMLInitializationEvent event)
     {
-    	BlocksAsthetics.initBlocks();
+    	BlocksAesthetics.initBlocks();
     }
 }

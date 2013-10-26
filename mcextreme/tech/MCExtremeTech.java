@@ -55,6 +55,6 @@ public class MCExtremeTech
         CraftingTech.registerInOreDict();
         EnumsTech.setHarvestLevels();
         
-        ((CreativeTab)MCExtremeCore.tabTech).setIconItemStack(new ItemStack(BlocksTech.blockBasicMachine, 1, 0));
+        ((CreativeTab)MCExtremeCore.tabTech).setIconItemStack(new ItemStack(BlocksTech.blockBreaker, 1, 0));
     }
 }

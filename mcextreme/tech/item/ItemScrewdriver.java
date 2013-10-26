@@ -36,7 +36,7 @@ public class ItemScrewdriver extends Item
         if (world.getBlockId(x, y, z) == 0) return false;
         
         if (debug) return scan(world, x, y, z, side, player, stack);
-        else if (world.getBlockId(x, y, z) == BlocksTech.blockBasicMachine.blockID)
+        else if (world.getBlockId(x, y, z) == BlocksTech.blockBreaker.blockID || world.getBlockId(x, y, z) == BlocksTech.blockPlacer.blockID)
         {
             int meta = world.getBlockMetadata(x, y, z);
             world.setBlockMetadataWithNotify(x, y, z, (meta % 6 == 5 ? meta - 5 : meta + 1), 3);
