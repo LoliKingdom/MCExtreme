@@ -65,6 +65,7 @@ tile.blockPlacer.name=Block Placer
 tile.machineCompressor.name=Compressor
 tile.liquidConcrete.name=Liquid Concrete
 tile.rebar.name=Rebar
+tile.solidconcrete.name= Hardened Concrete
 
 #Items
 item.screwdriver.name=Screwdriver
@@ -89,9 +90,23 @@ item.ingotMCExtreme.17.name=Tungsten Ingot
 item.ingotMCExtreme.18.name=Dark Iron Ingot
 item.nanotube.name=Nano Tube
 item.dbgscrewdriver.name=Debug Screwdriver
+item.concretebucket.name=Bucket of Concrete
 
 #Misc
 itemGroup.mcx.tech=MC-Extreme: Tech
+
+#######################################################
+
+#MC-X Utilities
+
+#Blocks
+
+
+#Items
+
+
+#Misc
+itemGroup.mcx.utilities=MC-Extreme: Utilities
 
 #######################################################
 

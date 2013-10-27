@@ -23,14 +23,18 @@ public class MCExtremeConfig
     //--------------- Block range: 1700 - 2199 ---------------
     //--------------- Item range: 5000 - 5999 ----------------
     public static int blockTechOreID, blockTechStorageID, blockBreakerID, blockPlacerID, blockCompressorID, blockCompressorActiveID, blockRebarID;
-    public static int itemTechIngotID, itemScrewdriverID, itemDebugScrewdriverID, itemNanotubeID;
-    public static int blockLiquidConcreteID;
+    public static int itemTechIngotID, itemScrewdriverID, itemDebugScrewdriverID, itemNanotubeID, itemConcreteBucketID;
+    public static int blockLiquidConcreteID, blockSolidConcreteID;
     
     //--------------- MC-Extreme VanillaTweaks ---------------
     //--------------- Block range: 2200 - 2699 ---------------
     //--------------- Item range: 6000 - 6999 ----------------
     public static int itemLinkID, itemPlateID;
     public static int blockCharcoalID;
+    //--------------- MC-Extreme Utilities ---------------
+    //--------------- Block range: 2700 - 3199 ---------------
+    //--------------- Item range: 7000 - 7999 ----------------
+    public static int blockSandbagID;
     
     public static void loadConfig(Configuration config, String type)
     {
@@ -76,16 +80,18 @@ public class MCExtremeConfig
             blockRebarID = config.get("block", "BlockRebarID", 1702).getInt();
             
             blockLiquidConcreteID = config.get("block", "LiquidConcreteID", 1703).getInt();
+            blockSolidConcreteID = config.get("block", "BlockSolidConcreteID", 1704).getInt();
             
-            blockBreakerID = config.get("block", "BlockBreakerID", 1704).getInt();
-            blockPlacerID = config.get("block", "BlockPlacerID", 1705).getInt();
+            blockBreakerID = config.get("block", "BlockBreakerID", 1705).getInt();
+            blockPlacerID = config.get("block", "BlockPlacerID", 1706).getInt();
             
-            blockCompressorID = config.get("block", "BlockCompressor", 1706).getInt();
-            blockCompressorActiveID = config.get("block", "BlockCompressorActive", 1707).getInt();
+            blockCompressorID = config.get("block", "BlockCompressor", 1707).getInt();
+            blockCompressorActiveID = config.get("block", "BlockCompressorActive", 1708).getInt();
             
             itemTechIngotID = config.get("item", "ItemIngotID", 5000).getInt();
             itemScrewdriverID = config.get("item", "ItemScrewdriverID", 5001).getInt();
             itemDebugScrewdriverID = config.get("item", "ItemDebugScrewdriverID", 5002).getInt();
+            itemConcreteBucketID = config.get("item", "ItemConcreteBucket", 5003).getInt();
         }
         
         else if (type.toUpperCase().equals("VTWEAKS"))
@@ -94,6 +100,10 @@ public class MCExtremeConfig
             
             itemLinkID = config.get("item", "ItemLinkID", 6000).getInt();
             itemPlateID = config.get("item", "ItemPlateID", 6001).getInt();
+        }
+        else if (type.toUpperCase().equals("UTIL"))
+        {
+        	blockSandbagID = config.get("blocks", "BlockSandbagID", 2700).getInt();
         }
         
         config.save();

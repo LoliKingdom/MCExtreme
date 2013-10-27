@@ -15,7 +15,7 @@ public class BlockLiquidConcrete extends BlockFluidClassic
 {
 	public BlockLiquidConcrete(int par1) 
 	{
-		super(par1, BlocksTech.fluidConcrete, Material.water);
+		super(par1, BlocksTech.fluidConcrete, Material.lava);
 		this.setCreativeTab(MCExtremeCore.tabTech);
 		BlocksTech.fluidConcrete.setBlockID(par1);
 	}
@@ -29,8 +29,4 @@ public class BlockLiquidConcrete extends BlockFluidClassic
 	{
 	    return 0x808080; // HEX color code as indicated by the 0x infront. This is black
 	}
-	public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
-    {
-    par1World.setBlock(103, 1, 1, 1);
-    }
 }

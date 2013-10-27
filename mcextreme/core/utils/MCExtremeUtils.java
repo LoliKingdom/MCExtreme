@@ -17,7 +17,7 @@ public class MCExtremeUtils
 		String pluginsFound = "[MC-X] Installed plugins:";
     	boolean first = true;
     	
-    	String[] classes = new String[] {"aesthetics.MCExtremeAesthetics", "magic.MCExtremeMagic", "tech.MCExtremeTech", "vtweaks.MCExtremeVTweaks"};
+    	String[] classes = new String[] {"aesthetics.MCExtremeAesthetics", "magic.MCExtremeMagic", "tech.MCExtremeTech", "vtweaks.MCExtremeVTweaks","utilities.MCExtremeUtilities"};
     	
     	for (int i = 0; i < classes.length; i++)
     	{

@@ -3,6 +3,7 @@ package mcextreme.tech;
 import mcextreme.magic.block.BlocksMagic;
 import mcextreme.magic.item.ItemsMagic;
 import mcextreme.tech.block.BlocksTech;
+import mcextreme.tech.item.ItemsTech;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
@@ -14,28 +15,29 @@ import net.minecraftforge.event.entity.player.FillBucketEvent;
 
 public class TechnicalEventHooks 
 {
-	@ForgeSubscribe(priority = EventPriority.NORMAL)
-	public void FillBucket(FillBucketEvent event) 
+	@ForgeSubscribe
+	public void onBucketFill(FillBucketEvent event)
 	{
-		ItemStack result = attemptFill(event.world, event.target);
-		if (result != null) 
-		{
-			event.result = result;
-			event.setResult(Result.ALLOW);
-		}
+
+		ItemStack result = fillCustomBucket(event.world, event.target);
+
+		if (result == null)
+			return;
+
+		event.result = result;
+		event.setResult(Result.ALLOW);
 	}
 
-	private ItemStack attemptFill( World world, MovingObjectPosition p )
+	public ItemStack fillCustomBucket(World world, MovingObjectPosition pos)
 	{
-		int id = world.getBlockId( p.blockX, p.blockY, p.blockZ );
-	
-		if ( id == BlocksTech.blockLiquidConcrete.blockID )
+		int blockID = world.getBlockId(pos.blockX, pos.blockY, pos.blockZ);
+
+		if ((blockID == BlocksTech.blockLiquidConcrete.blockID || blockID == BlocksTech.blockRebar.blockID) && world.getBlockMetadata(pos.blockX, pos.blockY, pos.blockZ) == 0)
 		{
-			if ( world.getBlockMetadata( p.blockX, p.blockY, p.blockZ ) == 0 ) // Check that it is a source block
-			{
-				world.setBlock( p.blockX, p.blockY, p.blockZ, 0 ); // Remove the fluid block
-			}
+			world.setBlock(pos.blockX, pos.blockY, pos.blockZ, 0);
+			return new ItemStack(ItemsTech.itemConcreteBucket);
 		}
-		return new ItemStack(Item.diamond); // Return the filled bucked item here.
+		else
+			return null;
 	}
 }
