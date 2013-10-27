@@ -23,7 +23,8 @@ public class MCExtremeConfig
     //--------------- Block range: 1700 - 2199 ---------------
     //--------------- Item range: 5000 - 5999 ----------------
     public static int blockTechOreID, blockTechStorageID, blockBreakerID, blockPlacerID, blockCompressorID, blockCompressorActiveID, blockRebarID;
-    public static int itemTechIngotID, itemScrewdriverID, itemDebugScrewdriverID, itemNanotubeID, itemConcreteBucketID;
+    public static int itemTechIngotID, itemScrewdriverID, itemDebugScrewdriverID, itemNanotubeID, itemConcreteBucketID, itemCrowbarID, itemWrenchID, itemHammerID, itemPliersID;
+    public static int itemRubberID, itemPlasticID, itemWire, itemGear, itemPlate;
     public static int blockLiquidConcreteID, blockSolidConcreteID;
     
     //--------------- MC-Extreme VanillaTweaks ---------------
@@ -92,6 +93,10 @@ public class MCExtremeConfig
             itemScrewdriverID = config.get("item", "ItemScrewdriverID", 5001).getInt();
             itemDebugScrewdriverID = config.get("item", "ItemDebugScrewdriverID", 5002).getInt();
             itemConcreteBucketID = config.get("item", "ItemConcreteBucket", 5003).getInt();
+            itemCrowbarID = config.get("item", "ItemCrowbarID", 5004).getInt(); 
+            itemWrenchID = config.get("item", "ItemWrenchID", 5005).getInt();
+            itemHammerID = config.get("item", "ItemHammerID", 5006).getInt();
+            itemPliersID = config.get("item", "ItemPliersID", 5007).getInt();
         }
         
         else if (type.toUpperCase().equals("VTWEAKS"))

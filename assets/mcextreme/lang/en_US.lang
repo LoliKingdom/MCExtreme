@@ -91,6 +91,10 @@ item.ingotMCExtreme.18.name=Dark Iron Ingot
 item.nanotube.name=Nano Tube
 item.dbgscrewdriver.name=Debug Screwdriver
 item.concretebucket.name=Bucket of Concrete
+item.crowbar.name=Crowbar
+item.wrench.name=Wrench
+item.hammer.name=Hammer
+item.pliers.name=Pair of Pliers
 
 #Misc
 itemGroup.mcx.tech=MC-Extreme: Tech
