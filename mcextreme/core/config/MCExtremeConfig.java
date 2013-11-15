@@ -35,7 +35,7 @@ public class MCExtremeConfig
     //--------------- MC-Extreme Utilities ---------------
     //--------------- Block range: 2700 - 3199 ---------------
     //--------------- Item range: 7000 - 7999 ----------------
-    public static int blockSandbagID;
+    public static int blockSandbagID, blockBinID;
     
     public static void loadConfig(Configuration config, String type)
     {
@@ -109,6 +109,7 @@ public class MCExtremeConfig
         else if (type.toUpperCase().equals("UTIL"))
         {
         	blockSandbagID = config.get("blocks", "BlockSandbagID", 2700).getInt();
+        	blockBinID = config.get("blocks", "BlockBinID", 2701).getInt();
         }
         
         config.save();

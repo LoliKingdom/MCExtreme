@@ -9,11 +9,12 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class BlocksUtilities
 {
-    public static Block blockSandbag;
+    public static Block blockSandbag, blockBin;
     
     public static void initBlocks()
     {
     	blockSandbag = new Block(MCExtremeConfig.blockSandbagID, Material.sand).setResistance(10F).setHardness(2F).setUnlocalizedName("blockSandbag").setCreativeTab(MCExtremeCore.tabUtilities);
-    	MCExtremeUtils.registerDefaultBlock(blockSandbag);	
+    	blockBin = new BlockBin(MCExtremeConfig.blockBinID, Material.iron).setUnlocalizedName("blockBin").setCreativeTab(MCExtremeCore.tabUtilities);
+    	MCExtremeUtils.registerDefaultBlocks(blockSandbag, blockBin);	
     }
 }
