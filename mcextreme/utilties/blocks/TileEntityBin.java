@@ -1,107 +1,144 @@
 package mcextreme.utilties.blocks;
 
-import mcextreme.utilities.MCExtremeUtilities;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 
-public class TileEntityBin extends TileEntity
+public class TileEntityBin extends TileEntity implements ISidedInventory
 {
-	private ItemStack[] binContents = new ItemStack[27];
-	
-    /** The current angle of the chest lid (between 0 and 1) */
-    public float lidAngle;
-
-    /** The angle of the chest lid last tick */
-    public float prevLidAngle;
-
-    /** The number of players currently using this ender chest. */
-    public int numUsingPlayers;
-
-    /** Server sync counter (once per 20 ticks) */
-    private int ticksSinceSync;
-
-    /**
-     * Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count
-     * ticks and creates a new spawn inside its implementation.
-     */
-    public void updateEntity()
+    public ItemStack[] inventory;
+    
+    private static final int[] slots = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
+    
+    public TileEntityBin()
     {
-        super.updateEntity();
-        //this.decrStackSize(numUsingPlayers, numUsingPlayers);
-        this.binContents.equals(0);
+        inventory = new ItemStack[9];
+    }
+    
+    @Override
+    public void updateEntity() 
+    {
+        for (int i = 0; i < getSizeInventory(); i++) setInventorySlotContents(i, null);
+    }
+    
+    @Override
+    public int getSizeInventory()
+    {
+        return inventory.length;
     }
 
-    /**
-     * Called when a client event is received with the event number and argument, see World.sendClientEvent
-     */
-    public boolean receiveClientEvent(int par1, int par2)
+    @Override
+    public ItemStack getStackInSlot(int slotID)
     {
-        if (par1 == 1)
+        return inventory[slotID];
+    }
+
+    @Override
+    public ItemStack decrStackSize(int slotID, int amount)
+    {
+        ItemStack stack = getStackInSlot(slotID);
+        
+        if (stack != null)
         {
-            this.numUsingPlayers = par2;
-            return true;
-        }
-        else
-        {
-            return super.receiveClientEvent(par1, par2);
-        }
-    }
-
-    /**
-     * invalidates a tile entity
-     */
-    public void invalidate()
-    {
-        this.updateContainingBlockInfo();
-        super.invalidate();
-    }
-
-    public void openChest()
-    {
-        ++this.numUsingPlayers;
-        this.worldObj.addBlockEvent(this.xCoord, this.yCoord, this.zCoord, BlocksUtilities.blockBin.blockID, 1, this.numUsingPlayers);
-    }
-
-    public void closeChest()
-    {
-        --this.numUsingPlayers;
-        this.worldObj.addBlockEvent(this.xCoord, this.yCoord, this.zCoord, BlocksUtilities.blockBin.blockID, 1, this.numUsingPlayers);
-    }
-
-    public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer)
-    {
-        return this.worldObj.getBlockTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : par1EntityPlayer.getDistanceSq((double)this.xCoord + 0.5D, (double)this.yCoord + 0.5D, (double)this.zCoord + 0.5D) <= 64.0D;
-    }
-    public ItemStack decrStackSize(int par1, int par2)
-    {
-        if (this.binContents[par1] != null)
-        {
-            ItemStack itemstack;
-
-            if (this.binContents[par1].stackSize <= par2)
+            ItemStack temp;
+            temp = stack.copy();
+            
+            if (amount >= stack.stackSize)
             {
-                itemstack = this.binContents[par1];
-                this.binContents[par1] = null;
-                this.onInventoryChanged();
-                return itemstack;
+                setInventorySlotContents(slotID, null);
+                
+                temp.stackSize = stack.stackSize;
             }
-            else
+            else 
             {
-                itemstack = this.binContents[par1].splitStack(par2);
-
-                if (this.binContents[par1].stackSize == 0)
-                {
-                    this.binContents[par1] = null;
-                }
-
-                this.onInventoryChanged();
-                return itemstack;
+                setInventorySlotContents(slotID, new ItemStack(stack.itemID, stack.stackSize - amount, stack.getItemDamage()));
+                
+                temp.stackSize = amount;
             }
+            
+            return temp;
         }
-        else
+        return null;
+    }
+
+    @Override
+    public ItemStack getStackInSlotOnClosing(int slotID)
+    {
+        ItemStack returnStack = getStackInSlot(slotID);
+        
+        setInventorySlotContents(slotID, null);
+        
+        return returnStack;
+    }
+
+    @Override
+    public void setInventorySlotContents(int slotID, ItemStack stack)
+    {
+        if (stack != null && stack.stackSize > getInventoryStackLimit())
         {
-            return null;
+            stack.stackSize = getInventoryStackLimit();
         }
+        
+        inventory[slotID] = stack;
+        
+        onInventoryChanged();
+    }
+
+    @Override
+    public String getInvName()
+    {
+        return "Trash Bin";
+    }
+
+    @Override
+    public boolean isInvNameLocalized()
+    {
+        return false;
+    }
+
+    @Override
+    public int getInventoryStackLimit()
+    {
+        return 64;
+    }
+
+    @Override
+    public void onInventoryChanged() { }
+
+    @Override
+    public boolean isUseableByPlayer(EntityPlayer entityplayer)
+    {
+        return entityplayer.getDistanceSq(xCoord + 0.5, yCoord + 0.5, zCoord + 0.5) <= 64;
+    }
+
+    @Override
+    public void openChest() { }
+
+    @Override
+    public void closeChest() { }
+
+    @Override
+    public boolean isItemValidForSlot(int i, ItemStack itemstack)
+    {
+        return false;
+    }
+
+    @Override
+    public int[] getAccessibleSlotsFromSide(int side)
+    {
+        return slots;
+    }
+
+    @Override
+    public boolean canInsertItem(int slotID, ItemStack stack, int side)
+    {
+        return true;
+    }
+
+    @Override
+    public boolean canExtractItem(int slotID, ItemStack stack, int side)
+    {
+        return true;
     }
 }
