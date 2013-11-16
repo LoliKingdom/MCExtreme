@@ -1,4 +1,4 @@
-#VERSION 2 - Translated by domi1819
+#VERSION 3 - Translated by domi1819
 
 #######################################################
 
@@ -63,8 +63,9 @@ tile.blockTechStorage.15.name=Iridiumblock
 tile.blockBreaker.name=Blockzerst\u00f6rer
 tile.blockPlacer.name=Blockplatzierer
 tile.machineCompressor.name=Kompressor
-tile.liquidConcrete.name=Beton
+tile.liquidConcrete.name=Fl\u00fcssiger Beton
 tile.rebar.name=Betonstahl
+tile.solidconcrete.name=Ausgeh\u00e4rteter Beton
 
 #Items
 item.screwdriver.name=Schraubendreher
@@ -89,9 +90,27 @@ item.ingotMCExtreme.17.name=Wolframbarren
 item.ingotMCExtreme.18.name=Dunkler Eisenbarren
 item.nanotube.name=Nanor\u00f6hre
 item.dbgscrewdriver.name=Debug-Schraubendreher
+item.concretebucket.name=Betoneimer
+item.crowbar.name=Brecheisen
+item.wrench.name=Schraubschl\u00fcssel
+item.hammer.name=Hammer
+item.pliers.name=Zange
 
 #Misc
 itemGroup.mcx.tech=MC-Extreme: Technik
+
+#######################################################
+
+#MC-X Utilities
+
+#Blocks
+tile.blockBin.name=Abfalleimer
+
+#Items
+
+
+#Misc
+itemGroup.mcx.utilities=MC-Extreme: Utilities
 
 #######################################################
 
