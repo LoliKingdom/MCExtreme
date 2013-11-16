@@ -8,11 +8,12 @@ import net.minecraft.block.material.Material;
 
 public class BlocksAesthetics 
 {
-    public static Block blockBone;
+    public static Block blockBone, blockLSandstone;
 
     public static void initBlocks()
     {
         blockBone = new Block(MCExtremeConfig.blockBoneID, Material.rock).setUnlocalizedName("blockBone");
-		MCExtremeUtils.registerDefaultBlock(blockBone);
+        blockLSandstone = new Block(MCExtremeConfig.blockLSandstoneID, Material.rock).setUnlocalizedName("blockLSandstone");
+		MCExtremeUtils.registerDefaultBlocks(blockBone, blockLSandstone);
     }
 }

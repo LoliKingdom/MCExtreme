@@ -8,7 +8,7 @@ public class MCExtremeConfig
     //--------------- MC-Extreme Aesthetics ------------------
     //--------------- Block range: 700 - 1199 ----------------
     //--------------- Item range: 3000 - 3999 ----------------
-    public static int blockBoneID;
+    public static int blockBoneID, blockLSandstoneID;
     
     //--------------- MC-Extreme Core ------------------------
     
@@ -45,6 +45,7 @@ public class MCExtremeConfig
         if (type.toUpperCase().equals("AESTHETICS"))
         {
         	blockBoneID = config.get("block", "BlockBoneID", 700).getInt();
+        	blockLSandstoneID = config.get("block", "BlockLSandstoneID", 701).getInt();
         }
         
         else if (type.toUpperCase().equals("CORE"))
