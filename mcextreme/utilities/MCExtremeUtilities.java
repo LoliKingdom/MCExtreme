@@ -5,6 +5,7 @@ import java.io.File;
 import mcextreme.core.MCExtremeCore;
 import mcextreme.core.config.MCExtremeConfig;
 import mcextreme.core.utils.CreativeTab;
+import mcextreme.utilties.blocks.BlocksUtilities;
 import mcextreme.vtweaks.CraftingVTweaks;
 import mcextreme.vtweaks.MCExtremeVTweaks;
 import mcextreme.vtweaks.blocks.BlockNonSolidLeaves;
@@ -47,6 +48,6 @@ public class MCExtremeUtilities
     @EventHandler
     public void load(FMLInitializationEvent event)
     {
-
+        BlocksUtilities.initBlocks();
     }
 }

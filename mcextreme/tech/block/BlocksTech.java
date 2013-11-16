@@ -39,9 +39,8 @@ public class BlocksTech
         Item.itemsList[MCExtremeConfig.blockTechOreID] = new ItemBlockTech(MCExtremeConfig.blockTechOreID).setUnlocalizedName("blockOreID");
         Item.itemsList[MCExtremeConfig.blockTechStorageID] = new ItemBlockTech(MCExtremeConfig.blockTechStorageID).setUnlocalizedName("blockStorageID");
         
-        MCExtremeUtils.registerDefaultBlocks(blockBreaker, blockPlacer, blockCompressor, blockCompressorActive, blockRebar, blockLiquidConcrete);
+        MCExtremeUtils.registerDefaultBlocks(blockBreaker, blockPlacer, blockCompressor, blockCompressorActive, blockRebar, blockLiquidConcrete, blockSolidConcrete);
         
         GameRegistry.registerTileEntity(TileEntityCompressor.class, "tileEntityCompressor");
-        MCExtremeUtils.registerDefaultBlock(blockSolidConcrete);
     }
 }

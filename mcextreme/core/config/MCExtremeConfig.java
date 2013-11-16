@@ -32,6 +32,7 @@ public class MCExtremeConfig
     //--------------- Item range: 6000 - 6999 ----------------
     public static int itemLinkID, itemPlateID;
     public static int blockCharcoalID;
+    
     //--------------- MC-Extreme Utilities ---------------
     //--------------- Block range: 2700 - 3199 ---------------
     //--------------- Item range: 7000 - 7999 ----------------
