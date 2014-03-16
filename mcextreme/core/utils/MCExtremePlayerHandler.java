@@ -35,6 +35,11 @@ public class MCExtremePlayerHandler implements IConnectionHandler
 			{
 			MCExtremeCore.exhate = true;
 			FMLLog.warning("Exacat, you do not deserve this mod!", "");
+			//Lelfish
+			{
+		    if(username.equals("Rongmario"))
+		    	FMLLog.info("Lel <3", ""); break;
+			}
 			}
 		}
 	}

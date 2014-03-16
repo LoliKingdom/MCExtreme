@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import cpw.mods.fml.relauncher.SideOnly;
+
+import mcextreme.core.utils.CreativeTab;
+import mcextreme.magic.MCExtremeMagic;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -25,10 +29,9 @@ public class BlockWorldsEnd extends Block
         this.setTickRandomly(true);
         this.setBlockUnbreakable();
 	}
-    
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
     {
-        par3List.add("The world destroyer");
+        par3List.add("The World Destroyer");
     }	
 
     public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
