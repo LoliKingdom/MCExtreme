@@ -2,6 +2,7 @@ package mcextreme.core;
 
 import java.util.Arrays;
 
+import mcextreme.core.utils.CreativeTab;
 import mcextreme.core.utils.MCExtremePlayerHandler;
 import mcextreme.core.utils.MCExtremeUtils;
 import net.minecraft.block.Block;
@@ -29,7 +30,7 @@ public class MCExtremeCore
     @Instance("MCExtremeCore")
     public static MCExtremeCore instance;
     
-    public static CreativeTabs tabAesthetics, tabMagic, tabTech, tabVanillaTweaks, tabUtilities; 
+    public static CreativeTabs tabAesthetics, tabMagic, tabTech, tabVanillaTweaks, tabUtilities, tabTools; 
     
     public static final String version = "0.2.4", mcversion = "1.6.4";
     

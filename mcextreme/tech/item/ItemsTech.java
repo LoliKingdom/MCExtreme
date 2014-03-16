@@ -7,7 +7,7 @@ import net.minecraft.item.Item;
 
 public class ItemsTech
 {
-    public static Item itemIngot, itemScrewdriver, itemNanotube, itemDebugScrewdriver, itemConcreteBucket, itemCrowbar, itemWrench, itemHammer, itemPliers;
+    public static Item itemIngot, itemScrewdriver, itemNanotube, itemDebugScrewdriver, itemConcreteBucket, itemCrowbar, itemWrench, itemHammer, itemPliers, itemTestTube;
     
     public static void initItems()
     {
@@ -18,8 +18,9 @@ public class ItemsTech
         itemHammer = new ItemHammer(MCExtremeConfig.itemHammerID).setUnlocalizedName("hammer");
         itemPliers = new ItemPliers(MCExtremeConfig.itemPliersID).setUnlocalizedName("pliers");
         itemNanotube = new ItemNanotube(MCExtremeConfig.itemNanotubeID).setUnlocalizedName("nanotube");
-        itemDebugScrewdriver = new ItemScrewdriver(MCExtremeConfig.itemDebugScrewdriverID, true).setUnlocalizedName("dbgscrewdriver");
+        itemDebugScrewdriver = new ItemScrewdriver(MCExtremeConfig.itemDebugScrewdriverID, true).setUnlocalizedName("debugScrewdriver");
         itemConcreteBucket = new ItemConcreteBucket(MCExtremeConfig.itemConcreteBucketID).setUnlocalizedName("concreteBucket");
+        itemTestTube = new ItemTestTube(MCExtremeConfig.itemTestTubeID).setUnlocalizedName("testtube");
     }
     
 }

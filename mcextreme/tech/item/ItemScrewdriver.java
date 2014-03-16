@@ -19,7 +19,7 @@ public class ItemScrewdriver extends Item
     {
         super(itemID);
         setMaxStackSize(1);
-        if (debugMode) setMaxDamage(249);
+        if (debugMode) setMaxDamage(269);
         setTextureName("mcextreme:tech/tools/screwdriver");
         setCreativeTab(MCExtremeCore.tabTech);
         
