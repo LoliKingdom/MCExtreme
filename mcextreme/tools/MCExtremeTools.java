@@ -17,14 +17,14 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid="MCExtremeTools", name="MC-X Tools", version=MCExtremeTools.version, dependencies = "required-after:MCExtremeCore")
+@Mod(modid=MCExtremeTools.MODID, name=MCExtremeTools.NAME, version=MCExtremeTools.VERSION, dependencies = "required-after:" + MCExtremeCore.MODID)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MCExtremeTools
 {
-	public static final String version = "0.2.4";
-	public static final String pluginName = "MCX Tools";
-	
-    @Instance("MCExtremeTools")
+    public static final String MODID = MCExtremeCore.PRE_ID + "Tools";
+	public static final String VERSION = "0.2.4";
+	public static final String NAME = MCExtremeCore.ABBR + " Tools";
+    @Instance(MODID)
     public static MCExtremeTools instance;
     
     @EventHandler
@@ -33,7 +33,7 @@ public class MCExtremeTools
         MCExtremeCore.tabTools = new CreativeTab("mcx.tools");
         
     	ModMetadata modMeta = event.getModMetadata();
- 		modMeta.parent = "MCExtremeCore";
+ 		modMeta.parent = MCExtremeCore.MODID;
  		
  		MCExtremeConfig.loadConfig(new Configuration(new File(event.getModConfigurationDirectory() + "/mcextreme", "mcx-tools.cfg")), "TOOLS");
  		

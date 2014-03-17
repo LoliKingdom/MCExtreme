@@ -14,9 +14,11 @@ import net.minecraft.network.packet.NetHandler;
 import net.minecraft.network.packet.Packet1Login;
 import net.minecraft.network.packet.Packet3Chat;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.src.ModLoader;
 import net.minecraft.util.ChatMessageComponent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
+
+import java.util.Arrays;
+import java.util.logging.Logger;
 
 public class MCExtremePlayerHandler implements IConnectionHandler
 {
@@ -25,21 +27,20 @@ public class MCExtremePlayerHandler implements IConnectionHandler
 	{
 		for(String username : MinecraftServer.getServer().getAllUsernames()){
 			if(username.equals("warlordjones")){
-				FMLLog.warning("The code breaker is here: warlordjones! You're warned!", ""); break;
+				MCExtremeCore.logger.warning("The code breaker is here: warlordjones! You're warned!"); break;
 			}
 			if(username.contains("Player")){
-				FMLLog.info("MCP Test Enviroment!", ""); break;
+                MCExtremeCore.logger.info("MCP Test Enviroment!"); break;
 			}
 			//Insert Exacat Hate here!
 			if(username.equals("Exacat"))
 			{
-			MCExtremeCore.exhate = true;
-			FMLLog.warning("Exacat, you do not deserve this mod!", "");
-			//Lelfish
-			{
-		    if(username.equals("Rongmario"))
-		    	FMLLog.info("Lel <3", ""); break;
-			}
+                MCExtremeCore.exhate = true;
+                MCExtremeCore.logger.warning("Exacat, you do not deserve this mod!");
+                //Lelfish
+                if(Arrays.asList(MinecraftServer.getServer().getAllUsernames()).contains("Rongmario"))
+                    Logger.getLogger("Rongmario").info("Lel <3");
+                break;
 			}
 		}
 	}

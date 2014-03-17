@@ -24,14 +24,15 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid="MCExtremeMagic", name="MC-X Magic", version=MCExtremeMagic.version, dependencies = "required-after:MCExtremeCore")
+@Mod(modid=MCExtremeMagic.MODID, name=MCExtremeMagic.NAME, version=MCExtremeMagic.VERSION, dependencies = "required-after:" + MCExtremeCore.MODID)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MCExtremeMagic
 {
-	@Instance("MCExtremeMagic")
+    public static final String MODID = MCExtremeCore.PRE_ID + "Magic";
+	public static final String VERSION = "0.2.4";
+	public static final String NAME = MCExtremeCore.ABBR + " Magic";
+    @Instance(MODID)
     public static MCExtremeMagic instance;
-	public static final String version = "0.2.4";
-	public static final String pluginName = "MCX Magic";
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -39,7 +40,7 @@ public class MCExtremeMagic
         MCExtremeCore.tabMagic = new CreativeTab("mcx.magic");
         
     	ModMetadata modMeta = event.getModMetadata();
- 		modMeta.parent = "MCExtremeCore";
+ 		modMeta.parent = MCExtremeCore.MODID;
  		
         MCExtremeConfig.loadConfig(new Configuration(new File(event.getModConfigurationDirectory() + "/mcextreme", "mcx-magic.cfg")), "MAGIC");
     }

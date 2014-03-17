@@ -15,24 +15,23 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid="MCExtremeAesthetics", name="MC-X Aesthetics", version=MCExtremeAesthetics.version, dependencies = "required-after:MCExtremeCore")
+@Mod(modid=MCExtremeAesthetics.MODID, name=MCExtremeAesthetics.NAME, version=MCExtremeAesthetics.VERSION, dependencies = "required-after:" + MCExtremeCore.MODID)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MCExtremeAesthetics
-{	
-	
-	public static final String version = "0.2.4";
-	public static final String pluginName = "MCX Aesthetics";
-	
-    @Instance("MCExtremeAesthetics")
+{
+	public static final String MODID = MCExtremeCore.PRE_ID + "Aesthetics";
+	public static final String VERSION = "0.2.4";
+	public static final String NAME = MCExtremeCore.ABBR + " Aesthetics";
+    @Instance(MODID)
     public static MCExtremeAesthetics instance;
-    
+
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         MCExtremeCore.tabAesthetics = new CreativeTab("mcx.aesthetics");
         
     	ModMetadata modMeta = event.getModMetadata();
- 		modMeta.parent = "MCExtremeCore";
+ 		modMeta.parent = MCExtremeCore.MODID;
  		
  		MCExtremeConfig.loadConfig(new Configuration(new File(event.getModConfigurationDirectory() + "/mcextreme", "mcx-aesthetics.cfg")), "AESTHETICS");
     }

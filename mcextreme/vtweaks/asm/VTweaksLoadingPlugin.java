@@ -8,7 +8,7 @@ import cpw.mods.fml.relauncher.IFMLLoadingPlugin.TransformerExclusions;
 @TransformerExclusions({"mcextreme.vtweaks.asm"})
 public class VTweaksLoadingPlugin implements IFMLLoadingPlugin {
 
-	@Override
+	//@Override
 	public String[] getLibraryRequestClass() {
 		// TODO Auto-generated method stub
 		return null;

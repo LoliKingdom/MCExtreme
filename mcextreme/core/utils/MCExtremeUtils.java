@@ -5,7 +5,6 @@ import java.util.logging.Level;
 
 import mcextreme.core.MCExtremeCore;
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.FMLLog;
@@ -15,7 +14,7 @@ public class MCExtremeUtils
 {    
 	public static void printModInfo()
 	{
-		String pluginsFound = "[MC-X] Installed plugins:";
+		String pluginsFound = "Installed plugins:";
     	boolean first = true;
     	
     	String[] classes = new String[] {"aesthetics.MCExtremeAesthetics", "magic.MCExtremeMagic", "tech.MCExtremeTech", "vtweaks.MCExtremeVTweaks","utilities.MCExtremeUtilities"};
@@ -27,18 +26,20 @@ public class MCExtremeUtils
     		
     		//Kodehawa code: Fixed reflection usage for independent versioning system
     		//To General: DO NOT CHANGE THIS CODE, pleeease :)
+
+            // from general: I did. :P (I learned Reflection)
     		
     		try{
     			Class clazz = Class.forName("mcextreme."+classes[i]);
     			if(clazz != null){
-    				Field name = clazz.getDeclaredField("pluginName");
-    			    Field version = clazz.getDeclaredField("version");
+    				Field name = clazz.getDeclaredField("NAME");
+    			    Field version = clazz.getDeclaredField("VERSION");
     			    if(name != null && version != null){
     			    	name.setAccessible(true);
     			        version.setAccessible(true);
     			        pluginVersion = (String)version.get(null);
     			        label = (String)name.get(null);
-    	    		    label = (first ? " " : ", ")+label+"["+pluginVersion+"]";
+    	    		    label = (first ? " " : ", ")+label+" ["+pluginVersion+"]";
         			    first = false;
     			    }
     			}
@@ -52,9 +53,9 @@ public class MCExtremeUtils
     			pluginsFound = pluginsFound + label;
     		}
     	}
-    	
-    	FMLLog.log(Level.INFO, "[MC-X] Loaded MC to the Extreme version " + MCExtremeCore.version + " for MC " + MCExtremeCore.mcversion);
-    	FMLLog.log(Level.INFO, pluginsFound); 
+
+        MCExtremeCore.logger.info("Loaded " + MCExtremeCore.NAME + " version " + MCExtremeCore.VERSION + " for Minecraft " + MCExtremeCore.MCVERSION);
+    	MCExtremeCore.logger.info(pluginsFound);
 	}
 
     public static void registerDefaultBlocks(Block... blocks)

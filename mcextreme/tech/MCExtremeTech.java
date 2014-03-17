@@ -25,17 +25,17 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid="MCExtremeTech", name="MC-X Tech", version=MCExtremeTech.version, dependencies = "required-after:MCExtremeCore")
+@Mod(modid=MCExtremeTech.MODID, name=MCExtremeTech.NAME, version=MCExtremeTech.VERSION, dependencies = "required-after:" + MCExtremeCore.MODID)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MCExtremeTech
 {
-	
-	public static final int guiIDCompressor = 0;
-	public static final String version = "0.2.4";
-	public static final String pluginName = "MCX Tech";
-	
-    @Instance("MCExtremeTech")
+    public static final String MODID = MCExtremeCore.PRE_ID + "Tech";
+	public static final String VERSION = "0.2.4";
+	public static final String NAME = MCExtremeCore.ABBR + " Tech";
+    @Instance(MODID)
     public static MCExtremeTech instance;
+
+    public static final int guiIDCompressor = 0;
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -43,7 +43,7 @@ public class MCExtremeTech
         MCExtremeCore.tabTech = new CreativeTab("mcx.tech");
         
     	ModMetadata modMeta = event.getModMetadata();
- 		modMeta.parent = "MCExtremeCore";
+ 		modMeta.parent = MCExtremeCore.MODID;
  		
  		MCExtremeConfig.loadConfig(new Configuration(new File(event.getModConfigurationDirectory() + "/mcextreme", "mcx-tech.cfg")), "TECH");
  		

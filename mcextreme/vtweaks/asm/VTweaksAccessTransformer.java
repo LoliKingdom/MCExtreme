@@ -7,6 +7,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 import cpw.mods.fml.common.asm.transformers.AccessTransformer;
+import mcextreme.core.MCExtremeCore;
 
 public class VTweaksAccessTransformer extends AccessTransformer {
     private static VTweaksAccessTransformer instance;
@@ -32,7 +33,7 @@ public class VTweaksAccessTransformer extends AccessTransformer {
             }
     }
     private void readMapFile(String name) {
-            System.out.println("Adding transformer map: " + name);
+            MCExtremeCore.logger.info("Adding transformer map: " + name);
             try {
                     // get a method from AccessTransformer
                     Method e = AccessTransformer.class.getDeclaredMethod("readMapFile", new Class[]{String.class});
