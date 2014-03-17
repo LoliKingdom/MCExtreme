@@ -1,10 +1,5 @@
 package mcextreme.vtweaks;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Iterator;
-
 import mcextreme.vtweaks.blocks.BlocksVTweaks;
 import mcextreme.vtweaks.item.ItemsVTweaks;
 import net.minecraft.block.Block;
@@ -12,6 +7,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Iterator;
 
 public class CraftingVTweaks
 {

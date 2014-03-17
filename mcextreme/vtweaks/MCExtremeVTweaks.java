@@ -1,14 +1,5 @@
 package mcextreme.vtweaks;
 
-import java.io.File;
-
-import mcextreme.core.config.MCExtremeConfig;
-import mcextreme.core.MCExtremeCore;
-import mcextreme.core.utils.CreativeTab;
-import mcextreme.vtweaks.blocks.BlocksVTweaks;
-import mcextreme.vtweaks.item.ItemsVTweaks;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -16,6 +7,15 @@ import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import mcextreme.core.MCExtremeCore;
+import mcextreme.core.config.MCExtremeConfig;
+import mcextreme.core.utils.CreativeTab;
+import mcextreme.vtweaks.blocks.BlocksVTweaks;
+import mcextreme.vtweaks.item.ItemsVTweaks;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.Configuration;
+
+import java.io.File;
 
 @Mod(modid=MCExtremeVTweaks.MODID, name=MCExtremeVTweaks.NAME, version=MCExtremeVTweaks.VERSION, dependencies = "required-after:" + MCExtremeCore.MODID)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)

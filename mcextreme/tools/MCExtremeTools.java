@@ -1,14 +1,5 @@
 package mcextreme.tools;
 
-import java.io.File;
-
-import mcextreme.core.MCExtremeCore;
-import mcextreme.core.config.MCExtremeConfig;
-import mcextreme.core.utils.CreativeTab;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.Configuration;
-import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -16,6 +7,14 @@ import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import mcextreme.core.MCExtremeCore;
+import mcextreme.core.config.MCExtremeConfig;
+import mcextreme.core.utils.CreativeTab;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.Configuration;
+
+import java.io.File;
 
 @Mod(modid=MCExtremeTools.MODID, name=MCExtremeTools.NAME, version=MCExtremeTools.VERSION, dependencies = "required-after:" + MCExtremeCore.MODID)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)

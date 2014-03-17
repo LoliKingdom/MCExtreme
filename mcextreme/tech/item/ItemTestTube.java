@@ -1,11 +1,11 @@
 package mcextreme.tech.item;
 
+import mcextreme.core.MCExtremeCore;
+import mcextreme.tech.entity.EntityTestTube;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import mcextreme.core.MCExtremeCore;
-import mcextreme.tech.entity.EntityTestTube;
 
 public class ItemTestTube extends Item
 { //Not even sure If I did this right, will fix laterz

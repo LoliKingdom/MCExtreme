@@ -1,8 +1,7 @@
 package mcextreme.vtweaks.item;
 
-import mcextreme.core.config.MCExtremeConfig;
 import mcextreme.core.MCExtremeCore;
-import mcextreme.vtweaks.MCExtremeVTweaks;
+import mcextreme.core.config.MCExtremeConfig;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 

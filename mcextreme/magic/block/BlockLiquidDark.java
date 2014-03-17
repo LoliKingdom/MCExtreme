@@ -1,14 +1,11 @@
 package mcextreme.magic.block;
 
 import mcextreme.core.MCExtremeCore;
-import mcextreme.magic.MCExtremeMagic;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fluids.BlockFluidClassic;
-import mcextreme.magic.block.FluidDark;
 
 public class BlockLiquidDark extends BlockFluidClassic
 {

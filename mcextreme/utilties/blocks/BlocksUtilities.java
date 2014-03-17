@@ -5,7 +5,6 @@ import mcextreme.core.config.MCExtremeConfig;
 import mcextreme.core.utils.MCExtremeUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 
 public class BlocksUtilities
 {

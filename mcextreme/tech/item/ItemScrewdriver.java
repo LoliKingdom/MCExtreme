@@ -1,7 +1,5 @@
 package mcextreme.tech.item;
 
-import java.util.List;
-
 import mcextreme.core.MCExtremeCore;
 import mcextreme.tech.block.BlocksTech;
 import net.minecraft.entity.player.EntityPlayer;
@@ -10,6 +8,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatMessageComponent;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class ItemScrewdriver extends Item
 {

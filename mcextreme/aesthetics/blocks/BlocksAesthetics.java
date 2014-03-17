@@ -1,6 +1,5 @@
 package mcextreme.aesthetics.blocks;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import mcextreme.core.config.MCExtremeConfig;
 import mcextreme.core.utils.MCExtremeUtils;
 import net.minecraft.block.Block;

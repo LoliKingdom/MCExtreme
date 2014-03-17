@@ -1,15 +1,13 @@
 package mcextreme.magic.block;
 
-import java.util.List;
-import java.util.Random;
-
-import mcextreme.magic.MCExtremeMagic;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
+
+import java.util.List;
 
 public class BlockOreStorageMagic extends Block
 {

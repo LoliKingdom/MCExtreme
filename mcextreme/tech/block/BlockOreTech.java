@@ -1,16 +1,14 @@
 package mcextreme.tech.block;
 
-import java.util.List;
-import java.util.Random;
-
 import mcextreme.core.MCExtremeCore;
-import mcextreme.tech.MCExtremeTech;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
+
+import java.util.List;
 
 public class BlockOreTech extends Block
 {

@@ -1,13 +1,13 @@
 package mcextreme.vtweaks.asm;
 
-import java.util.List;
+import cpw.mods.fml.common.asm.transformers.AccessTransformer;
+import mcextreme.core.MCExtremeCore;
+
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Iterator;
 import java.util.LinkedList;
-
-import cpw.mods.fml.common.asm.transformers.AccessTransformer;
-import mcextreme.core.MCExtremeCore;
+import java.util.List;
 
 public class VTweaksAccessTransformer extends AccessTransformer {
     private static VTweaksAccessTransformer instance;

@@ -3,9 +3,7 @@ package mcextreme.magic.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.EnumMobType;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.Entity;
 import net.minecraft.world.World;
-import net.minecraft.entity.*;
 
 public class BlockBarrierRune extends Block
 {

@@ -1,19 +1,12 @@
 package mcextreme.tech;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Iterator;
-
 import mcextreme.tech.block.BlockOreStorageTech;
 import mcextreme.tech.block.BlockOreTech;
 import mcextreme.tech.block.BlocksTech;
 import mcextreme.tech.item.ItemsTech;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.FurnaceRecipes;
-import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class CraftingTech

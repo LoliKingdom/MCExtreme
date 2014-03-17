@@ -1,19 +1,13 @@
 package mcextreme.magic.block;
 
-import cpw.mods.fml.common.registry.GameRegistry;
+import mcextreme.core.MCExtremeCore;
 import mcextreme.core.config.MCExtremeConfig;
 import mcextreme.core.utils.MCExtremeUtils;
-import mcextreme.core.MCExtremeCore;
-import mcextreme.magic.MCExtremeMagic;
 import mcextreme.magic.item.ItemBlockMagic;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialLiquid;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidRegistry;
 
 public class BlocksMagic
 {

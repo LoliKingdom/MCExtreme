@@ -2,7 +2,6 @@ package mcextreme.magic;
 
 import mcextreme.magic.block.BlocksMagic;
 import mcextreme.magic.item.ItemsMagic;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;

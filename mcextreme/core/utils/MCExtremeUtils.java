@@ -1,14 +1,12 @@
 package mcextreme.core.utils;
 
-import java.lang.reflect.Field;
-import java.util.logging.Level;
-
+import cpw.mods.fml.common.registry.GameRegistry;
 import mcextreme.core.MCExtremeCore;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.world.World;
-import cpw.mods.fml.common.FMLLog;
-import cpw.mods.fml.common.registry.GameRegistry;
+
+import java.lang.reflect.Field;
 
 public class MCExtremeUtils 
 {    

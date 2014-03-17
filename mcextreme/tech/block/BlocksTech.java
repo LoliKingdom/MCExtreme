@@ -1,18 +1,16 @@
 package mcextreme.tech.block;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import mcextreme.core.MCExtremeCore;
 import mcextreme.core.config.MCExtremeConfig;
 import mcextreme.core.utils.MCExtremeUtils;
 import mcextreme.tech.item.ItemBlockTech;
 import mcextreme.tech.tileentity.TileEntityCompressor;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockGlass;
-import net.minecraft.block.BlockPane;
 import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraftforge.fluids.Fluid;
-import cpw.mods.fml.common.registry.GameRegistry;
 
 public class BlocksTech
 {	

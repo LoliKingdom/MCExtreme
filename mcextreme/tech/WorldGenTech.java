@@ -1,11 +1,10 @@
 package mcextreme.tech;
 
-import java.util.Random;
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.world.World;
-import net.minecraft.block.Block;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.feature.WorldGenMinable;
+
+import java.util.Random;
 
 public class WorldGenTech implements IWorldGenerator
 {

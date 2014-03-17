@@ -1,7 +1,8 @@
 package mcextreme.tech.block;
 
-import java.util.Random;
-
+import cpw.mods.fml.common.network.FMLNetworkHandler;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import mcextreme.core.config.MCExtremeConfig;
 import mcextreme.tech.MCExtremeTech;
 import mcextreme.tech.tileentity.TileEntityCompressor;
@@ -16,9 +17,8 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-import cpw.mods.fml.common.network.FMLNetworkHandler;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+
+import java.util.Random;
 
 public class BlockCompressor extends BlockContainer 
 {

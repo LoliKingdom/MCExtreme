@@ -1,18 +1,9 @@
 package mcextreme.magic.block;
 
-import java.util.List;
-import java.util.Random;
-
 import mcextreme.core.MCExtremeCore;
-import mcextreme.magic.MCExtremeMagic;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.entity.Entity;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
 
 public class BlockMagicPortal extends Block//Container
 {

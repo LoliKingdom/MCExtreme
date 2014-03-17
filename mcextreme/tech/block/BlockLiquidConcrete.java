@@ -1,14 +1,10 @@
 package mcextreme.tech.block;
 
-import java.util.Random;
-
 import mcextreme.core.MCExtremeCore;
-import mcextreme.magic.block.BlocksMagic;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
 import net.minecraftforge.fluids.BlockFluidClassic;
 
 public class BlockLiquidConcrete extends BlockFluidClassic

@@ -1,12 +1,5 @@
 package mcextreme.core;
 
-import java.util.Arrays;
-import java.util.logging.Logger;
-
-import mcextreme.core.utils.MCExtremePlayerHandler;
-import mcextreme.core.utils.MCExtremeUtils;
-import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -16,6 +9,13 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import mcextreme.core.utils.MCExtremePlayerHandler;
+import mcextreme.core.utils.MCExtremeUtils;
+import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
+
+import java.util.Arrays;
+import java.util.logging.Logger;
 
 @Mod(modid=MCExtremeCore.MODID, name=MCExtremeCore.NAME, version=MCExtremeCore.VERSION)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
