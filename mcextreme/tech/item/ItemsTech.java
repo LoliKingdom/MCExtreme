@@ -1,12 +1,13 @@
 package mcextreme.tech.item;
 
 import mcextreme.core.config.MCExtremeConfig;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 
 public class ItemsTech
 {
-    public static Item itemIngot, itemScrewdriver, itemNanotube, itemDebugScrewdriver, itemConcreteBucket, itemCrowbar, itemWrench, itemHammer, itemPliers, itemTestTube;
+	public static Item itemIngot, itemScrewdriver, itemNanotube, itemDebugScrewdriver, itemConcreteBucket, itemCrowbar, itemWrench, itemHammer, itemPliers, itemTestTube, itemGlassShard;
     
     public static void initItems()
     {
@@ -20,6 +21,8 @@ public class ItemsTech
         itemDebugScrewdriver = new ItemScrewdriver(MCExtremeConfig.itemDebugScrewdriverID, true).setUnlocalizedName("debugScrewdriver");
         itemConcreteBucket = new ItemConcreteBucket(MCExtremeConfig.itemConcreteBucketID).setUnlocalizedName("concreteBucket");
         itemTestTube = new ItemTestTube(MCExtremeConfig.itemTestTubeID).setUnlocalizedName("testtube");
+        itemGlassShard = new ItemGlassShard(MCExtremeConfig.itemGlassShardID).setUnlocalizedName("shardGlass");
+        
     }
     
 }

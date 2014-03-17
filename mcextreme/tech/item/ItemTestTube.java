@@ -1,7 +1,6 @@
 package mcextreme.tech.item;
 
 import mcextreme.core.MCExtremeCore;
-import mcextreme.tech.entity.EntityTestTube;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -32,7 +31,7 @@ par2World.playSoundAtEntity(par3EntityPlayer, "random.bow", 0.5F, 0.4F / (itemRa
 
 if (!par2World.isRemote)
 {
-par2World.spawnEntityInWorld(new EntityTestTube(par2World, par3EntityPlayer));
+par2World.spawnEntityInWorld(new mcextreme.tech.projectile.EntityTestTube(par2World, par3EntityPlayer));
 }
 
 return par1ItemStack;
