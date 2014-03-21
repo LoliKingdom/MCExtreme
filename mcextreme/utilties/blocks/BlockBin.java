@@ -1,103 +1,57 @@
 package mcextreme.utilties.blocks;
 
+import cpw.mods.fml.common.network.FMLNetworkHandler;
+import mcextreme.core.MCExtremeCore;
+import mcextreme.utilities.MCExtremeUtilities;
+import mcextreme.utilities.client.BinRenderer;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 
-public class BlockBin extends BlockContainer implements IInventory
+public class BlockBin extends BlockContainer
 {
-
-	protected BlockBin(int par1, Material par2Material) {
-		super(par1, par2Material);
-		// TODO Auto-generated constructor stub
-	}
-
-	@Override
-	public TileEntity createNewTileEntity(World world) {
-		// TODO Auto-generated method stub
-		return new TileEntityBin();
-	}
-
-	@Override
-	public int getSizeInventory() {
-		// TODO Auto-generated method stub
-		return 9;
-	}
-
-	@Override
-	public ItemStack getStackInSlot(int i) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ItemStack decrStackSize(int i, int j) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ItemStack getStackInSlotOnClosing(int i) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setInventorySlotContents(int i, ItemStack itemstack) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public String getInvName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public boolean isInvNameLocalized() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public int getInventoryStackLimit() {
-		// TODO Auto-generated method stub
-		return 64;
-	}
-
-	@Override
-	public void onInventoryChanged() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public boolean isUseableByPlayer(EntityPlayer entityplayer) {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
-	@Override
-	public void openChest() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void closeChest() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
+    public static Icon[] textures = new Icon[5];
+    
+    public BlockBin(int blockID, Material material)
+    {
+        super(blockID, material);
+    }
+    
+    @Override
+    public TileEntity createNewTileEntity(World world)
+    {
+        return new TileEntityBin();
+    }
+    
+    @Override
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
+    {
+        if (!world.isRemote) FMLNetworkHandler.openGui(player, MCExtremeUtilities.instance, 400, world, x, y, z);
+        return true;
+    }
+    
+    @Override
+    public void registerIcons(IconRegister iconRegister)
+    {
+        for (int i = 0; i < 5; i++)
+            textures[i] = iconRegister.registerIcon("mcextreme:util/bin" + (i + 1));
+    }
+    
+    @Override
+    public boolean isOpaqueCube()
+    {
+        return false;
+    }
+    
+    @Override
+    public int getRenderType()
+    {
+        return BinRenderer.renderID;
+    }
 }

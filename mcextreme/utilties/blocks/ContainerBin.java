@@ -8,11 +8,11 @@ import net.minecraft.item.ItemStack;
 
 public class ContainerBin extends Container
 {
-    public TileEntityBin infuserTile;
+    public TileEntityBin tileBin;
     
-    public ContainerBin(TileEntityBin tileEntityInfuser, InventoryPlayer invPlayer)
+    public ContainerBin(TileEntityBin tileBin, InventoryPlayer invPlayer)
     {
-        this.infuserTile = tileEntityInfuser;
+        this.tileBin = tileBin;
         
         // ======================================//
         // PLAYER INVENTORY SLOTS
@@ -31,7 +31,7 @@ public class ContainerBin extends Container
             }
         }
 
-        addSlotToContainer(new SlotBin(tileEntityInfuser, 0, 40, 35, "INPUT"));
+        addSlotToContainer(new Slot(tileBin, 0, 80, 33));
     }
     
     @Override
@@ -43,6 +43,6 @@ public class ContainerBin extends Container
     @Override
     public boolean canInteractWith(EntityPlayer entityplayer)
     {
-        return infuserTile.isUseableByPlayer(entityplayer);
+        return tileBin.isUseableByPlayer(entityplayer);
     }
 }

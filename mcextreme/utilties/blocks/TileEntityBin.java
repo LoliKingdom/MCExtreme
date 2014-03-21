@@ -7,31 +7,25 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityBin extends TileEntity implements ISidedInventory
 {
-    public ItemStack[] inventory;
-    
-    private static final int[] slots = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
-    
-    public TileEntityBin()
-    {
-        inventory = new ItemStack[9];
-    }
+    public ItemStack inventory;
+    public static final int[] slots = new int[] { 0 };
     
     @Override
     public void updateEntity() 
     {
-        for (int i = 0; i < getSizeInventory(); i++) setInventorySlotContents(i, null);
+        inventory = null;
     }
     
     @Override
     public int getSizeInventory()
     {
-        return inventory.length;
+        return 1;
     }
 
     @Override
     public ItemStack getStackInSlot(int slotID)
     {
-        return inventory[slotID];
+        return inventory;
     }
 
     @Override
@@ -80,7 +74,7 @@ public class TileEntityBin extends TileEntity implements ISidedInventory
             stack.stackSize = getInventoryStackLimit();
         }
         
-        inventory[slotID] = stack;
+        inventory = stack;
         
         onInventoryChanged();
     }
@@ -88,7 +82,7 @@ public class TileEntityBin extends TileEntity implements ISidedInventory
     @Override
     public String getInvName()
     {
-        return "Trash Bin";
+        return "TrashBin";
     }
 
     @Override
@@ -104,7 +98,10 @@ public class TileEntityBin extends TileEntity implements ISidedInventory
     }
 
     @Override
-    public void onInventoryChanged() { }
+    public void onInventoryChanged()
+    {
+        inventory = null;
+    }
 
     @Override
     public boolean isUseableByPlayer(EntityPlayer entityplayer)
@@ -121,7 +118,7 @@ public class TileEntityBin extends TileEntity implements ISidedInventory
     @Override
     public boolean isItemValidForSlot(int i, ItemStack itemstack)
     {
-        return false;
+        return true;
     }
 
     @Override
@@ -139,6 +136,6 @@ public class TileEntityBin extends TileEntity implements ISidedInventory
     @Override
     public boolean canExtractItem(int slotID, ItemStack stack, int side)
     {
-        return true;
+        return false;
     }
 }

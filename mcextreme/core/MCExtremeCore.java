@@ -11,6 +11,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import mcextreme.core.utils.MCExtremePlayerHandler;
 import mcextreme.core.utils.MCExtremeUtils;
+import mcextreme.utilities.GUIHandler;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 
