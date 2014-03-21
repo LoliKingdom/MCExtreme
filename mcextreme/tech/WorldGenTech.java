@@ -20,10 +20,10 @@ public class WorldGenTech implements IWorldGenerator
 
     private void genSurface(World world, Random random, int chunkX, int chunkZ)
     {
-        /*
+        
         boolean chanceAluminium = new Random().nextInt(4)==0;
         boolean chanceIridium = new Random().nextInt(32)==0;
-        
+      /* 
         for (int i = 0; i < Properties.oreVeinsPerChunkAluminium * 4; i++) {
             int randPosX = blockXPos + random.nextInt(16);
             int randPosY = 48 + random.nextInt(Properties.heightLimitOreAluminium - 48);

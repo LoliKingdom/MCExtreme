@@ -11,6 +11,7 @@ public class BlockMagicPortal extends Block//Container
     {
         super(blockID, Material.portal);
         this.setCreativeTab(MCExtremeCore.tabMagic);
+        this.setBlockUnbreakable();
     }
     
     /*

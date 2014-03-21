@@ -14,7 +14,7 @@ import net.minecraftforge.fluids.Fluid;
 
 public class BlocksTech
 {	
-    public static Block blockOre, blockStorage, blockBreaker, blockPlacer, blockCompressor, blockCompressorActive, blockRebar;
+    public static Block blockOre, blockStorage, blockBreaker, blockPlacer, blockCompressor, blockCompressorActive, blockRebar, blockLimestone;
     
     public static Block blockLiquidConcrete, blockSolidConcrete;
     
@@ -33,6 +33,7 @@ public class BlocksTech
         blockLiquidConcrete = new BlockLiquidConcrete(MCExtremeConfig.blockLiquidConcreteID).setUnlocalizedName("liquidConcrete").setCreativeTab(MCExtremeCore.tabTech);
         blockRebar = new BlockWall(MCExtremeConfig.blockRebarID, Block.anvil).setUnlocalizedName("rebar").setCreativeTab(MCExtremeCore.tabTech);
         blockSolidConcrete = new Block(MCExtremeConfig.blockSolidConcreteID, Material.rock).setUnlocalizedName("solidconcrete").setCreativeTab(MCExtremeCore.tabTech);
+        blockLimestone = new BlockLimestone(MCExtremeConfig.blockLimestoneID, Material.rock).setUnlocalizedName("blockLimestone").setCreativeTab(MCExtremeCore.tabTech);
         
         Item.itemsList[MCExtremeConfig.blockTechOreID] = new ItemBlockTech(MCExtremeConfig.blockTechOreID).setUnlocalizedName("blockOreID");
         Item.itemsList[MCExtremeConfig.blockTechStorageID] = new ItemBlockTech(MCExtremeConfig.blockTechStorageID).setUnlocalizedName("blockStorageID");
