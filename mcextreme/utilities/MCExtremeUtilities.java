@@ -14,8 +14,8 @@ import cpw.mods.fml.relauncher.Side;
 import mcextreme.core.MCExtremeCore;
 import mcextreme.core.config.MCExtremeConfig;
 import mcextreme.core.utils.CreativeTab;
+import mcextreme.utilities.blocks.BlocksUtilities;
 import mcextreme.utilities.client.BinRenderer;
-import mcextreme.utilties.blocks.BlocksUtilities;
 import net.minecraftforge.common.Configuration;
 
 import java.io.File;

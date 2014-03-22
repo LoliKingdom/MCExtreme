@@ -1,4 +1,4 @@
-package mcextreme.tools.item;
+/**package mcextreme.tools.item;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -95,7 +95,7 @@ public final class ToolHandler {
 
 /**
  * @author mDiyo
- */
+ *//*
 public static MovingObjectPosition raytraceFromEntity(World world, Entity player, boolean par3, double range) {
 	float f = 1.0F;
 	float f1 = player.prevRotationPitch + (player.rotationPitch - player.prevRotationPitch) * f;
@@ -119,4 +119,4 @@ public static MovingObjectPosition raytraceFromEntity(World world, Entity player
 	return world.rayTraceBlocks_do_do(vec3, vec31, par3, !par3);
 }
 
-}
+}*/

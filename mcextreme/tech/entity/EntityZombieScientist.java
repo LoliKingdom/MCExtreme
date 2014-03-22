@@ -38,4 +38,3 @@ public class EntityZombieScientist extends EntityZombie
 	  return ItemsTech.itemTestTube.itemID;
   }
 }
-  

@@ -1,4 +1,4 @@
-package mcextreme.core.utils;
+/*package mcextreme.core.utils;
 
 import cpw.mods.fml.common.network.IConnectionHandler;
 import cpw.mods.fml.common.network.Player;
@@ -54,4 +54,4 @@ public class MCExtremePlayerHandler implements IConnectionHandler
 
 	@Override
 	public void clientLoggedIn(NetHandler clientHandler, INetworkManager manager, Packet1Login login) { }
-}
+}*/

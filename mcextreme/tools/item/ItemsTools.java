@@ -9,7 +9,7 @@ public class ItemsTools {
 
 	public static void initItems()
 	{
-		itemHammerMjolnir = new ItemHammerMjolnir(MCExtremeConfig.itemHammerMjolnirID).setUnlocalizedName("itemHammerMjolnir");
+		//itemHammerMjolnir = new ItemHammerMjolnir(MCExtremeConfig.itemHammerMjolnirID).setUnlocalizedName("itemHammerMjolnir");
 
 	}
 }

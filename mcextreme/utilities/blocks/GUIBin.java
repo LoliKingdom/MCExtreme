@@ -1,4 +1,4 @@
-package mcextreme.utilties.blocks;
+package mcextreme.utilities.blocks;
 
 import org.lwjgl.opengl.GL11;
 

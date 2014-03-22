@@ -1,4 +1,4 @@
-package mcextreme.utilties.blocks;
+package mcextreme.utilities.blocks;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;

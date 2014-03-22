@@ -1,4 +1,4 @@
-package mcextreme.utilties.blocks;
+package mcextreme.utilities.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import mcextreme.core.MCExtremeCore;

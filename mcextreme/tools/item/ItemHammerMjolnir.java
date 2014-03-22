@@ -32,7 +32,7 @@ public class ItemHammerMjolnir extends Item
 
 
 
-	@Override
+	/*@Override
 	public boolean onBlockStartBreak(ItemStack stack, int x, int y, int z, EntityPlayer player) {
 		World world = player.worldObj;
 		Material mat = world.getBlockMaterial(x, y, z);
@@ -75,7 +75,7 @@ public class ItemHammerMjolnir extends Item
 		}
 		}
 		return false;
-	}
+	}*/
 
 	@Override
 	public boolean onBlockDestroyed(ItemStack par1ItemStack, World par2World, int par3, int par4, int par5, int par6, EntityLivingBase par7EntityLivingBase) {

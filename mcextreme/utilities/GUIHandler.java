@@ -1,8 +1,8 @@
 package mcextreme.utilities;
 
-import mcextreme.utilties.blocks.ContainerBin;
-import mcextreme.utilties.blocks.GUIBin;
-import mcextreme.utilties.blocks.TileEntityBin;
+import mcextreme.utilities.blocks.ContainerBin;
+import mcextreme.utilities.blocks.GUIBin;
+import mcextreme.utilities.blocks.TileEntityBin;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.network.IGuiHandler;

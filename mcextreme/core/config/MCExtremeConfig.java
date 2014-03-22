@@ -22,7 +22,7 @@ public class MCExtremeConfig
     //--------------- MC-Extreme Tech ------------------------
     //--------------- Block range: 1700 - 2199 ---------------
     //--------------- Item range: 5000 - 5999 ----------------
-    public static int blockTechOreID, blockTechStorageID, blockBreakerID, blockPlacerID, blockCompressorID, blockCompressorActiveID, blockRebarID, blockLimestoneID;
+    public static int blockTechOreID, blockTechStorageID, blockBreakerID, blockPlacerID, blockCompressorID, blockCompressorActiveID, blockRebarID, blockLimestoneID = 2160;
     public static int itemTechIngotID, itemScrewdriverID, itemDebugScrewdriverID, itemNanotubeID, itemConcreteBucketID, itemCrowbarID, itemWrenchID, itemHammerID, itemPliersID, itemTestTubeID, itemGlassShardID;
     public static int itemRubberID, itemPlasticID, itemWire, itemGear, itemPlate;
     public static int blockLiquidConcreteID, blockSolidConcreteID;
@@ -41,8 +41,8 @@ public class MCExtremeConfig
     //--------------- MC-Extreme Tools -------------------
     //--------------- Block range: 3200 - **** -----------
     //--------------- Item range: 8000 - **** ------------
-    public static int blockPatternWorkBenchID;
-    public static int itemHammerMjolnirID;
+    public static int blockPatternWorkBenchID = 3200;
+    public static int itemHammerMjolnirID = 8000;
     
     public static void loadConfig(Configuration config, String type)
     {

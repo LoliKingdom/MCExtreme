@@ -1,4 +1,4 @@
-package mcextreme.utilties.blocks;
+package mcextreme.utilities.blocks;
 
 import cpw.mods.fml.common.network.FMLNetworkHandler;
 import mcextreme.core.MCExtremeCore;
@@ -16,7 +16,7 @@ import net.minecraft.world.World;
 
 public class BlockBin extends BlockContainer
 {
-    public static Icon[] textures = new Icon[5];
+    public static Icon[] textures = new Icon[6];
     
     public BlockBin(int blockID, Material material)
     {
@@ -39,7 +39,7 @@ public class BlockBin extends BlockContainer
     @Override
     public void registerIcons(IconRegister iconRegister)
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 6; i++)
             textures[i] = iconRegister.registerIcon("mcextreme:util/bin" + (i + 1));
     }
     
